@@ -3,16 +3,14 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Section } from "@/components/ui/Section";
-import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
-import { CalendlyEmbed } from "@/components/sections/CalendlyEmbed";
-import { InstagramIcon, TikTokIcon } from "@/components/icons/BrandIcons";
+import { InstagramIcon } from "@/components/icons/BrandIcons";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Book a free 30-minute strategy call with DentaScale, or reach us by email, phone, Instagram, or TikTok.",
+    "Get in touch with DentaScale by email — we'll get back to you within 1 business day. Or find us on Instagram.",
 };
 
 export default function ContactPage() {
@@ -20,70 +18,37 @@ export default function ContactPage() {
     <>
       <PageHero label="Contact" title="Let's have a conversation" />
 
-      <Section bg="secondary">
-        <div className="grid grid-cols-1 gap-10 md:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
-          {/* Left: intro + Calendly embed placeholder */}
-          <Reveal>
-            <div className="flex flex-col gap-6">
-              <p className="text-[15px] leading-relaxed text-text-secondary">
-                Pick a time that works for you and we&apos;ll talk through your
-                practice, your goals, and whether we&apos;re the right fit. No
-                hard sell — just a 30-minute conversation. Prefer email? Our
-                details are on the right.
-              </p>
+      <Section bg="secondary" id="start" className="scroll-mt-20">
+        <Reveal className="mx-auto flex max-w-lg flex-col items-center gap-7 text-center">
+          <p className="text-[15px] leading-relaxed text-text-secondary">
+            The best way to reach us is by email. Tell us a bit about your
+            practice and what you&apos;re looking for, and we&apos;ll get back to
+            you within 1 business day.
+          </p>
 
-              {/* Calendly inline embed — books a call without leaving the page. */}
-              <CalendlyEmbed url={siteConfig.calendlyUrl} height={700} />
-            </div>
-          </Reveal>
+          <a
+            href={`mailto:${siteConfig.email}`}
+            className="group inline-flex items-center gap-3 rounded-full border border-card-border bg-card px-6 py-4 text-base font-medium text-white transition-colors hover:border-accent"
+          >
+            <span className="flex size-9 items-center justify-center rounded-full bg-accent-bg text-accent-light">
+              <Mail size={18} aria-hidden="true" />
+            </span>
+            {siteConfig.email}
+          </a>
 
-          {/* Right: contact info */}
-          <Reveal delay={0.1}>
-            <Card interactive={false} className="flex flex-col gap-6 p-7">
-              <h2 className="text-lg font-medium text-white">Reach us directly</h2>
-
-              <ul className="flex flex-col gap-5">
-                <li>
-                  <a
-                    href={`mailto:${siteConfig.email}`}
-                    className="group flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-white"
-                  >
-                    <span className="flex size-9 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
-                      <Mail size={16} aria-hidden="true" />
-                    </span>
-                    {siteConfig.email}
-                  </a>
-                </li>
-                <li>
-                  <Link
-                    href={siteConfig.social.instagram}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-white"
-                  >
-                    <span className="flex size-9 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
-                      <InstagramIcon size={16} />
-                    </span>
-                    @dentascale
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={siteConfig.social.tiktok}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-3 text-sm text-text-secondary transition-colors hover:text-white"
-                  >
-                    <span className="flex size-9 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
-                      <TikTokIcon size={16} />
-                    </span>
-                    @dentascale
-                  </Link>
-                </li>
-              </ul>
-            </Card>
-          </Reveal>
-        </div>
+          <div className="flex items-center gap-4 pt-1">
+            <span className="text-[13px] text-text-tertiary">Or find us on</span>
+            <Link
+              href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="DentaScale on Instagram"
+              className="flex size-9 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light transition-colors hover:border-accent hover:text-white"
+            >
+              <InstagramIcon size={16} />
+            </Link>
+          </div>
+        </Reveal>
       </Section>
     </>
   );

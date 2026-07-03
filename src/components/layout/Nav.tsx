@@ -144,7 +144,11 @@ export function Nav() {
                 })}
               </ul>
 
-              <Button href={siteConfig.bookingUrl} className="mt-auto w-full">
+              <Button
+                href={siteConfig.bookingUrl}
+                className="mt-auto w-full"
+                onClick={() => setOpen(false)}
+              >
                 Book a free call
               </Button>
             </motion.div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { Mail } from "lucide-react";
 import { siteConfig } from "@/lib/site";
-import { InstagramIcon, TikTokIcon } from "@/components/icons/BrandIcons";
+import { InstagramIcon } from "@/components/icons/BrandIcons";
 
 export function Footer() {
   return (
@@ -41,15 +42,13 @@ export function Footer() {
             >
               <InstagramIcon size={20} />
             </Link>
-            <Link
-              href={siteConfig.social.tiktok}
+            <a
+              href={`mailto:${siteConfig.email}`}
               className="text-text-muted transition-colors hover:text-accent-light"
-              aria-label="DentaScale on TikTok"
-              target="_blank"
-              rel="noopener noreferrer"
+              aria-label={`Email ${siteConfig.name}`}
             >
-              <TikTokIcon size={20} />
-            </Link>
+              <Mail size={20} aria-hidden="true" />
+            </a>
           </div>
 
           <p className="text-xs text-text-tertiary">© 2026 DentaScale</p>

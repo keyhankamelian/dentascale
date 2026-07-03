@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { EquationRow } from "@/components/ui/EquationRow";
 import { CaseStudyCard } from "@/components/sections/CaseStudyCard";
 import { LeadToChairSystem } from "@/components/sections/LeadToChairSystem";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import { LeadFormSection } from "@/components/sections/LeadFormSection";
 import { siteConfig } from "@/lib/site";
 
 type Pain = { icon: LucideIcon; title: string; body: string };
@@ -144,7 +144,7 @@ export default function HomePage() {
       </Section>
 
       {/* Section 6 — Final CTA */}
-      <FinalCTA bg="secondary" />
+      <LeadFormSection bg="secondary" />
     </>
   );
 }

@@ -5,7 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { LeadToChairSystem } from "@/components/sections/LeadToChairSystem";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import { LeadFormSection } from "@/components/sections/LeadFormSection";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -72,7 +72,7 @@ export default function ServicesPage() {
 
       <LeadToChairSystem bg="primary" />
 
-      <FinalCTA bg="secondary" />
+      <LeadFormSection bg="secondary" />
     </>
   );
 }

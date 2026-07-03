@@ -28,7 +28,8 @@ type ButtonProps = {
 
 /**
  * Pill-shaped link button. Solid (purple) or outlined, with hover scale.
- * External (http) hrefs open in a new tab; internal hrefs use Next routing.
+ * External (http) hrefs open in a new tab; same-page hash links (#anchor) use a
+ * plain anchor so the browser scrolls natively; other hrefs use Next routing.
  */
 export function Button({
   href,
@@ -40,13 +41,13 @@ export function Button({
 }: ButtonProps) {
   const classes = `${base} ${variants[variant]} ${sizes[size]} ${className}`;
   const isExternal = /^https?:\/\//.test(href);
+  const isHash = href.startsWith("#");
 
-  if (isExternal) {
+  if (isExternal || isHash) {
     return (
       <a
         href={href}
-        target="_blank"
-        rel="noopener noreferrer"
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
         className={classes}
         {...rest}
       >

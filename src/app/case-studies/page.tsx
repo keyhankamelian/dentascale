@@ -5,7 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { CaseStudyCard } from "@/components/sections/CaseStudyCard";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import { LeadFormSection } from "@/components/sections/LeadFormSection";
 
 export const metadata: Metadata = {
   title: "Case Studies",
@@ -70,7 +70,7 @@ export default function CaseStudiesPage() {
               <blockquote className="text-lg font-light leading-relaxed text-text-secondary">
                 &ldquo;Working with DentaScale has changed our business&apos;s
                 trajectory. We went from the stress of an empty calendar to
-                getting so many patients that we can&apos;t keep up — and
+                getting so many patients that we can&apos;t keep up, and
                 we&apos;re now thinking of opening a second location.&rdquo;
               </blockquote>
               <p className="text-sm text-text-tertiary">
@@ -81,7 +81,7 @@ export default function CaseStudiesPage() {
         </div>
       </Section>
 
-      <FinalCTA bg="primary" />
+      <LeadFormSection bg="primary" />
     </>
   );
 }

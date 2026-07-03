@@ -1,23 +1,19 @@
 /** Shared site-wide configuration: nav links, contact details, CTA copy. */
 
-/** Calendly booking link, themed to the dark site via URL params. */
-const CALENDLY_URL =
-  "https://calendly.com/hello-dentascale/dentascale-consultation?hide_gdpr_banner=1&background_color=0a0a0a&text_color=ffffff&primary_color=7c3aed";
-
 export const siteConfig = {
   name: "DentaScale",
   tagline: "Paid ads & lead generation for dental practices.",
-  email: "hello@dentascale.com",
-  /** On file — intentionally NOT surfaced as a call CTA. Clients book via Calendly. */
+  email: "hello@dentascale.agency",
+  /** On file — intentionally NOT surfaced as a call CTA. Leads reach us via the form/email. */
   phone: "310-694-7875",
   social: {
     instagram: "https://instagram.com/dentascale",
-    tiktok: "https://tiktok.com/@dentascale",
   },
-  /** Calendly link used by the inline embed on /contact. */
-  calendlyUrl: CALENDLY_URL,
-  /** Primary CTA destination — all "Book a call" buttons open Calendly directly. */
-  bookingUrl: CALENDLY_URL,
+  /**
+   * Primary CTA destination — all "Book a call" buttons scroll to the lead
+   * form (#start), which sits at the bottom of every page.
+   */
+  bookingUrl: "#start",
 } as const;
 
 export const navLinks = [

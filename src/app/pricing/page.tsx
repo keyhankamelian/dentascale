@@ -4,18 +4,18 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
 import { PricingCard } from "@/components/ui/PricingCard";
 import { FAQ, type FAQItem } from "@/components/ui/FAQ";
-import { FinalCTA } from "@/components/sections/FinalCTA";
+import { LeadFormSection } from "@/components/sections/LeadFormSection";
 
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple, transparent dental marketing pricing from $750/mo. Month-to-month, no lock-in. Ad spend paid directly to platforms — we never touch your budget.",
+    "Simple, transparent dental marketing pricing from $1,000/mo. Month-to-month, no lock-in. Ad spend paid directly to platforms — we never touch your budget.",
 };
 
 const plans = [
   {
     name: "Starter",
-    price: "$750",
+    price: "$1,000",
     description: "One platform — all you need to get started and see results.",
     features: [
       "Meta Ads only",
@@ -29,7 +29,7 @@ const plans = [
   },
   {
     name: "Two-platform",
-    price: "$1,250",
+    price: "$1,750",
     description: "The sweet spot. Reach patients across two channels at once.",
     features: [
       "Meta + TikTok or Google",
@@ -43,7 +43,7 @@ const plans = [
   },
   {
     name: "Three-platform",
-    price: "$2,000",
+    price: "$2,500",
     description: "Maximum reach across every channel that matters.",
     features: [
       "Meta + TikTok + Google",
@@ -59,7 +59,7 @@ const plans = [
 const addOns = [
   {
     name: "Social media growth",
-    price: "+$250",
+    price: "+$350",
     period: "/mo",
     description: "Layer organic social growth on top of any plan.",
     features: [
@@ -70,7 +70,7 @@ const addOns = [
   },
   {
     name: "Landing page build",
-    price: "$1,000",
+    price: "$1,500",
     period: "one-time",
     description:
       "A conversion-focused landing page that turns ad clicks into booked leads.",
@@ -83,7 +83,7 @@ const addOns = [
   },
   {
     name: "SEO optimization",
-    price: "+$250",
+    price: "+$350",
     period: "/mo",
     description:
       "Get found in local search so patients reach you beyond paid ads.",
@@ -95,7 +95,7 @@ const addOns = [
   },
   {
     name: "Lead reach-out",
-    price: "+$1,000",
+    price: "+$1,250",
     period: "/mo",
     description:
       "We call and qualify your leads, then book appointments straight into your calendar.",
@@ -122,7 +122,7 @@ const faqs: FAQItem[] = [
   {
     question: "Is there a setup or onboarding fee?",
     answer:
-      "Normally there's a one-time $250 onboarding fee to build out your accounts, tracking, and first campaigns. It's currently waived for new practices — see the banner below.",
+      "Normally there's a one-time $500 onboarding fee to build out your accounts, tracking, and first campaigns. It's currently waived for new practices — see the banner below.",
   },
   {
     question: "What's the Lead-to-Chair System, and does it cost extra?",
@@ -200,7 +200,7 @@ export default function PricingPage() {
         </div>
       </Section>
 
-      <FinalCTA bg="primary" />
+      <LeadFormSection bg="primary" />
     </>
   );
 }
