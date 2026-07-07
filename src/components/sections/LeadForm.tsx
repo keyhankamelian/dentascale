@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from "react";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { trackLead } from "@/lib/tracking";
+import { siteConfig } from "@/lib/site";
 
 const BUSINESS_TYPES = [
   "General dentistry",
@@ -41,28 +42,25 @@ export function LeadForm() {
     setStatus("submitting");
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch(siteConfig.formEndpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
-          subject: `New lead: ${form.name} — ${form.businessName}`,
-          from_name: "DentaScale Website",
           name: form.name,
           business_name: form.businessName,
           business_type: form.businessType,
           phone: form.phone,
           email: form.email,
           location: form.location,
-          botcheck: form.botcheck,
+          _subject: `New lead: ${form.name} — ${form.businessName}`,
+          _gotcha: form.botcheck, // Formspree honeypot — real users leave empty
         }),
       });
-      const data = await res.json();
 
-      if (data.success) {
+      if (res.ok) {
         trackLead(); // fire FB Pixel + Google conversion on success only
         setStatus("success");
       } else {

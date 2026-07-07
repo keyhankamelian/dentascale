@@ -9,6 +9,8 @@ export const siteConfig = {
   social: {
     instagram: "https://instagram.com/dentascale",
   },
+  /** Formspree endpoint the lead form submits to (leads land in Formspree). */
+  formEndpoint: "https://formspree.io/f/xrewojbg",
   /**
    * Primary CTA destination — all "Book a call" buttons scroll to the lead
    * form (#start), which sits at the bottom of every page.

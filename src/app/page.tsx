@@ -8,6 +8,7 @@ import { EquationRow } from "@/components/ui/EquationRow";
 import { CaseStudyCard } from "@/components/sections/CaseStudyCard";
 import { LeadToChairSystem } from "@/components/sections/LeadToChairSystem";
 import { LeadFormSection } from "@/components/sections/LeadFormSection";
+import { featuredCaseStudy } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 type Pain = { icon: LucideIcon; title: string; body: string };
@@ -113,7 +114,10 @@ export default function HomePage() {
         />
 
         <div className="mx-auto mt-12 max-w-3xl">
-          <CaseStudyCard />
+          <CaseStudyCard
+            stats={featuredCaseStudy.stats}
+            comparisons={featuredCaseStudy.comparisons}
+          />
 
           <Reveal className="mt-6 text-center" delay={0.1}>
             <Link
