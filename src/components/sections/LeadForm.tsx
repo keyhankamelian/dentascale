@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { trackLead } from "@/lib/tracking";
+import { getStoredUtmParams } from "@/lib/utm";
 import { siteConfig } from "@/lib/site";
 
 const BUSINESS_TYPES = [
@@ -43,6 +44,9 @@ export function LeadForm() {
     setStatus("submitting");
 
     try {
+      const utm = getStoredUtmParams();
+      const source = utm.utm_source || (utm.fbclid ? "facebook" : undefined);
+
       const res = await fetch(siteConfig.formEndpoint, {
         method: "POST",
         headers: {
@@ -56,7 +60,8 @@ export function LeadForm() {
           phone: form.phone,
           email: form.email,
           location: form.location,
-          _subject: `New lead: ${form.name} — ${form.businessName}`,
+          ...utm, // utm_source, utm_medium, utm_campaign, utm_term, utm_content, fbclid, gclid
+          _subject: `New lead: ${form.name} — ${form.businessName}${source ? ` (via ${source})` : ""}`,
           _gotcha: form.botcheck, // Formspree honeypot — real users leave empty
         }),
       });

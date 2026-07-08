@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
+import { UtmCapture } from "@/components/UtmCapture";
 
 // Analytics IDs — set these in .env.local (see .env.example). Tags only load
 // when the corresponding ID is present.
@@ -75,6 +76,7 @@ ${ADS_ID ? `gtag('config', '${ADS_ID}');` : ""}`}
         )}
       </head>
       <body className="min-h-screen bg-bg-primary text-text-primary antialiased">
+        <UtmCapture />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:text-white"
