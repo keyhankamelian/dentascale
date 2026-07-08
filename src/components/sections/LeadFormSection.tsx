@@ -15,7 +15,7 @@ export function LeadFormSection({ bg = "primary" }: Props) {
     <Section bg={bg} id="start" className="scroll-mt-20">
       <Reveal className="mx-auto flex max-w-xl flex-col items-center gap-5 text-center">
         <span className="rounded-full border border-accent bg-accent-bg px-4 py-1.5 text-[12px] font-medium text-accent-light">
-          Onboarding fee waived for new practices — save $500
+          Onboarding fee waived until end of July — save $500
         </span>
 
         <h2 className="text-3xl font-light leading-tight text-white md:text-4xl">

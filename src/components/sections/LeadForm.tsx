@@ -207,7 +207,7 @@ export function LeadForm() {
       {status === "error" && (
         <p className="mt-4 text-sm text-red-400" role="alert">
           Something went wrong sending your details. Please try again, or email us
-          at hello@dentascale.agency.
+          at {siteConfig.email}.
         </p>
       )}
 

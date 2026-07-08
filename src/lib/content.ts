@@ -65,17 +65,12 @@ export const caseStudies: CaseStudy[] = [
         badge: "3.6x higher",
       },
     ],
-    testimonial: {
-      quote:
-        "Working with DentaScale has changed our business's trajectory. We went from the stress of an empty calendar to getting so many patients that we can't keep up, and we're now thinking of opening a second location.",
-      attribution: "— DentaScale client, orthodontic practice",
-    },
   },
   {
     slug: "general-dentistry",
     industry: "General dentistry",
     channels: "Facebook & Instagram",
-    timeframe: "April 2026",
+    timeframe: "April 2026 · 30 days",
     heading: "General dentistry practice",
     stats: [
       { value: 29, label: "Qualified leads" },
@@ -90,7 +85,24 @@ export const caseStudies: CaseStudy[] = [
         average: "$76",
         badge: "73% below avg",
       },
+      {
+        metric: "Cost per booking",
+        yours: "$34",
+        average: "$240",
+        badge: "86% below avg",
+      },
+      {
+        metric: "Leads per $1k spend",
+        yours: "48",
+        average: "29",
+        badge: "1.7x higher",
+      },
     ],
+    testimonial: {
+      quote:
+        "Working with DentaScale has changed our business's trajectory. We went from the stress of an empty calendar to getting so many patients that we can't keep up, and we're now thinking of opening a second location.",
+      attribution: "— DentaScale client, general dentistry practice",
+    },
   },
 ];
 

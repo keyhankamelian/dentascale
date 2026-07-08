@@ -3,7 +3,7 @@
 export const siteConfig = {
   name: "DentaScale",
   tagline: "Paid ads & lead generation for dental practices.",
-  email: "hello@dentascale.agency",
+  email: "hello@dentascale.net",
   /** On file — intentionally NOT surfaced as a call CTA. Leads reach us via the form/email. */
   phone: "310-694-7875",
   social: {

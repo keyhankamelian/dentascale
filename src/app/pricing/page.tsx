@@ -122,7 +122,7 @@ const faqs: FAQItem[] = [
   {
     question: "Is there a setup or onboarding fee?",
     answer:
-      "Normally there's a one-time $500 onboarding fee to build out your accounts, tracking, and first campaigns. It's currently waived for new practices — see the banner below.",
+      "Normally there's a one-time $500 onboarding fee to build out your accounts, tracking, and first campaigns. It's currently waived until end of July — see the banner below.",
   },
   {
     question: "What's the Lead-to-Chair System, and does it cost extra?",
