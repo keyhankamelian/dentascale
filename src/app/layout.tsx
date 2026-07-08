@@ -63,6 +63,18 @@ fbq('init', '${FB_PIXEL_ID}');
 fbq('track', 'PageView');`}
           </Script>
         )}
+        {FB_PIXEL_ID && (
+          <noscript>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              height="1"
+              width="1"
+              style={{ display: "none" }}
+              src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`}
+              alt=""
+            />
+          </noscript>
+        )}
 
         {/* Google gtag — GA4 and/or Google Ads */}
         {gtagId && (
