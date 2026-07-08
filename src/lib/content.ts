@@ -53,12 +53,6 @@ export const caseStudies: CaseStudy[] = [
         badge: "90% below avg",
       },
       {
-        metric: "Cost per booking",
-        yours: "~$28",
-        average: "$240",
-        badge: "88% below avg",
-      },
-      {
         metric: "Leads per $1k spend",
         yours: "107",
         average: "29",
@@ -71,7 +65,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "General dentistry",
     channels: "Facebook & Instagram",
     timeframe: "April 2026 · 30 days",
-    heading: "General dentistry practice",
+    heading: "General dentistry practice — 30-day campaign",
     stats: [
       { value: 29, label: "Qualified leads" },
       { value: 20.69, label: "Cost per lead", decimals: 2, prefix: "$" },
@@ -84,12 +78,6 @@ export const caseStudies: CaseStudy[] = [
         yours: "$20.69",
         average: "$76",
         badge: "73% below avg",
-      },
-      {
-        metric: "Cost per booking",
-        yours: "$34",
-        average: "$240",
-        badge: "86% below avg",
       },
       {
         metric: "Leads per $1k spend",

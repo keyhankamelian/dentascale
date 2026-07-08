@@ -51,7 +51,13 @@ export function Footer() {
             </a>
           </div>
 
-          <p className="text-xs text-text-tertiary">© 2026 DentaScale</p>
+          <div className="flex items-center gap-3 text-xs text-text-tertiary">
+            <span>© 2026 DentaScale</span>
+            <span aria-hidden="true">·</span>
+            <Link href="/privacy" className="transition-colors hover:text-white">
+              Privacy Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

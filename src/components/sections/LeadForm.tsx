@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { CheckCircle2, Loader2 } from "lucide-react";
 import { trackLead } from "@/lib/tracking";
 import { siteConfig } from "@/lib/site";
@@ -227,7 +228,15 @@ export function LeadForm() {
       </button>
 
       <p className="mt-3 text-center text-[12px] text-text-tertiary">
-        We&apos;ll review your details and reach out to schedule your call.
+        We&apos;ll review your details and reach out to schedule your call. By
+        submitting, you agree to our{" "}
+        <Link
+          href="/privacy"
+          className="underline underline-offset-2 hover:text-text-secondary"
+        >
+          Privacy Policy
+        </Link>
+        .
       </p>
     </form>
   );
