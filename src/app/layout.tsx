@@ -34,6 +34,12 @@ export const metadata: Metadata = {
       "Month-to-month dental marketing. Transparent pricing from $1,000/mo. A system that turns leads into booked patients.",
     type: "website",
   },
+  other: {
+    // Meta Business Manager domain verification (Business Settings > Brand
+    // Safety > Domains). Required to fully trust Pixel events for ad
+    // optimization.
+    "facebook-domain-verification": "krujuphewtywgtzjwlvvt1hooqxex7",
+  },
 };
 
 export default function RootLayout({
