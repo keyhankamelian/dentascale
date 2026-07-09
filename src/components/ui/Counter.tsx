@@ -36,12 +36,9 @@ export function Counter({
   const [display, setDisplay] = useState(0);
 
   useEffect(() => {
-    if (!inView) return;
-
-    if (reduceMotion) {
-      setDisplay(value);
-      return;
-    }
+    // Reduced-motion renders `value` directly during render (see below) —
+    // no animation, so no effect needed for that case.
+    if (!inView || reduceMotion) return;
 
     const controls = animate(0, value, {
       duration: durationSeconds,
@@ -52,7 +49,8 @@ export function Counter({
     return () => controls.stop();
   }, [inView, value, reduceMotion, durationSeconds]);
 
-  const formatted = display.toLocaleString("en-US", {
+  const shown = reduceMotion ? value : display;
+  const formatted = shown.toLocaleString("en-US", {
     minimumFractionDigits: decimals,
     maximumFractionDigits: decimals,
   });

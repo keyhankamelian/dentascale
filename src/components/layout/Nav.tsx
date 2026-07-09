@@ -20,11 +20,16 @@ export function Nav() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  // Close the mobile menu on route change and lock body scroll while open.
-  useEffect(() => {
+  // Close the mobile menu on route change. Adjusting state during render
+  // (rather than in an effect) avoids an extra render pass — see
+  // https://react.dev/learn/you-might-not-need-an-effect
+  const [prevPathname, setPrevPathname] = useState(pathname);
+  if (pathname !== prevPathname) {
+    setPrevPathname(pathname);
     setOpen(false);
-  }, [pathname]);
+  }
 
+  // Lock body scroll while the mobile menu is open.
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
