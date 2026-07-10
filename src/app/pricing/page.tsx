@@ -39,7 +39,7 @@ const plans = [
       "Lead-to-Chair System included",
     ],
     featured: true,
-    badge: "Most popular",
+    badge: "Recommended",
   },
   {
     name: "Three-platform",
@@ -115,6 +115,11 @@ const faqs: FAQItem[] = [
       "None. Every plan is month-to-month. We earn the next month with results, not with a contract that traps you. Cancel any time with no penalty.",
   },
   {
+    question: "Do you work with other practices in my area?",
+    answer:
+      "No. We only take on one practice per market — so if we're running your campaigns, we're not also running a competing practice down the street. If we already have a client in your market, we'll tell you upfront.",
+  },
+  {
     question: "Who pays for the ad spend?",
     answer:
       "You do — directly to Meta, TikTok, and Google. We never touch your ad budget. The monthly price above is purely for our management, strategy, and creative work. We recommend a minimum of $500/mo in ad spend per platform.",
@@ -128,6 +133,11 @@ const faqs: FAQItem[] = [
     question: "What's the Lead-to-Chair System, and does it cost extra?",
     answer:
       "It's our proprietary playbook for turning leads into booked, show-up patients — scripts, templates, follow-up cadences, and a no-show checklist. It's included free with every plan, at no additional cost.",
+  },
+  {
+    question: "Will you create my content for me?",
+    answer:
+      "We don't film or produce content for you, but we give you winning examples and tell you exactly what to shoot — shot lists, hooks, and angles proven to convert. What we do take care of is every word of your ad copy.",
   },
 ];
 

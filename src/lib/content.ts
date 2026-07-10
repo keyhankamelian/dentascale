@@ -37,26 +37,26 @@ export const caseStudies: CaseStudy[] = [
     industry: "Orthodontics",
     channels: "Facebook & Instagram",
     timeframe: "May 2026 · 30 days",
-    heading: "Orthodontic practice — 30-day campaign",
+    heading: "Dr. Tania Ohebsion — orthodontic practice, 30-day campaign",
     featured: true,
     stats: [
       { value: 42, label: "Qualified leads" },
-      { value: 7.38, label: "Cost per lead", decimals: 2, prefix: "$" },
+      { value: 9.31, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 391, label: "Total ad spend", prefix: "$" },
       { value: 74, label: "New IG followers", prefix: "+" },
     ],
     comparisons: [
       {
         metric: "Cost per lead",
-        yours: "$7.38",
+        yours: "$9.31",
         average: "$76",
-        badge: "90% below avg",
+        badge: "88% below avg",
       },
       {
         metric: "Leads per $1k spend",
         yours: "107",
         average: "29",
-        badge: "3.6x higher",
+        badge: "3.7x higher",
       },
     ],
   },
@@ -97,7 +97,7 @@ export const caseStudies: CaseStudy[] = [
 /** The primary study used on the Home-page teaser. */
 export const featuredCaseStudy = caseStudies[0];
 
-/** "Why both paths fail" copy — agencies vs. AI tools. Used on the About page. */
+/** "Why practices stay stuck" copy — agencies, AI tools, or no digital marketing at all. Used on the About page. */
 export const bothPathsFail = {
   agencies: {
     title: "Traditional agencies",
@@ -106,5 +106,9 @@ export const bothPathsFail = {
   ai: {
     title: "AI tools",
     body: "Promise to replace a marketing team for a low monthly fee, then hand you generic content and leads with no strategy behind it. There's no one who understands dental, no one to optimize your spend, and no system to turn a lead into someone sitting in your chair.",
+  },
+  noMarketing: {
+    title: "No digital marketing at all",
+    body: "Some practices have never run a paid ad or built a social following. Growth depends entirely on walk-ins and word-of-mouth, while patients actively searching online never see them — and the practices already advertising capture that demand instead.",
   },
 } as const;

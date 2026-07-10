@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Flame, Tag, Bot, ArrowRight, type LucideIcon } from "lucide-react";
+import { Flame, Tag, Bot, Radio, ArrowRight, type LucideIcon } from "lucide-react";
 import { Section, SectionHeading, SectionLabel } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
@@ -29,11 +29,17 @@ const pains: Pain[] = [
     title: "Let down by AI",
     body: "Tried an AI tool — got generic content that didn't bring in real patients.",
   },
+  {
+    icon: Radio,
+    title: "Flying blind",
+    body: "Relied on billboards, flyers, or word-of-mouth — with no way to measure results or scale what's working.",
+  },
 ];
 
 const equations = [
   { left: "Month-to-month", right: "our results earn the next month" },
   { left: "Small roster", right: "your practice gets our full attention" },
+  { left: "One practice per market", right: "we never work with your competitors" },
   { left: "Lean operation", right: "better pricing, no bloated overhead" },
   { left: "Real people", right: "always reachable, never a ticket system" },
 ];
@@ -80,10 +86,10 @@ export default function HomePage() {
         <SectionHeading
           label="Sound Familiar?"
           title="You've probably been here before"
-          subtitle="Three reasons dental practices stay stuck — and how we're different."
+          subtitle="Four reasons dental practices stay stuck — and how we're different."
         />
 
-        <ul className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+        <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {pains.map((pain, i) => {
             const Icon = pain.icon;
             return (
