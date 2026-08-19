@@ -89,7 +89,7 @@ body {
   }
 
   @page {
-    margin: 12mm;
+    margin: 11mm;
   }
 
   /* The sheet paints its own white ground; keep the app's dark body from

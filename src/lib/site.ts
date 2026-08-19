@@ -4,6 +4,8 @@ export const siteConfig = {
   name: "DentaScale",
   tagline: "Authentic branding and paid social for dental practices.",
   email: "hello@dentascale.net",
+  /** Keyhan's direct address, used on outbound proposals so replies come to him. */
+  founderEmail: "keyhan@dentascale.net",
   phone: "310-694-7875",
   /** Formspree endpoint the lead form submits to (leads land in Formspree). */
   formEndpoint: "https://formspree.io/f/xrewojbg",

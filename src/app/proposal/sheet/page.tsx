@@ -28,7 +28,15 @@ function clean(value: string | undefined): string | undefined {
 const handled = [
   {
     title: "Brand & creative direction",
-    body: "We tell you what to film and how to frame it, then write every word of the copy.",
+    body: "We direct new creative, build on content you already have including before-and-afters, and write every word of copy.",
+  },
+  {
+    title: "An offer worth booking",
+    body: "A limited-time offer that works financially and gives patients a reason to book now.",
+  },
+  {
+    title: "Your reviews, put to work",
+    body: "Your best social proof, in front of the people deciding whether to trust you.",
   },
   {
     title: "Paid campaigns",
@@ -46,7 +54,7 @@ const handled = [
 
 const steps = [
   {
-    title: "A free Growth Plan",
+    title: "A free Growth Plan session",
     body: "Thirty minutes plus a written plan: what other practices in your area are advertising right now and where the openings are. Yours either way.",
   },
   {
@@ -105,7 +113,7 @@ export default async function ProposalSheetPage({
         <div className="text-right text-[11.5px] leading-snug text-neutral-600">
           <p className="font-medium text-neutral-900">Keyhan Kamelian, Founder</p>
           <p>{siteConfig.phone}</p>
-          <p>{siteConfig.email}</p>
+          <p>{siteConfig.founderEmail}</p>
           <p>dentascale.net</p>
         </div>
       </header>
@@ -124,7 +132,7 @@ export default async function ProposalSheetPage({
         <p className="mt-2 max-w-[72ch] text-[13.5px] text-neutral-700">
           We help dental and orthodontic practices bring in new patients
           predictably, with creative that looks like your practice and campaigns
-          you can measure. Month to month, no long contract.
+          you can measure.
         </p>
       </section>
 
@@ -133,7 +141,7 @@ export default async function ProposalSheetPage({
         <h2 className="border-b border-neutral-200 pb-1.5 text-[11.5px] font-semibold uppercase tracking-[1.5px] text-neutral-500">
           What we handle
         </h2>
-        <div className="mt-3 grid grid-cols-2 gap-x-8 gap-y-3.5">
+        <div className="mt-2.5 grid grid-cols-3 gap-x-6 gap-y-3">
           {handled.map((item) => (
             <div key={item.title} className="avoid-break">
               <p className="text-[13px] font-semibold text-neutral-900">
@@ -159,7 +167,7 @@ export default async function ProposalSheetPage({
               {caseStudies.map((study) => (
                 <th
                   key={study.slug}
-                  className="py-1.5 text-right text-[12.5px] font-semibold text-neutral-900"
+                  className="py-1 text-right text-[12.5px] font-semibold text-neutral-900"
                 >
                   {study.industry}
                   <span className="block text-[11px] font-normal text-neutral-500">
@@ -173,13 +181,13 @@ export default async function ProposalSheetPage({
           <tbody>
             {rowLabels.map((label) => (
               <tr key={label} className="border-t border-neutral-200">
-                <td className="py-1.5 text-neutral-600">{label}</td>
+                <td className="py-1 text-neutral-600">{label}</td>
                 {caseStudies.map((study) => {
                   const stat = study.stats.find((s) => s.label === label);
                   return (
                     <td
                       key={study.slug}
-                      className="py-1.5 text-right font-semibold tabular-nums text-neutral-900"
+                      className="py-1 text-right font-semibold tabular-nums text-neutral-900"
                     >
                       {stat
                         ? formatStat(
@@ -203,7 +211,7 @@ export default async function ProposalSheetPage({
       </section>
 
       {/* Where we'd start — the emphasis of the whole sheet */}
-      <section className="avoid-break mt-5 rounded-lg border-2 border-violet-700 bg-violet-50 px-6 py-5">
+      <section className="avoid-break mt-4 rounded-lg border-2 border-violet-700 bg-violet-50 px-5 py-4">
         <p className="text-[11.5px] font-semibold uppercase tracking-[1.5px] text-violet-700">
           Where we&apos;d start
         </p>
@@ -218,15 +226,21 @@ export default async function ProposalSheetPage({
             One platform, managed end to end
           </p>
         </div>
-        <p className="mt-2.5 max-w-[68ch] text-[12.5px] text-neutral-700">
+        <p className="mt-2 max-w-[70ch] text-[12.5px] text-neutral-700">
           Plus <strong className="font-semibold">$500 to $1,000 per month</strong>{" "}
           in ad spend to start, paid directly to the platform. We never touch
           your budget. That is the whole cost, month to month, cancel any time.
         </p>
-        <p className="mt-2 max-w-[68ch] text-[12.5px] text-neutral-600">
-          Once it&apos;s working and you want more reach, we add a second
-          platform ($2,000/mo) or a third ($3,000/mo). No need to decide that
-          now.
+        <p className="mt-1.5 max-w-[70ch] text-[12.5px] font-medium text-violet-900">
+          Your first month also includes a social media growth plan at no
+          charge, to build your following and engagement while the ads run.
+        </p>
+        <p className="mt-1.5 max-w-[74ch] text-[12.5px] text-neutral-600">
+          Want more later? Raise your ad budget and you get more results while{" "}
+          <strong className="font-semibold text-neutral-800">
+            our fee stays the same
+          </strong>
+          . Or add a platform: $2,000/mo for two, $3,000/mo for three.
         </p>
       </section>
 
@@ -257,15 +271,16 @@ export default async function ProposalSheetPage({
       {/* Close */}
       <section className="avoid-break mt-5 border-t-2 border-neutral-900 pt-4">
         <p className="text-[14px] font-semibold text-neutral-900">
-          Want your free Growth Plan?
+          Want your free Growth Plan session?
         </p>
-        <p className="mt-1 max-w-[68ch] text-[12.5px] text-neutral-700">
-          Reply to the email this came with, or call me directly and I&apos;ll
-          put it together for{" "}
+        <p className="mt-1 max-w-[70ch] text-[12.5px] text-neutral-700">
+          Reply to this email, send me a text, or give me a call. I&apos;ll send
+          a link so you can pick a time that suits you, and we&apos;ll spend 30
+          minutes going through everything for{" "}
           {practice ? practice : "your practice"}. No obligation either way.
         </p>
         <p className="mt-2.5 text-[13px] font-medium text-neutral-900">
-          {siteConfig.phone} · {siteConfig.email} · dentascale.net
+          {siteConfig.phone} · {siteConfig.founderEmail} · dentascale.net
         </p>
       </section>
     </div>
