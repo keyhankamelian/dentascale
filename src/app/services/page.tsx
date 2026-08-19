@@ -24,7 +24,7 @@ const services: Service[] = [
   {
     icon: Target,
     title: "Paid social campaigns",
-    body: "We design, launch, and manage paid campaigns on Meta, TikTok, and Google built specifically for dental practices. From audience targeting to offer strategy to daily optimization, we focus on one thing: qualified patients who actually want to book. You approve the direction; we handle the buying, testing, and scaling.",
+    body: "We design, launch, and manage paid campaigns on Meta, TikTok, and Google built specifically for dental practices. From audience targeting to offer strategy to daily optimization, we focus on one thing: patients who actually want to book. You approve the direction; we handle the buying, testing, and scaling.",
   },
   {
     icon: TrendingUp,

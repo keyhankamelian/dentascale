@@ -59,7 +59,7 @@ const steps = [
   },
   {
     title: "Week one, we build",
-    body: "Ad account, tracking, and campaigns set up properly. We can launch with content you already have.",
+    body: "Ad account, tracking, and campaigns set up properly. We shoot your content, or launch with what you already have.",
   },
   {
     title: "Launch and optimize",
@@ -67,7 +67,7 @@ const steps = [
   },
   {
     title: "25 leads, or month two is free",
-    body: "25 qualified leads in your first month at the recommended ad budget. Miss it and you don't pay for month two. Qualified means someone in your area who gives us their details asking about a treatment you offer.",
+    body: "At least 25 leads in your first month at the recommended ad budget. Miss it and month two is on us, you only cover ad spend. A lead is someone who gives us their contact details through your campaign.",
   },
 ];
 
@@ -89,7 +89,7 @@ export default async function ProposalSheetPage({
   const preparedFor = [doctor, practice].filter(Boolean).join(" · ");
 
   const rowLabels = [
-    "Qualified leads",
+    "Leads",
     "Cost per lead",
     "Total ad spend",
     "Revenue generated",
@@ -231,9 +231,10 @@ export default async function ProposalSheetPage({
           in ad spend to start, paid directly to the platform. We never touch
           your budget. That is the whole cost, month to month, cancel any time.
         </p>
-        <p className="mt-1.5 max-w-[70ch] text-[12.5px] font-medium text-violet-900">
-          Your first month also includes a social media growth plan at no
-          charge, to build your following and engagement while the ads run.
+        <p className="mt-1.5 max-w-[74ch] text-[12.5px] font-medium text-violet-900">
+          Your first month includes a free content shoot, normally $500, plus a
+          social media growth plan at no charge. No production team or spare
+          afternoon needed.
         </p>
         <p className="mt-1.5 max-w-[74ch] text-[12.5px] text-neutral-600">
           Want more later? Raise your ad budget and you get more results while{" "}

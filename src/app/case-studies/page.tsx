@@ -11,7 +11,7 @@ import { caseStudies } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Real results from real dental practices. Orthodontic and general dentistry campaigns delivering qualified leads at a fraction of the industry-average cost per lead.",
+    "Real results from real dental practices. Orthodontic and general dentistry campaigns delivering leads at a fraction of the industry-average cost per lead.",
 };
 
 export default function CaseStudiesPage() {

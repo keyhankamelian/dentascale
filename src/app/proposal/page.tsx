@@ -78,7 +78,7 @@ const steps = [
   },
   {
     title: "Week one: we build",
-    body: "Ad accounts, tracking, and campaign structure set up properly. We direct your first round of creative and write the copy. We can launch with content you already have.",
+    body: "Ad accounts, tracking, and campaign structure set up properly. We shoot your first round of content free, direct the creative, and write the copy. If you'd rather, we can launch with content you already have.",
   },
   {
     title: "Weeks two to four: launch and optimize",
@@ -86,7 +86,7 @@ const steps = [
   },
   {
     title: "25 leads, or month two is free",
-    body: "We commit to 25 qualified leads in your first month at the recommended ad budget. If we miss it, you don't pay for month two. A qualified lead means someone in your area who gives us their contact details asking about a treatment you offer.",
+    body: "We commit to at least 25 leads in your first month at the recommended ad budget. If we miss it, month two is on us and you only cover your ad spend. A lead is someone who gives us their contact details through your campaign.",
   },
 ];
 
@@ -330,11 +330,14 @@ export default async function ProposalPage({
               </div>
             </dl>
 
-            <p className="mt-6 border-t border-border-subtle pt-5 text-[13px] leading-relaxed text-text-tertiary">
+            <p className="mt-6 border-t border-border-subtle pt-5 text-[13px] leading-relaxed text-text-secondary">
+              Your first month includes a content shoot, normally $500, and a
+              social media growth plan at no charge.
+            </p>
+            <p className="mt-3 text-[13px] leading-relaxed text-text-tertiary">
               We recommend $500 to $1,000 per month in ad spend per platform to
               start. Optional add-ons include a website or landing page build,
-              local SEO, lead reach-out, and a content shoot if you&apos;d
-              rather not film it yourself.
+              local SEO, and lead reach-out.
             </p>
           </Card>
         </Reveal>

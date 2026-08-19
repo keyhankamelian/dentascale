@@ -43,7 +43,7 @@ export const caseStudies: CaseStudy[] = [
     heading: "Dr. Tania Ohebsion's orthodontic practice, 30-day campaign",
     featured: true,
     stats: [
-      { value: 42, label: "Qualified leads" },
+      { value: 42, label: "Leads" },
       { value: 9.31, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 391, label: "Total ad spend", prefix: "$" },
       { value: 9000, label: "Revenue generated", prefix: "$", suffix: "+" },
@@ -72,7 +72,7 @@ export const caseStudies: CaseStudy[] = [
     location: "Los Angeles, CA",
     heading: "General dentistry practice, 30-day campaign",
     stats: [
-      { value: 29, label: "Qualified leads" },
+      { value: 29, label: "Leads" },
       { value: 20.69, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 600, label: "Total ad spend", prefix: "$" },
       { value: 6000, label: "Revenue generated", prefix: "$", suffix: "+" },
