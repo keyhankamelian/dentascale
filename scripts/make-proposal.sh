@@ -21,7 +21,7 @@ if [[ ! -x "$CHROME" ]]; then
   exit 1
 fi
 
-if ! curl -sf -o /dev/null "http://localhost:$PORT/proposal"; then
+if ! curl -sf -o /dev/null "http://localhost:$PORT/proposal/sheet"; then
   echo "No dev server on port $PORT. Start one with: npm run dev" >&2
   exit 1
 fi
@@ -35,7 +35,7 @@ encode() {
   fi
 }
 
-URL="http://localhost:$PORT/proposal"
+URL="http://localhost:$PORT/proposal/sheet"
 QUERY=""
 [[ -n "$DOCTOR" ]] && QUERY="doctor=$(encode "$DOCTOR")"
 [[ -n "$PRACTICE" ]] && QUERY="${QUERY:+$QUERY&}practice=$(encode "$PRACTICE")"

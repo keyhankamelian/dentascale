@@ -67,9 +67,10 @@ body {
 }
 
 /* ----------------------------------------------------------------------------
-   Print / PDF. Used when exporting the proposal page to a PDF to send out:
-   keeps the dark brand palette (browsers drop backgrounds otherwise), strips
-   site navigation, and stops sections breaking awkwardly across pages.
+   Print / PDF. The document we actually send out is the light one-sheet at
+   /proposal/sheet, which carries its own layout; these rules just strip site
+   chrome, force colours to render, and stop animations being captured
+   mid-flight.
 ---------------------------------------------------------------------------- */
 @media print {
   *,
@@ -79,74 +80,23 @@ body {
     print-color-adjust: exact;
   }
 
-  /* Site chrome has no meaning in a PDF. */
-  header,
-  footer,
+  /* Site chrome has no meaning in a PDF. Scoped to body's own children so the
+     one-sheet's letterhead <header> is not swept up with the site nav. */
+  body > header,
+  body > footer,
   [data-print-hide] {
     display: none !important;
   }
 
   @page {
-    margin: 10mm;
+    margin: 12mm;
   }
 
-  /* The on-screen layout breathes a lot; a mailed proposal should not run to
-     seven pages. Tighten the vertical rhythm and step the type down a notch. */
-  html {
-    font-size: 13px;
-  }
-
-  /* Sections must be allowed to flow across a page boundary. Forcing
-     break-inside: avoid here strands half-empty pages and inflates the
-     page count; the individual cards below are what actually need it. */
-  section {
-    padding-block: 18px !important;
-  }
-
-  .container-page {
-    max-width: 100% !important;
-    padding-inline: 14px !important;
-  }
-
-  /* A letter page is ~740px of usable width, just under Tailwind's `md`
-     breakpoint, so responsive grids would otherwise collapse to a single
-     column and stretch the PDF over many more pages. Force them back. */
-  [class*="md:grid-cols-3"],
-  [class*="sm:grid-cols-3"] {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  }
-
-  [class*="md:grid-cols-2"],
-  [class*="sm:grid-cols-2"] {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-
-  /* Hero blocks carry a lot of screen padding that reads as dead space here. */
-  section > div.container-page.relative {
-    padding-block: 24px !important;
-  }
-
-  h1 {
-    font-size: 30px !important;
-    line-height: 1.15 !important;
-  }
-
-  h2 {
-    font-size: 21px !important;
-    line-height: 1.2 !important;
-  }
-
-  article,
-  blockquote {
-    break-inside: avoid;
-  }
-
-  /* Cards sit tighter on paper than they do on screen. */
-  article,
-  ol > li > div,
-  [class*="p-7"],
-  [class*="p-8"] {
-    padding: 14px !important;
+  /* The sheet paints its own white ground; keep the app's dark body from
+     bleeding into the page edges. */
+  html,
+  body {
+    background: #ffffff !important;
   }
 
   /* Framer Motion server-renders reveal transforms inline; without this the
@@ -156,5 +106,10 @@ body {
     transform: none !important;
     animation: none !important;
     transition: none !important;
+  }
+
+  [data-sheet] section,
+  [data-sheet] .avoid-break {
+    break-inside: avoid;
   }
 }
