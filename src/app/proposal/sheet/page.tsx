@@ -27,8 +27,8 @@ function clean(value: string | undefined): string | undefined {
 
 const handled = [
   {
-    title: "Brand & creative direction",
-    body: "We direct new creative, build on content you already have including before-and-afters, and write every word of copy.",
+    title: "Ad content & visuals",
+    body: "We shoot and direct new content, build on what you already have including before-and-afters, and write every word of copy.",
   },
   {
     title: "An offer worth booking",
@@ -54,7 +54,7 @@ const handled = [
 
 const steps = [
   {
-    title: "A free Growth Plan session",
+    title: "Your Growth Plan, on us",
     body: "Thirty minutes plus a written plan: what other practices in your area are advertising right now and where the openings are. Yours either way.",
   },
   {
@@ -67,7 +67,7 @@ const steps = [
   },
   {
     title: "25 leads, or month two is free",
-    body: "At least 25 leads in your first month at the recommended ad budget. Miss it and month two is on us, you only cover ad spend. A lead is someone who gives us their contact details through your campaign.",
+    body: "At least 25 leads in your first month at the recommended ad budget. Miss it and month two is on us, you only cover ad spend. We use proven targeting and offer strategy to bring in the highest quality leads we can, and the Lead-to-Chair System is there to help your front desk book them.",
   },
 ];
 
@@ -131,8 +131,8 @@ export default async function ProposalSheetPage({
         </h1>
         <p className="mt-2 max-w-[72ch] text-[13.5px] text-neutral-700">
           We help dental and orthodontic practices bring in new patients
-          predictably, with creative that looks like your practice and campaigns
-          you can measure.
+          predictably, with ad content and visuals that look like your practice
+          and social media ad campaigns you can measure.
         </p>
       </section>
 
@@ -223,7 +223,7 @@ export default async function ProposalSheetPage({
             </span>
           </p>
           <p className="text-[14px] font-medium text-neutral-700">
-            One platform, managed end to end
+            Meta ads, managed end to end
           </p>
         </div>
         <p className="mt-2 max-w-[70ch] text-[12.5px] text-neutral-700">
@@ -232,9 +232,9 @@ export default async function ProposalSheetPage({
           your budget. That is the whole cost, month to month, cancel any time.
         </p>
         <p className="mt-1.5 max-w-[74ch] text-[12.5px] font-medium text-violet-900">
-          Your first month includes a free content shoot, normally $500, plus a
-          social media growth plan at no charge. No production team or spare
-          afternoon needed.
+          Your first month includes a content shoot on us, normally $500, plus a
+          social media growth plan at no charge. We come to you and handle the
+          whole thing.
         </p>
         <p className="mt-1.5 max-w-[74ch] text-[12.5px] text-neutral-600">
           Want more later? Raise your ad budget and you get more results while{" "}
@@ -272,7 +272,7 @@ export default async function ProposalSheetPage({
       {/* Close */}
       <section className="avoid-break mt-5 border-t-2 border-neutral-900 pt-4">
         <p className="text-[14px] font-semibold text-neutral-900">
-          Want your free Growth Plan session?
+          Let&apos;s start with a conversation
         </p>
         <p className="mt-1 max-w-[74ch] text-[12.5px] text-neutral-700">
           Pick a time at{" "}

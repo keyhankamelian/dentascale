@@ -51,8 +51,8 @@ type Pillar = { icon: LucideIcon; title: string; body: string };
 const pillars: Pillar[] = [
   {
     icon: PenLine,
-    title: "Brand & creative direction",
-    body: "We direct the creative so your ads look like your practice, not a stock photo library. Shot lists, hooks, angles, and every word of the copy.",
+    title: "Ad content & visuals",
+    body: "We shoot and direct your content so your ads look like your practice, not a stock photo library. Shot lists, hooks, angles, and every word of the copy.",
   },
   {
     icon: Target,
@@ -73,7 +73,7 @@ const pillars: Pillar[] = [
 
 const steps = [
   {
-    title: "A free Growth Plan",
+    title: "Your Growth Plan, on us",
     body: "A 30-minute call plus a written plan: what other practices in your area are running right now, where the openings are, and what we'd do first. Yours to keep whether or not we work together.",
   },
   {
@@ -86,7 +86,7 @@ const steps = [
   },
   {
     title: "25 leads, or month two is free",
-    body: "We commit to at least 25 leads in your first month at the recommended ad budget. If we miss it, month two is on us and you only cover your ad spend. A lead is someone who gives us their contact details through your campaign.",
+    body: "We commit to at least 25 leads in your first month at the recommended ad budget. If we miss it, month two is on us and you only cover your ad spend. We use proven targeting and offer strategy to bring in the highest quality leads we can, and the Lead-to-Chair System is there to help your front desk book them.",
   },
 ];
 
@@ -120,7 +120,7 @@ export default async function ProposalPage({
       <PageHero
         label={preparedFor ? `Prepared for ${preparedFor}` : "Growth Proposal"}
         title="A predictable way to fill your schedule"
-        subtitle="Paid social and brand creative for independent dental and orthodontic practices. Month to month, with the numbers shown to you every week."
+        subtitle="Ad content, visuals, and social media ad campaigns for independent dental and orthodontic practices. Month to month, with the numbers shown to you every week."
       />
 
       {/* The problem */}
@@ -347,7 +347,7 @@ export default async function ProposalPage({
       <Section bg="primary" id="book" className="scroll-mt-20">
         <Reveal className="mx-auto flex max-w-xl flex-col items-center gap-5 text-center">
           <h2 className="text-3xl font-light leading-tight text-white md:text-4xl">
-            Book your free Growth Plan session
+            Let&apos;s start with a conversation
           </h2>
           <p className="text-[15px] leading-relaxed text-text-muted">
             Pick a time below and we&apos;ll spend 30 minutes going through
