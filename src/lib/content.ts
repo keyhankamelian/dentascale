@@ -23,6 +23,8 @@ export type CaseStudy = {
   industry: string;
   channels: string;
   timeframe: string;
+  /** Optional market the practice operates in, e.g. "Los Angeles, CA". */
+  location?: string;
   /** Short heading for the study. */
   heading: string;
   featured?: boolean;
@@ -37,12 +39,13 @@ export const caseStudies: CaseStudy[] = [
     industry: "Orthodontics",
     channels: "Facebook & Instagram",
     timeframe: "May 2026 · 30 days",
-    heading: "Dr. Tania Ohebsion — orthodontic practice, 30-day campaign",
+    heading: "Dr. Tania Ohebsion's orthodontic practice, 30-day campaign",
     featured: true,
     stats: [
       { value: 42, label: "Qualified leads" },
       { value: 9.31, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 391, label: "Total ad spend", prefix: "$" },
+      { value: 9000, label: "Revenue generated", prefix: "$", suffix: "+" },
       { value: 74, label: "New IG followers", prefix: "+" },
     ],
     comparisons: [
@@ -65,11 +68,13 @@ export const caseStudies: CaseStudy[] = [
     industry: "General dentistry",
     channels: "Facebook & Instagram",
     timeframe: "April 2026 · 30 days",
-    heading: "General dentistry practice — 30-day campaign",
+    location: "Los Angeles, CA",
+    heading: "General dentistry practice, 30-day campaign",
     stats: [
       { value: 29, label: "Qualified leads" },
       { value: 20.69, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 600, label: "Total ad spend", prefix: "$" },
+      { value: 6000, label: "Revenue generated", prefix: "$", suffix: "+" },
       { value: 140, label: "New IG followers", prefix: "+" },
     ],
     comparisons: [
@@ -89,7 +94,7 @@ export const caseStudies: CaseStudy[] = [
     testimonial: {
       quote:
         "Working with DentaScale has changed our business's trajectory. We went from the stress of an empty calendar to getting so many patients that we can't keep up, and we're now thinking of opening a second location.",
-      attribution: "— DentaScale client, general dentistry practice",
+      attribution: "DentaScale client, general dentistry practice",
     },
   },
 ];
@@ -101,14 +106,14 @@ export const featuredCaseStudy = caseStudies[0];
 export const bothPathsFail = {
   agencies: {
     title: "Traditional agencies",
-    body: "Charge $3,000–5,000 a month, lock you into long contracts, and spread their attention across dozens of accounts in every industry. You become a line item, your campaigns get generic, and the leads — when they come — rarely turn into booked patients.",
+    body: "Lock you into long contracts and spread their attention across dozens of accounts in every industry. Your campaigns come off the same template as everyone else's, your brand gets flattened into stock imagery, and the leads, when they come, rarely turn into booked patients.",
   },
   ai: {
     title: "AI tools",
-    body: "Promise to replace a marketing team for a low monthly fee, then hand you generic content and leads with no strategy behind it. There's no one who understands dental, no one to optimize your spend, and no system to turn a lead into someone sitting in your chair.",
+    body: "Promise to replace a marketing team for a low monthly fee, then hand you generic content with no strategy behind it. There's no one who understands dental, no one shaping how your practice actually looks online, and no system to turn a lead into someone sitting in your chair.",
   },
   noMarketing: {
-    title: "No digital marketing at all",
-    body: "Some practices have never run a paid ad or built a social following. Growth depends entirely on walk-ins and word-of-mouth, while patients actively searching online never see them — and the practices already advertising capture that demand instead.",
+    title: "Referrals only",
+    body: "Growth depends entirely on word-of-mouth and walk-ins, which works until it doesn't. Patients searching online find nothing that reflects the quality of the work, and the practices already advertising capture that demand instead.",
   },
 } as const;

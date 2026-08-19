@@ -2,13 +2,9 @@
 
 export const siteConfig = {
   name: "DentaScale",
-  tagline: "Paid ads & lead generation for dental practices.",
+  tagline: "Authentic branding and paid social for dental practices.",
   email: "hello@dentascale.net",
-  /** On file — intentionally NOT surfaced as a call CTA. Leads reach us via the form/email. */
   phone: "310-694-7875",
-  social: {
-    instagram: "https://instagram.com/dentascale",
-  },
   /** Formspree endpoint the lead form submits to (leads land in Formspree). */
   formEndpoint: "https://formspree.io/f/xrewojbg",
   /**

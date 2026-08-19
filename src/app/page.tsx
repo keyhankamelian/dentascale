@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Flame, Tag, Bot, Radio, ArrowRight, type LucideIcon } from "lucide-react";
+import { Waves, Search, BarChart3, Gauge, ArrowRight, type LucideIcon } from "lucide-react";
 import { Section, SectionHeading, SectionLabel } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
@@ -15,33 +15,35 @@ type Pain = { icon: LucideIcon; title: string; body: string };
 
 const pains: Pain[] = [
   {
-    icon: Flame,
-    title: "Burned before",
-    body: "Paid an agency thousands, signed a long contract, got leads who never booked.",
+    icon: Waves,
+    title: "Feast or famine",
+    body: "Some months the schedule is full, some months it isn't, and nothing you did explains the difference.",
   },
   {
-    icon: Tag,
-    title: "Priced out",
-    body: "Saw $3,000–5,000/month agency pricing and quietly closed the tab.",
+    icon: Search,
+    title: "Invisible where it counts",
+    body: "Patients look you up before they book. What they find online doesn't reflect the quality of your work.",
   },
   {
-    icon: Bot,
-    title: "Let down by AI",
-    body: "Tried an AI tool — got generic content that didn't bring in real patients.",
+    icon: BarChart3,
+    title: "Marketing you can't measure",
+    body: "Money goes out to billboards, mailers, and sponsorships, with no way to tell what actually brought anyone in.",
   },
   {
-    icon: Radio,
-    title: "Flying blind",
-    body: "Relied on billboards, flyers, or word-of-mouth — with no way to measure results or scale what's working.",
+    icon: Gauge,
+    title: "No way to scale",
+    body: "Even in a good month, there's no lever to pull when you want more patients in the chair next month.",
   },
 ];
 
 const equations = [
   { left: "Month-to-month", right: "our results earn the next month" },
   { left: "Small roster", right: "your practice gets our full attention" },
-  { left: "One practice per market", right: "we never work with your competitors" },
-  { left: "Lean operation", right: "better pricing, no bloated overhead" },
-  { left: "Real people", right: "always reachable, never a ticket system" },
+  { left: "Lean operation", right: "changes ship the same day, not after a meeting" },
+  {
+    left: "Real people",
+    right: "always reachable, never a ticket system or an AI chatbot",
+  },
 ];
 
 export default function HomePage() {
@@ -60,22 +62,22 @@ export default function HomePage() {
 
           <Reveal delay={0.05}>
             <h1 className="max-w-3xl text-4xl font-extralight leading-[1.1] text-white sm:text-5xl md:text-[56px]">
-              Tired of overpriced agencies and AI tools that{" "}
-              <span className="text-accent-light">don&apos;t deliver?</span>
+              Referrals are luck.{" "}
+              <span className="text-accent-light">Growth should be a system.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-[15px] leading-relaxed text-text-secondary md:text-base">
-              There&apos;s a third option. Real dental marketing expertise,
-              powered by the right tools, at a price that finally makes sense —
-              and a system that turns your leads into booked patients.
+              We help dental and orthodontic practices build an authentic
+              online presence and run paid social campaigns that bring in new
+              patients predictably, not by chance.
             </p>
           </Reveal>
 
           <Reveal delay={0.15}>
             <Button href={siteConfig.bookingUrl} size="lg">
-              Book a free strategy call
+              Book a strategy session
             </Button>
           </Reveal>
         </div>
@@ -85,8 +87,8 @@ export default function HomePage() {
       <Section bg="secondary">
         <SectionHeading
           label="Sound Familiar?"
-          title="You've probably been here before"
-          subtitle="Four reasons dental practices stay stuck — and how we're different."
+          title="The ceiling most practices hit"
+          subtitle="Four reasons growth stalls, and what changes when you have a system."
         />
 
         <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -116,7 +118,7 @@ export default function HomePage() {
         <SectionHeading
           label="Case Study"
           title="Real results from a real practice"
-          subtitle="30 days of campaigns for an orthodontic practice — May 2026."
+          subtitle="30 days of campaigns for an orthodontic practice, May 2026."
         />
 
         <div className="mx-auto mt-12 max-w-3xl">

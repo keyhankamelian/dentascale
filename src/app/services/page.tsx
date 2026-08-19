@@ -10,31 +10,31 @@ import { LeadFormSection } from "@/components/sections/LeadFormSection";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Lead generation campaigns on Meta, TikTok & Google, social media growth, creative direction, ad copy, and weekly reporting — done for you, start to finish.",
+    "Brand and creative direction, paid social campaigns on Meta, TikTok & Google, social media growth, and weekly reporting. Done for you, start to finish.",
 };
 
 type Service = { icon: LucideIcon; title: string; body: string };
 
 const services: Service[] = [
   {
+    icon: PenLine,
+    title: "Brand & creative direction",
+    body: "Your ads should look like your practice, not a stock photo library. We direct the creative from the ground up: what to film, how to frame it, which hooks and angles land. The result is content that represents you authentically and still stops the scroll. We write every word of the copy that runs with it.",
+  },
+  {
     icon: Target,
-    title: "Lead generation campaigns",
+    title: "Paid social campaigns",
     body: "We design, launch, and manage paid campaigns on Meta, TikTok, and Google built specifically for dental practices. From audience targeting to offer strategy to daily optimization, we focus on one thing: qualified patients who actually want to book. You approve the direction; we handle the buying, testing, and scaling.",
   },
   {
     icon: TrendingUp,
     title: "Social media growth",
-    body: "Beyond direct-response ads, we run engagement campaigns that grow your following and keep your practice visible in the community. More reach means more trust — and more patients who already feel like they know you before they ever walk in the door.",
-  },
-  {
-    icon: PenLine,
-    title: "Creative direction & ad copy",
-    body: "You don't need a production team. We tell you exactly what to film — shot lists, hooks, and angles proven to convert — and we write every word of ad copy ourselves. You get scroll-stopping creative without the agency-sized creative bill.",
+    body: "Beyond direct-response ads, we run engagement campaigns that grow your following and keep your practice visible in the community. More reach means more trust, and more patients who already feel like they know you before they ever walk in the door.",
   },
   {
     icon: BarChart3,
     title: "Weekly reporting",
-    body: "Every week you get a clear, plain-English breakdown of what we spent, how many leads came in, what each one cost, and what's next. No vanity metrics, no jargon — just the numbers that tell you whether your marketing is working.",
+    body: "Every week you get a clear, plain-English breakdown of what we spent, how many leads came in, what each one cost, and what's next. No vanity metrics, no jargon. Just the numbers that tell you whether your marketing is working.",
   },
 ];
 
@@ -43,8 +43,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         label="Services"
-        title="Everything your practice needs to grow"
-        subtitle="Done for you, start to finish."
+        title="Brand, creative, and campaigns: done for you"
+        subtitle="The system that turns attention into booked patients."
       />
 
       <Section bg="secondary">

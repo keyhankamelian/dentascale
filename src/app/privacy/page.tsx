@@ -40,10 +40,10 @@ export default function PrivacyPage() {
               name, practice type, phone number, email address, and location.
             </p>
             <p>
-              We also automatically collect limited technical information when
-              you browse this site — such as pages visited, referring source,
-              device/browser type, and general location — through the analytics
-              and advertising tools described below.
+              When you browse this site, the analytics and advertising tools
+              described below also collect limited technical information: pages
+              visited, referring source, device or browser type, and general
+              location.
             </p>
           </PolicySection>
 
@@ -79,10 +79,10 @@ export default function PrivacyPage() {
 
           <PolicySection title="Cookies & advertising technologies">
             <p>
-              This site uses tracking technologies — including the{" "}
+              This site uses tracking technologies, including the{" "}
               <span className="text-text-secondary">Meta (Facebook) Pixel</span>{" "}
               and <span className="text-text-secondary">Google Analytics /
-              Google Ads</span> — to measure ad performance and understand how
+              Google Ads</span>, to measure ad performance and understand how
               visitors use our site. These tools may use cookies or similar
               technologies and may share information with Meta and Google in
               accordance with their own privacy policies.

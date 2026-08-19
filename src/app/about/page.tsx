@@ -11,7 +11,7 @@ import { bothPathsFail } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Meet Keyhan Kamelian, founder of DentaScale — five years in digital marketing, now focused exclusively on growing independent dental practices.",
+    "Meet Keyhan Kamelian, founder of DentaScale. Six years in digital marketing, now focused exclusively on growing independent dental practices.",
 };
 
 export default function AboutPage() {
@@ -38,14 +38,14 @@ export default function AboutPage() {
           <Reveal delay={0.1}>
             <div className="flex flex-col gap-5">
               <h2 className="text-2xl font-light text-white">
-                Why dental — and why now
+                Why dental, and why now
               </h2>
               <p className="text-[15px] leading-relaxed text-text-secondary">
                 I&apos;m Keyhan, founder of DentaScale.
               </p>
               <p className="text-[15px] leading-relaxed text-text-secondary">
                 I&apos;ve spent six years running paid ad campaigns for small
-                and medium-sized businesses — managing budgets, writing
+                and medium-sized businesses: managing budgets, writing
                 creative, optimizing funnels, and turning ad spend into
                 measurable revenue across local service businesses, e-commerce
                 brands, and entertainment.
@@ -54,9 +54,10 @@ export default function AboutPage() {
                 Now I focus exclusively on dental. The combination of high
                 patient value, clear targeting, and an industry underserved by
                 its current options made it the natural place to go deep.
-                DentaScale is built around one principle: deliver the kind of
-                campaigns big agencies charge a fortune for, at a price that
-                actually makes sense for independent practices.
+                DentaScale is built around one principle: give every practice
+                the kind of attention and results that get lost when
+                you&apos;re one of hundreds of accounts on someone
+                else&apos;s roster.
               </p>
             </div>
           </Reveal>

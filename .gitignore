@@ -43,3 +43,6 @@ next-env.d.ts
 
 # claude code (local, per-machine settings)
 .claude/settings.local.json
+
+# generated proposal PDFs (contain prospect names)
+/proposals/

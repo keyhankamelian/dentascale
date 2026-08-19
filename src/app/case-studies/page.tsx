@@ -11,7 +11,7 @@ import { caseStudies } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Real results from real dental practices — orthodontic and general dentistry campaigns delivering qualified leads at a fraction of the industry-average cost per lead.",
+    "Real results from real dental practices. Orthodontic and general dentistry campaigns delivering qualified leads at a fraction of the industry-average cost per lead.",
 };
 
 export default function CaseStudiesPage() {
@@ -20,7 +20,7 @@ export default function CaseStudiesPage() {
       <PageHero
         label="Case Studies"
         title="Results that speak for themselves"
-        subtitle="No inflated numbers — just what we delivered, side by side with the industry average."
+        subtitle="No inflated numbers. Just what we delivered, side by side with the industry average."
       />
 
       {caseStudies.map((study, i) => (
@@ -37,7 +37,7 @@ export default function CaseStudiesPage() {
                 <h2 className="text-2xl font-light text-white md:text-3xl">
                   {study.heading}
                 </h2>
-                <dl className="mt-2 grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-3">
+                <dl className="mt-2 flex flex-wrap gap-x-10 gap-y-3 text-sm">
                   <div>
                     <dt className="text-text-tertiary">Industry</dt>
                     <dd className="text-text-secondary">{study.industry}</dd>
@@ -50,6 +50,12 @@ export default function CaseStudiesPage() {
                     <dt className="text-text-tertiary">Timeframe</dt>
                     <dd className="text-text-secondary">{study.timeframe}</dd>
                   </div>
+                  {study.location ? (
+                    <div>
+                      <dt className="text-text-tertiary">Location</dt>
+                      <dd className="text-text-secondary">{study.location}</dd>
+                    </div>
+                  ) : null}
                 </dl>
               </div>
             </Reveal>

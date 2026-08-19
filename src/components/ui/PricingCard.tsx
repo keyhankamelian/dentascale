@@ -14,6 +14,8 @@ type PricingCardProps = {
   featured?: boolean;
   badge?: string;
   ctaLabel?: string;
+  /** Set false to hide the CTA button entirely. */
+  showCta?: boolean;
 };
 
 /** A single pricing tier card with feature list and CTA. */
@@ -24,8 +26,9 @@ export function PricingCard({
   description,
   features,
   featured = false,
-  badge = "Most popular",
-  ctaLabel = "Book a free call",
+  badge,
+  ctaLabel = "Book a strategy session",
+  showCta = true,
 }: PricingCardProps) {
   return (
     <Card
@@ -34,7 +37,7 @@ export function PricingCard({
         featured ? "!border-[1.5px] !border-accent" : ""
       }`}
     >
-      {featured ? (
+      {featured && badge ? (
         <span className="absolute -top-3 left-7 rounded-full border border-accent bg-accent-bg px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-accent-light">
           {badge}
         </span>
@@ -64,13 +67,15 @@ export function PricingCard({
         ))}
       </ul>
 
-      <Button
-        href={siteConfig.bookingUrl}
-        variant={featured ? "solid" : "outline"}
-        className="mt-7 w-full"
-      >
-        {ctaLabel}
-      </Button>
+      {showCta ? (
+        <Button
+          href={siteConfig.bookingUrl}
+          variant={featured ? "solid" : "outline"}
+          className="mt-7 w-full"
+        >
+          {ctaLabel}
+        </Button>
+      ) : null}
     </Card>
   );
 }

@@ -29,7 +29,7 @@ const items: Item[] = [
     icon: Calendar,
     title: "The follow-up cadence",
     description:
-      "Exactly when to reach out — day 1, day 3, day 7 — so no lead slips through the cracks.",
+      "Exactly when to reach out (day 1, day 3, day 7) so no lead slips through the cracks.",
   },
   {
     icon: ShieldCheck,
@@ -64,8 +64,8 @@ export function LeadToChairSystem({ bg = "secondary" }: Props) {
           client our proprietary{" "}
           <span className="font-medium text-text-secondary">
             Lead-to-Chair System
-          </span>{" "}
-          — the exact playbook for turning a fresh lead into a booked, show-up
+          </span>
+          , the exact playbook for turning a fresh lead into a booked, show-up
           patient. It&apos;s the difference between paying for clicks and
           filling your schedule.
         </p>

@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
+import { MobileCtaBar } from "@/components/layout/MobileCtaBar";
 import { UtmCapture } from "@/components/UtmCapture";
 
 // Analytics IDs — set these in .env.local (see .env.example). Tags only load
@@ -22,16 +23,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "DentaScale — Paid ads & lead generation for dental practices",
-    template: "%s — DentaScale",
+    default: "DentaScale: Branding & paid social for dental practices",
+    template: "%s | DentaScale",
   },
   description:
-    "Boutique digital marketing for dental practices. Month-to-month paid ads on Meta, TikTok & Google, transparent pricing from $1,000/mo, and our Lead-to-Chair System that turns leads into booked patients.",
-  metadataBase: new URL("https://dentascale.example"),
+    "We help dental and orthodontic practices grow beyond referrals by building an authentic online presence and running paid social campaigns that bring in new patients predictably, month after month.",
+  metadataBase: new URL("https://dentascale.net"),
   openGraph: {
-    title: "DentaScale — Paid ads & lead generation for dental practices",
+    title: "DentaScale: Branding & paid social for dental practices",
     description:
-      "Month-to-month dental marketing. Transparent pricing from $1,000/mo. A system that turns leads into booked patients.",
+      "Referrals are luck. Growth should be a system. Authentic brand creative and paid social campaigns that bring dental practices new patients predictably.",
     type: "website",
   },
   other: {
@@ -104,6 +105,7 @@ ${ADS_ID ? `gtag('config', '${ADS_ID}');` : ""}`}
         <Nav />
         <main id="main">{children}</main>
         <Footer />
+        <MobileCtaBar />
       </body>
     </html>
   );

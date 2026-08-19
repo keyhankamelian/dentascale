@@ -22,7 +22,7 @@ export function CaseStudyCard({
 }: Props) {
   return (
     <Card as="article" interactive={false} className="p-6 sm:p-8">
-      <div className="grid grid-cols-2 gap-y-8 gap-x-6">
+      <div className="grid grid-cols-2 gap-y-8 gap-x-6 sm:grid-cols-3">
         {stats.map((stat, i) => (
           <Reveal key={stat.label} delay={staggerStats ? i * 0.1 : 0}>
             <StatBlock

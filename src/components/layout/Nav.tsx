@@ -72,7 +72,7 @@ export function Nav() {
         </ul>
 
         <div className="hidden md:block">
-          <Button href={siteConfig.bookingUrl}>Book a free call</Button>
+          <Button href={siteConfig.bookingUrl}>Book a strategy session</Button>
         </div>
 
         {/* Mobile menu trigger */}
@@ -154,7 +154,7 @@ export function Nav() {
                 className="mt-auto w-full"
                 onClick={() => setOpen(false)}
               >
-                Book a free call
+                Book a strategy session
               </Button>
             </motion.div>
           </>
