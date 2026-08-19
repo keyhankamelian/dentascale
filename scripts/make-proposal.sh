@@ -7,7 +7,9 @@
 #   ./scripts/make-proposal.sh                            # generic version
 #
 # Requires the dev server to be running (npm run dev) on $PORT (default 3000).
-# Output lands in ./proposals/ as a dated, per-practice PDF.
+# Output lands in ./proposals/ unless OUT_DIR is set:
+#
+#   OUT_DIR=~/Downloads ./scripts/make-proposal.sh "Dr. Smith" "Smith Ortho"
 
 set -euo pipefail
 
@@ -41,14 +43,15 @@ QUERY=""
 [[ -n "$PRACTICE" ]] && QUERY="${QUERY:+$QUERY&}practice=$(encode "$PRACTICE")"
 [[ -n "$QUERY" ]] && URL="$URL?$QUERY"
 
-# Filename: practice, else doctor, else "generic" — slugified.
-LABEL="${PRACTICE:-${DOCTOR:-generic}}"
+# Filename: practice, else doctor, else "generic". Case is preserved so the
+# attachment reads properly in a doctor's inbox.
+LABEL="${PRACTICE:-${DOCTOR:-Generic}}"
 SLUG="$(printf '%s' "$LABEL" \
-  | tr '[:upper:]' '[:lower:]' \
-  | sed -E -e 's/[^a-z0-9]+/-/g' -e 's/^-+//' -e 's/-+$//')"
+  | sed -E -e 's/[^A-Za-z0-9]+/-/g' -e 's/^-+//' -e 's/-+$//')"
 
-mkdir -p proposals
-OUT="proposals/DentaScale-Proposal-${SLUG}-$(date +%Y-%m-%d).pdf"
+OUT_DIR="${OUT_DIR:-proposals}"
+mkdir -p "$OUT_DIR"
+OUT="$OUT_DIR/DentaScale-Proposal-${SLUG}.pdf"
 
 "$CHROME" \
   --headless \
