@@ -90,8 +90,17 @@ const steps = [
   },
 ];
 
+/**
+ * Personalization is a PDF-only feature. PDFs are rendered from the local dev
+ * server (see scripts/make-proposal.sh), so the `?doctor=` / `?practice=`
+ * params are honoured there and ignored everywhere else — the deployed page
+ * that prospects visit is always the generic version, whatever the URL says.
+ */
+const PERSONALIZATION_ENABLED = process.env.NODE_ENV !== "production";
+
 /** Keeps reflected query text short and on one line. */
 function clean(value: string | undefined): string | undefined {
+  if (!PERSONALIZATION_ENABLED) return undefined;
   const trimmed = value?.trim().replace(/\s+/g, " ");
   return trimmed ? trimmed.slice(0, 80) : undefined;
 }
