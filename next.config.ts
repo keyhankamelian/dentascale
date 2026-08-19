@@ -18,11 +18,14 @@ const csp = [
   "default-src 'self'",
   // 'unsafe-eval' is only needed in dev, for React Fast Refresh/HMR's
   // debugging tooling (never used by React in production).
-  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://connect.facebook.net https://www.googletagmanager.com`,
-  "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: https://www.facebook.com https://connect.facebook.net",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://connect.facebook.net https://www.googletagmanager.com https://assets.calendly.com`,
+  "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
+  "img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://*.calendly.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://formspree.io https://www.facebook.com https://connect.facebook.net https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com",
+  "connect-src 'self' https://formspree.io https://www.facebook.com https://connect.facebook.net https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.calendly.com",
+  // The Calendly scheduler renders in an iframe. Without an explicit
+  // frame-src it falls back to default-src 'self' and is silently blocked.
+  "frame-src https://calendly.com https://*.calendly.com",
   "frame-ancestors 'self'",
   "base-uri 'self'",
   "form-action 'self'",

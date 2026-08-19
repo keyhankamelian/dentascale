@@ -273,11 +273,19 @@ export default async function ProposalSheetPage({
         <p className="text-[14px] font-semibold text-neutral-900">
           Want your free Growth Plan session?
         </p>
-        <p className="mt-1 max-w-[70ch] text-[12.5px] text-neutral-700">
-          Reply to this email, send me a text, or give me a call. I&apos;ll send
-          a link so you can pick a time that suits you, and we&apos;ll spend 30
-          minutes going through everything for{" "}
-          {practice ? practice : "your practice"}. No obligation either way.
+        <p className="mt-1 max-w-[74ch] text-[12.5px] text-neutral-700">
+          Pick a time at{" "}
+          <strong className="font-semibold text-neutral-900">
+            calendly.com/dentascale/30min
+          </strong>
+          , or reply to this email, send a text, or give me a call and I&apos;ll
+          send the link. Thirty minutes going through everything for{" "}
+          {practice ? practice : "your practice"}, no obligation either way.
+        </p>
+        <p className="mt-1.5 max-w-[74ch] text-[12px] text-neutral-600">
+          If none of the listed times work, send a few that do and we&apos;ll do
+          our best to accommodate. Practices in the Los Angeles metro can also
+          meet in person.
         </p>
         <p className="mt-2.5 text-[13px] font-medium text-neutral-900">
           {siteConfig.phone} · {siteConfig.founderEmail} · dentascale.net

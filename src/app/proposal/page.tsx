@@ -13,7 +13,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
-import { Button } from "@/components/ui/Button";
+import { CalendlyEmbed } from "@/components/sections/CalendlyEmbed";
 import { caseStudies } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
@@ -340,28 +340,45 @@ export default async function ProposalPage({
         </Reveal>
       </Section>
 
-      {/* Close */}
-      <Section bg="primary">
-        <Reveal className="mx-auto flex max-w-xl flex-col items-center gap-6 text-center">
+      {/* Close — book the session */}
+      <Section bg="primary" id="book" className="scroll-mt-20">
+        <Reveal className="mx-auto flex max-w-xl flex-col items-center gap-5 text-center">
           <h2 className="text-3xl font-light leading-tight text-white md:text-4xl">
-            Want your free Growth Plan?
+            Book your free Growth Plan session
           </h2>
           <p className="text-[15px] leading-relaxed text-text-muted">
-            Reply to the email this came from, or reach out directly.
-            We&apos;ll book 30 minutes, walk through what other practices in
-            your area are running, and put a plan in writing. No obligation
-            either way.
+            Pick a time below and we&apos;ll spend 30 minutes going through
+            what other practices in your area are running, where the openings
+            are, and what we&apos;d do first. No obligation either way.
+          </p>
+        </Reveal>
+
+        <Reveal className="mx-auto mt-10 max-w-3xl" delay={0.1}>
+          <CalendlyEmbed />
+        </Reveal>
+
+        <Reveal className="mx-auto mt-8 flex max-w-xl flex-col items-center gap-3 text-center">
+          <p className="text-[13px] leading-relaxed text-text-muted">
+            Nothing on the calendar works? Send a few times that suit you and
+            we&apos;ll do our best to accommodate. Practices in the Los Angeles
+            metro can also meet in person.
           </p>
 
-          <div className="flex flex-col items-center gap-3">
-            <Button href={`mailto:${siteConfig.email}`} size="lg">
-              Email {siteConfig.email}
-            </Button>
+          <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[14px]">
             <a
-              href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}
-              className="text-[14px] text-text-secondary transition-colors hover:text-white"
+              href={`mailto:${siteConfig.founderEmail}`}
+              className="text-text-secondary transition-colors hover:text-white"
             >
-              Or call {siteConfig.phone}
+              {siteConfig.founderEmail}
+            </a>
+            <span aria-hidden="true" className="text-text-tertiary">
+              ·
+            </span>
+            <a
+              href={`tel:+1${siteConfig.phone.replace(/\D/g, "")}`}
+              className="text-text-secondary transition-colors hover:text-white"
+            >
+              {siteConfig.phone}
             </a>
           </div>
 

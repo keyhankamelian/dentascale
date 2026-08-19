@@ -14,6 +14,12 @@ export const siteConfig = {
    * form (#start), which sits at the bottom of every page.
    */
   bookingUrl: "#start",
+  /**
+   * Calendly scheduling link for the free Growth Plan session. Leave empty to
+   * fall back to plain email/phone contact details; the proposal page renders
+   * the scheduler only once this is set.
+   */
+  calendlyUrl: "https://calendly.com/dentascale/30min",
 } as const;
 
 export const navLinks = [
