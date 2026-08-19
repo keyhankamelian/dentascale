@@ -66,8 +66,8 @@ const steps = [
     body: "Campaigns go live and we tune them daily as real data comes in. You get a plain-English report every week.",
   },
   {
-    title: "We agree a target first",
-    body: "Before a dollar is spent we set a month-one lead target together. If we miss it, you don't pay for month two.",
+    title: "25 leads, or month two is free",
+    body: "25 qualified leads in your first month at the recommended ad budget. Miss it and you don't pay for month two. Qualified means someone in your area who gives us their details asking about a treatment you offer.",
   },
 ];
 
