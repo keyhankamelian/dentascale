@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "DentaScale: Branding & paid social for dental practices",
     description:
-      "Referrals are luck. Growth should be a system. Authentic brand creative and paid social campaigns that bring dental practices new patients predictably.",
+      "Referrals are unpredictable. Growth should be a system. Ad content, visuals, and social media ad campaigns that bring dental practices new patients predictably.",
     type: "website",
   },
   other: {

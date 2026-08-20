@@ -62,7 +62,7 @@ export default function HomePage() {
 
           <Reveal delay={0.05}>
             <h1 className="max-w-3xl text-4xl font-extralight leading-[1.1] text-white sm:text-5xl md:text-[56px]">
-              Referrals are luck.{" "}
+              Referrals are unpredictable.{" "}
               <span className="text-accent-light">Growth should be a system.</span>
             </h1>
           </Reveal>
