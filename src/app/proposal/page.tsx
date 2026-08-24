@@ -236,9 +236,11 @@ export default async function ProposalPage({
 
         <Reveal className="mx-auto mt-8 max-w-2xl text-center" delay={0.15}>
           <p className="text-[12px] leading-relaxed text-text-tertiary">
-            Results vary for each practice based on factors including their
-            offer, market, location, ad spend, and branding. Past results are
-            not a guarantee of future performance.
+            Case value is an estimate based on typical treatment values in each
+            practice&apos;s market, not collected revenue. Results vary for each
+            practice based on factors including their offer, market, location,
+            ad spend, and branding. Past results are not a guarantee of future
+            performance.
           </p>
         </Reveal>
       </Section>

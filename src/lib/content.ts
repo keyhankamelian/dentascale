@@ -46,7 +46,7 @@ export const caseStudies: CaseStudy[] = [
       { value: 42, label: "Leads" },
       { value: 9.31, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 391, label: "Total ad spend", prefix: "$" },
-      { value: 9000, label: "Revenue generated", prefix: "$", suffix: "+" },
+      { value: 15000, label: "Est. case value booked", prefix: "$", suffix: "+" },
       { value: 74, label: "New IG followers", prefix: "+" },
     ],
     comparisons: [
@@ -75,7 +75,7 @@ export const caseStudies: CaseStudy[] = [
       { value: 29, label: "Leads" },
       { value: 20.69, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 600, label: "Total ad spend", prefix: "$" },
-      { value: 6000, label: "Revenue generated", prefix: "$", suffix: "+" },
+      { value: 6000, label: "Est. case value booked", prefix: "$", suffix: "+" },
       { value: 140, label: "New IG followers", prefix: "+" },
     ],
     comparisons: [

@@ -97,9 +97,11 @@ export default function CaseStudiesPage() {
       <Section bg={caseStudies.length % 2 === 0 ? "secondary" : "primary"}>
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-[12px] leading-relaxed text-text-tertiary">
-            Results vary for each business based on factors including their
-            offer, market, location, ad spend, and branding. Past results are
-            not a guarantee of future performance.
+            Case value is an estimate based on typical treatment values in each
+            practice&apos;s market, not collected revenue. Results vary for each
+            business based on factors including their offer, market, location,
+            ad spend, and branding. Past results are not a guarantee of future
+            performance.
           </p>
         </Reveal>
       </Section>

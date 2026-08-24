@@ -92,7 +92,7 @@ export default async function ProposalSheetPage({
     "Leads",
     "Cost per lead",
     "Total ad spend",
-    "Revenue generated",
+    "Est. case value booked",
   ];
 
   return (
@@ -205,8 +205,10 @@ export default async function ProposalSheetPage({
           </tbody>
         </table>
         <p className="mt-2 text-[10.5px] leading-snug text-neutral-400">
-          Results vary by practice based on offer, market, location, ad spend,
-          and branding. Past results are not a guarantee of future performance.
+          Case value is an estimate based on typical treatment values in each
+          practice&apos;s market, not collected revenue. Results vary by practice
+          based on offer, market, location, ad spend, and branding. Past results
+          are not a guarantee of future performance.
         </p>
       </section>
 
