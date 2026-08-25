@@ -7,6 +7,7 @@ import {
   Target,
   MessageSquare,
   BarChart3,
+  Quote,
   type LucideIcon,
 } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
@@ -97,6 +98,9 @@ const steps = [
  * that prospects visit is always the generic version, whatever the URL says.
  */
 const PERSONALIZATION_ENABLED = process.env.NODE_ENV !== "production";
+
+/** Pulled from the case studies so the wording can't drift out of sync. */
+const testimonial = caseStudies.find((s) => s.testimonial)?.testimonial;
 
 /** Keeps reflected query text short and on one line. */
 function clean(value: string | undefined): string | undefined {
@@ -344,6 +348,30 @@ export default async function ProposalPage({
           </Card>
         </Reveal>
       </Section>
+
+      {/* Client testimonial — last thing read before the ask */}
+      {testimonial ? (
+        <Section bg="secondary">
+          <Reveal className="mx-auto max-w-2xl">
+            <Card
+              interactive={false}
+              className="relative flex flex-col gap-4 p-8"
+            >
+              <Quote
+                size={28}
+                className="text-accent-light/70"
+                aria-hidden="true"
+              />
+              <blockquote className="text-lg font-light leading-relaxed text-text-secondary">
+                &ldquo;{testimonial.quote}&rdquo;
+              </blockquote>
+              <p className="text-sm text-text-tertiary">
+                {testimonial.attribution}
+              </p>
+            </Card>
+          </Reveal>
+        </Section>
+      ) : null}
 
       {/* Close — book the session */}
       <Section bg="primary" id="book" className="scroll-mt-20">

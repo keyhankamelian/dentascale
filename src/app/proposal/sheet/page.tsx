@@ -71,6 +71,9 @@ const steps = [
   },
 ];
 
+/** Pulled from the case studies so the wording can't drift out of sync. */
+const testimonial = caseStudies.find((s) => s.testimonial)?.testimonial;
+
 function formatStat(value: number, decimals = 0, prefix = "", suffix = "") {
   return `${prefix}${value.toLocaleString("en-US", {
     minimumFractionDigits: decimals,
@@ -270,6 +273,18 @@ export default async function ProposalSheetPage({
           ))}
         </ol>
       </section>
+
+      {/* Client testimonial — last thing read before the ask */}
+      {testimonial ? (
+        <section className="avoid-break mt-5 rounded-lg bg-neutral-50 px-6 py-5">
+          <p className="text-[14px] italic leading-relaxed text-neutral-800">
+            &ldquo;{testimonial.quote}&rdquo;
+          </p>
+          <p className="mt-2 text-[11.5px] text-neutral-500">
+            {testimonial.attribution}
+          </p>
+        </section>
+      ) : null}
 
       {/* Close */}
       <section className="avoid-break mt-5 border-t-2 border-neutral-900 pt-4">
