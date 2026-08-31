@@ -28,15 +28,15 @@ function clean(value: string | undefined): string | undefined {
 const handled = [
   {
     title: "Ad content & visuals",
-    body: "We shoot and direct new content, build on what you already have including before-and-afters, and write every word of copy.",
+    body: "We come to you, shoot it, edit it, and write every word of copy. We can also use what you already have.",
   },
   {
     title: "An offer worth booking",
     body: "A limited-time offer that works financially and gives patients a reason to book now.",
   },
   {
-    title: "Your reviews, put to work",
-    body: "Your best social proof, in front of the people deciding whether to trust you.",
+    title: "Your booking funnel",
+    body: "We build the landing page and forms behind the ads, with your reviews front and center, so clicks turn into patients.",
   },
   {
     title: "Paid campaigns",
@@ -58,16 +58,16 @@ const steps = [
     body: "Thirty minutes plus a written plan: what other practices in your area are advertising right now and where the openings are. Yours either way.",
   },
   {
-    title: "Week one, we build",
-    body: "Ad account, tracking, and campaigns set up properly. We shoot your content, or launch with what you already have.",
+    title: "We build everything, free",
+    body: "Content shoot, editing, ad account, tracking, your booking funnel, and the campaigns themselves. All of it before you pay us anything.",
   },
   {
-    title: "Launch and optimize",
+    title: "We launch and optimize",
     body: "Campaigns go live and we tune them daily as real data comes in. You get a plain-English report every week.",
   },
   {
-    title: "25 leads, or month two is free",
-    body: "At least 25 leads in your first month at the recommended ad budget. Miss it and month two is on us, you only cover ad spend. We use proven targeting and offer strategy to bring in the highest quality leads we can, and the Lead-to-Chair System is there to help your front desk book them.",
+    title: "You pay at lead 30",
+    body: "Our first invoice goes out when your 30th lead arrives, not before. From there it is $1,000 a month, month to month, cancel any time.",
   },
 ];
 
@@ -158,8 +158,44 @@ export default async function ProposalSheetPage({
         </div>
       </section>
 
+      {/* Where we'd start — the emphasis of the whole sheet */}
+      <section className="avoid-break mt-4 rounded-lg border-2 border-violet-700 bg-violet-50 px-5 py-4">
+        <p className="text-[11.5px] font-semibold uppercase tracking-[1.5px] text-violet-700">
+          Where we&apos;d start
+        </p>
+        <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <p className="text-[26px] font-semibold leading-none tracking-tight text-neutral-900">
+            We start free.
+          </p>
+          <p className="text-[14px] font-medium text-neutral-700">
+            You pay once it works.
+          </p>
+        </div>
+        <p className="mt-2 max-w-[74ch] text-[12.5px] text-neutral-700">
+          We shoot and edit your content, build your booking funnel, and launch
+          and optimize your campaigns before you pay us anything. Our first
+          invoice goes out when your{" "}
+          <strong className="font-semibold text-neutral-900">
+            30th lead arrives
+          </strong>
+          , and not before.
+        </p>
+        <p className="mt-1.5 max-w-[74ch] text-[12.5px] font-medium text-violet-900">
+          All we ask is that you run $50 a day in ad spend, paid directly to
+          Meta. We never touch your budget.
+        </p>
+        <p className="mt-1.5 max-w-[74ch] text-[12.5px] text-neutral-600">
+          After lead 30 it is $1,000 a month, month to month, cancel any time.
+          Raise your budget later and{" "}
+          <strong className="font-semibold text-neutral-800">
+            our fee stays the same
+          </strong>
+          . Two platforms $2,000/mo, three $3,000/mo.
+        </p>
+      </section>
+
       {/* Results */}
-      <section className="avoid-break mt-5">
+      <section className="mt-5">
         <h2 className="border-b border-neutral-200 pb-1.5 text-[11.5px] font-semibold uppercase tracking-[1.5px] text-neutral-500">
           Recent results
         </h2>
@@ -212,41 +248,6 @@ export default async function ProposalSheetPage({
           practice&apos;s market, not collected revenue. Results vary by practice
           based on offer, market, location, ad spend, and branding. Past results
           are not a guarantee of future performance.
-        </p>
-      </section>
-
-      {/* Where we'd start — the emphasis of the whole sheet */}
-      <section className="avoid-break mt-4 rounded-lg border-2 border-violet-700 bg-violet-50 px-5 py-4">
-        <p className="text-[11.5px] font-semibold uppercase tracking-[1.5px] text-violet-700">
-          Where we&apos;d start
-        </p>
-        <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <p className="text-[27px] font-semibold leading-none tracking-tight text-neutral-900">
-            $1,000
-            <span className="text-[15px] font-medium text-neutral-500">
-              /month
-            </span>
-          </p>
-          <p className="text-[14px] font-medium text-neutral-700">
-            Meta ads, managed end to end
-          </p>
-        </div>
-        <p className="mt-2 max-w-[70ch] text-[12.5px] text-neutral-700">
-          Plus <strong className="font-semibold">$500 to $1,000 per month</strong>{" "}
-          in ad spend to start, paid directly to the platform. We never touch
-          your budget. That is the whole cost, month to month, cancel any time.
-        </p>
-        <p className="mt-1.5 max-w-[74ch] text-[12.5px] font-medium text-violet-900">
-          Your first month includes a content shoot on us, normally $500, plus a
-          social media growth plan at no charge. We come to you and handle the
-          whole thing.
-        </p>
-        <p className="mt-1.5 max-w-[74ch] text-[12.5px] text-neutral-600">
-          Want more later? Raise your ad budget and you get more results while{" "}
-          <strong className="font-semibold text-neutral-800">
-            our fee stays the same
-          </strong>
-          . Or add a platform: $2,000/mo for two, $3,000/mo for three.
         </p>
       </section>
 

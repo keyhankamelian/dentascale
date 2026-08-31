@@ -53,7 +53,7 @@ const pillars: Pillar[] = [
   {
     icon: PenLine,
     title: "Ad content & visuals",
-    body: "We shoot and direct your content so your ads look like your practice, not a stock photo library. Shot lists, hooks, angles, and every word of the copy.",
+    body: "We come to you and shoot it, edit it, and write every word of copy, so your ads look like your practice rather than a stock photo library.",
   },
   {
     icon: Target,
@@ -75,19 +75,19 @@ const pillars: Pillar[] = [
 const steps = [
   {
     title: "Your Growth Plan, on us",
-    body: "A 30-minute call plus a written plan: what other practices in your area are running right now, where the openings are, and what we'd do first. Yours to keep whether or not we work together.",
+    body: "A 30-minute call plus a written plan: what other practices in your area are running right now, where the gaps are, and what we'd do first. Yours to keep whether or not we work together.",
   },
   {
-    title: "Week one: we build",
-    body: "Ad accounts, tracking, and campaign structure set up properly. We shoot your first round of content free, direct the creative, and write the copy. If you'd rather, we can launch with content you already have.",
+    title: "We build everything, free",
+    body: "Content shoot, editing, ad account, tracking, your booking funnel, and the campaigns themselves. All of it before you pay us anything.",
   },
   {
-    title: "Weeks two to four: launch and optimize",
-    body: "Campaigns go live and we optimize daily as real data comes in. You get a plain-English report every week.",
+    title: "We launch and optimize",
+    body: "Campaigns go live and we tune them daily as real data comes in. You get a plain-English report every week.",
   },
   {
-    title: "25 leads, or month two is free",
-    body: "We commit to at least 25 leads in your first month at the recommended ad budget. If we miss it, month two is on us and you only cover your ad spend. We use proven targeting and offer strategy to bring in the highest quality leads we can, and the Lead-to-Chair System is there to help your front desk book them.",
+    title: "You pay at lead 30",
+    body: "Our first invoice goes out when your 30th lead arrives, not before. From there it's $1,000 a month, month to month, cancel any time. All we ask throughout is that you run $50 a day in ad spend, paid directly to Meta.",
   },
 ];
 
@@ -286,17 +286,30 @@ export default async function ProposalPage({
       <Section bg="secondary">
         <SectionHeading
           label="Investment"
-          title="What it costs"
+          title="We start free. You pay once it works."
           subtitle="Ad spend is paid directly to the platforms. We never touch your budget."
         />
 
         <Reveal className="mx-auto mt-12 max-w-2xl">
           <Card interactive={false} className="flex flex-col p-7 sm:p-8">
-            <dl className="flex flex-col divide-y divide-border-subtle">
-              <div className="flex items-baseline justify-between gap-6 pb-4">
+            <p className="text-[15px] leading-relaxed text-text-secondary">
+              We shoot and edit your content, build your booking funnel, and
+              launch and optimize your campaigns before you pay us anything.
+              Our first invoice goes out when your{" "}
+              <span className="font-medium text-white">30th lead arrives</span>,
+              and not before.
+            </p>
+            <p className="mt-4 text-[15px] leading-relaxed text-text-secondary">
+              All we ask is that you run{" "}
+              <span className="font-medium text-white">$50 a day</span> in ad
+              spend, paid directly to Meta.
+            </p>
+
+            <dl className="mt-7 flex flex-col divide-y divide-border-subtle border-t border-border-subtle pt-2">
+              <div className="flex items-baseline justify-between gap-6 py-4">
                 <div>
                   <dt className="text-[15px] font-medium text-white">
-                    One platform
+                    After lead 30 — one platform
                   </dt>
                   <p className="text-[13px] text-text-muted">
                     Meta ads, managed end to end
@@ -327,7 +340,7 @@ export default async function ProposalPage({
                     Three platforms
                   </dt>
                   <p className="text-[13px] text-text-muted">
-                    Meta, TikTok, and Google, plus social growth
+                    Meta, TikTok, and Google
                   </p>
                 </div>
                 <dd className="whitespace-nowrap text-[17px] font-light text-white">
@@ -336,14 +349,9 @@ export default async function ProposalPage({
               </div>
             </dl>
 
-            <p className="mt-6 border-t border-border-subtle pt-5 text-[13px] leading-relaxed text-text-secondary">
-              Your first month includes a content shoot, normally $500, and a
-              social media growth plan at no charge.
-            </p>
-            <p className="mt-3 text-[13px] leading-relaxed text-text-tertiary">
-              We recommend $500 to $1,000 per month in ad spend per platform to
-              start. Optional add-ons include a website or landing page build,
-              local SEO, and lead reach-out.
+            <p className="mt-6 border-t border-border-subtle pt-5 text-[13px] leading-relaxed text-text-tertiary">
+              Month to month throughout, cancel any time. Raise your ad budget
+              later and you get more results while our fee stays the same.
             </p>
           </Card>
         </Reveal>

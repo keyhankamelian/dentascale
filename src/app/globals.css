@@ -108,7 +108,8 @@ body {
     transition: none !important;
   }
 
-  [data-sheet] section,
+  /* Only blocks explicitly marked avoid-break stay whole. Applying this to
+     every section strands half-empty pages when one section cannot fit. */
   [data-sheet] .avoid-break {
     break-inside: avoid;
   }

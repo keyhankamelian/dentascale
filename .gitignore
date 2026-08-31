@@ -46,3 +46,5 @@ next-env.d.ts
 
 # generated proposal PDFs (contain prospect names)
 /proposals/
+onboarding/node_modules/
+onboarding/package*.json
