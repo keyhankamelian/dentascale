@@ -297,15 +297,14 @@ export default async function ProposalSheetPage({
         </p>
         <p className="mt-1 max-w-[74ch] text-[12.5px] text-neutral-700">
           We take on a limited number of practices at a time, so we start with
-          a short call to see whether it is a fit both ways. Fifteen to thirty
-          minutes.
+          a short call to see whether it is a fit both ways.
         </p>
         <p className="mt-1.5 max-w-[74ch] text-[12.5px] text-neutral-700">
           Pick a time at{" "}
           <strong className="font-semibold text-neutral-900">
             calendly.com/dentascale/30min
           </strong>
-          . We are Los Angeles based, so in person works too.
+          .
         </p>
         <p className="mt-2.5 text-[13px] font-medium text-neutral-900">
           {siteConfig.phone} · {siteConfig.founderEmail} · dentascale.net

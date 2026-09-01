@@ -392,8 +392,7 @@ export default async function ProposalPage({
           </h2>
           <p className="text-[15px] leading-relaxed text-text-muted">
             We take on a limited number of practices at a time, so we start
-            with a short call to see whether it&apos;s a fit both ways. Fifteen
-            to thirty minutes.
+            with a short call to see whether it&apos;s a fit both ways.
           </p>
         </Reveal>
 
@@ -402,10 +401,6 @@ export default async function ProposalPage({
         </Reveal>
 
         <Reveal className="mx-auto mt-8 flex max-w-xl flex-col items-center gap-3 text-center">
-          <p className="text-[13px] leading-relaxed text-text-muted">
-            We&apos;re Los Angeles based, so in person works too.
-          </p>
-
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[14px]">
             <a
               href={`mailto:${siteConfig.founderEmail}`}
