@@ -15,7 +15,7 @@ import { Section, SectionHeading } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { CalendlyEmbed } from "@/components/sections/CalendlyEmbed";
-import { caseStudies } from "@/lib/content";
+import { caseStudies, featuredCaseStudy } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -101,6 +101,9 @@ const PERSONALIZATION_ENABLED = process.env.NODE_ENV !== "production";
 
 /** Pulled from the case studies so the wording can't drift out of sync. */
 const testimonial = caseStudies.find((s) => s.testimonial)?.testimonial;
+
+/** The proposal shows the orthodontics campaign only. */
+const shownStudies = [featuredCaseStudy];
 
 /** Keeps reflected query text short and on one line. */
 function clean(value: string | undefined): string | undefined {
@@ -191,11 +194,11 @@ export default async function ProposalPage({
         <SectionHeading
           label="Recent results"
           title="What this has looked like"
-          subtitle="Two campaigns we ran this year, exactly as they happened."
+          subtitle="A campaign we ran this year, exactly as it happened."
         />
 
-        <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-5 md:grid-cols-2">
-          {caseStudies.map((study, i) => (
+        <div className="mx-auto mt-12 grid max-w-lg grid-cols-1 gap-5">
+          {shownStudies.map((study, i) => (
             <Reveal key={study.slug} delay={i * 0.1}>
               <Card
                 as="article"
@@ -388,9 +391,9 @@ export default async function ProposalPage({
             Let&apos;s start with a conversation
           </h2>
           <p className="text-[15px] leading-relaxed text-text-muted">
-            Pick a time below and we&apos;ll spend 30 minutes going through
-            what other practices in your area are running, where the openings
-            are, and what we&apos;d do first. No obligation either way.
+            We take on a limited number of practices at a time, so we start
+            with a short call to see whether it&apos;s a fit both ways. Fifteen
+            to thirty minutes.
           </p>
         </Reveal>
 
@@ -400,9 +403,7 @@ export default async function ProposalPage({
 
         <Reveal className="mx-auto mt-8 flex max-w-xl flex-col items-center gap-3 text-center">
           <p className="text-[13px] leading-relaxed text-text-muted">
-            Nothing on the calendar works? Send a few times that suit you and
-            we&apos;ll do our best to accommodate. Practices in the Los Angeles
-            metro can also meet in person.
+            We&apos;re Los Angeles based, so in person works too.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[14px]">

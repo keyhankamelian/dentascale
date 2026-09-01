@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { caseStudies } from "@/lib/content";
+import { caseStudies, featuredCaseStudy } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -73,6 +73,9 @@ const steps = [
 
 /** Pulled from the case studies so the wording can't drift out of sync. */
 const testimonial = caseStudies.find((s) => s.testimonial)?.testimonial;
+
+/** The proposal shows the orthodontics campaign only. */
+const shownStudies = [featuredCaseStudy];
 
 function formatStat(value: number, decimals = 0, prefix = "", suffix = "") {
   return `${prefix}${value.toLocaleString("en-US", {
@@ -203,7 +206,7 @@ export default async function ProposalSheetPage({
           <thead>
             <tr>
               <th className="w-[34%] py-1.5 text-left font-medium text-neutral-500" />
-              {caseStudies.map((study) => (
+              {shownStudies.map((study) => (
                 <th
                   key={study.slug}
                   className="py-1 text-right text-[12.5px] font-semibold text-neutral-900"
@@ -221,7 +224,7 @@ export default async function ProposalSheetPage({
             {rowLabels.map((label) => (
               <tr key={label} className="border-t border-neutral-200">
                 <td className="py-1 text-neutral-600">{label}</td>
-                {caseStudies.map((study) => {
+                {shownStudies.map((study) => {
                   const stat = study.stats.find((s) => s.label === label);
                   return (
                     <td
@@ -293,18 +296,16 @@ export default async function ProposalSheetPage({
           Let&apos;s start with a conversation
         </p>
         <p className="mt-1 max-w-[74ch] text-[12.5px] text-neutral-700">
+          We take on a limited number of practices at a time, so we start with
+          a short call to see whether it is a fit both ways. Fifteen to thirty
+          minutes.
+        </p>
+        <p className="mt-1.5 max-w-[74ch] text-[12.5px] text-neutral-700">
           Pick a time at{" "}
           <strong className="font-semibold text-neutral-900">
             calendly.com/dentascale/30min
           </strong>
-          , or reply to this email, send a text, or give me a call and I&apos;ll
-          send the link. Thirty minutes going through everything for{" "}
-          {practice ? practice : "your practice"}, no obligation either way.
-        </p>
-        <p className="mt-1.5 max-w-[74ch] text-[12px] text-neutral-600">
-          If none of the listed times work, send a few that do and we&apos;ll do
-          our best to accommodate. Practices in the Los Angeles metro can also
-          meet in person.
+          . We are Los Angeles based, so in person works too.
         </p>
         <p className="mt-2.5 text-[13px] font-medium text-neutral-900">
           {siteConfig.phone} · {siteConfig.founderEmail} · dentascale.net

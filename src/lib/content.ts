@@ -63,6 +63,11 @@ export const caseStudies: CaseStudy[] = [
         badge: "3.7x higher",
       },
     ],
+    testimonial: {
+      quote:
+        "Working with DentaScale has changed our business's trajectory. We went from the stress of an empty calendar to getting so many patients that we can't keep up, and we're now thinking of opening a second location.",
+      attribution: "DentaScale client, orthodontics practice",
+    },
   },
   {
     slug: "general-dentistry",
@@ -92,11 +97,6 @@ export const caseStudies: CaseStudy[] = [
         badge: "1.7x higher",
       },
     ],
-    testimonial: {
-      quote:
-        "Working with DentaScale has changed our business's trajectory. We went from the stress of an empty calendar to getting so many patients that we can't keep up, and we're now thinking of opening a second location.",
-      attribution: "DentaScale client, general dentistry practice",
-    },
   },
 ];
 
