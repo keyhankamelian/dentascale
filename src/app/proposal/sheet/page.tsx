@@ -58,16 +58,16 @@ const steps = [
     body: "Thirty minutes plus a written plan: what other practices in your area are advertising right now and where the openings are. Yours either way.",
   },
   {
-    title: "We build everything, free",
-    body: "Content shoot, editing, ad account, tracking, your booking funnel, and the campaigns themselves. All of it before you pay us anything.",
+    title: "Week one, we build",
+    body: "Content shoot, editing, ad account, tracking, your booking funnel, and the campaigns themselves. Live within seven days.",
   },
   {
     title: "We launch and optimize",
     body: "Campaigns go live and we tune them daily as real data comes in. You get a plain-English report every week.",
   },
   {
-    title: "You pay at lead 30",
-    body: "Our first invoice goes out when your 30th lead arrives, not before. From there it is $1,000 a month, month to month, cancel any time.",
+    title: "25 leads, or month two is free",
+    body: "If we do not deliver at least 25 qualified leads in your first month, we work the second month at no charge. A qualified lead is someone in your area who gives us their contact details asking about a treatment you offer.",
   },
 ];
 
@@ -167,28 +167,26 @@ export default async function ProposalSheetPage({
           Where we&apos;d start
         </p>
         <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <p className="text-[26px] font-semibold leading-none tracking-tight text-neutral-900">
-            We start free.
+          <p className="text-[27px] font-semibold leading-none tracking-tight text-neutral-900">
+            $1,000
+            <span className="text-[15px] font-medium text-neutral-500">
+              /month
+            </span>
           </p>
           <p className="text-[14px] font-medium text-neutral-700">
-            You pay once it works.
+            Meta ads, managed end to end
           </p>
         </div>
-        <p className="mt-2 max-w-[74ch] text-[12.5px] text-neutral-700">
-          We shoot and edit your content, build your booking funnel, and launch
-          and optimize your campaigns before you pay us anything. Our first
-          invoice goes out when your{" "}
-          <strong className="font-semibold text-neutral-900">
-            30th lead arrives
-          </strong>
-          , and not before.
+        <p className="mt-2 max-w-[76ch] text-[12.5px] font-medium text-violet-900">
+          If we do not deliver at least 25 qualified leads in your first month,
+          we work the second month at no charge.
         </p>
-        <p className="mt-1.5 max-w-[74ch] text-[12.5px] font-medium text-violet-900">
-          All we ask is that you run $50 a day in ad spend, paid directly to
-          Meta. We never touch your budget.
+        <p className="mt-1.5 max-w-[76ch] text-[12.5px] text-neutral-700">
+          Plus $50 a day in ad spend, paid directly to Meta. We never touch
+          your budget. Month to month, cancel any time, and you own every asset
+          we create.
         </p>
-        <p className="mt-1.5 max-w-[74ch] text-[12.5px] text-neutral-600">
-          After lead 30 it is $1,000 a month, month to month, cancel any time.
+        <p className="mt-1.5 max-w-[76ch] text-[12.5px] text-neutral-600">
           Raise your budget later and{" "}
           <strong className="font-semibold text-neutral-800">
             our fee stays the same

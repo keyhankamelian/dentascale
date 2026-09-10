@@ -78,16 +78,16 @@ const steps = [
     body: "A 30-minute call plus a written plan: what other practices in your area are running right now, where the gaps are, and what we'd do first. Yours to keep whether or not we work together.",
   },
   {
-    title: "We build everything, free",
-    body: "Content shoot, editing, ad account, tracking, your booking funnel, and the campaigns themselves. All of it before you pay us anything.",
+    title: "Week one, we build",
+    body: "Content shoot, editing, ad account, tracking, your booking funnel, and the campaigns themselves. Live within seven days.",
   },
   {
     title: "We launch and optimize",
     body: "Campaigns go live and we tune them daily as real data comes in. You get a plain-English report every week.",
   },
   {
-    title: "You pay at lead 30",
-    body: "Our first invoice goes out when your 30th lead arrives, not before. From there it's $1,000 a month, month to month, cancel any time. All we ask throughout is that you run $50 a day in ad spend, paid directly to Meta.",
+    title: "25 leads, or month two is free",
+    body: "If we don't deliver at least 25 qualified leads in your first month, we work the second month at no charge. A qualified lead is someone in your area who gives us their contact details asking about a treatment you offer.",
   },
 ];
 
@@ -289,63 +289,49 @@ export default async function ProposalPage({
       <Section bg="secondary">
         <SectionHeading
           label="Investment"
-          title="We start free. You pay once it works."
+          title="What it costs"
           subtitle="Ad spend is paid directly to the platforms. We never touch your budget."
         />
 
         <Reveal className="mx-auto mt-12 max-w-2xl">
           <Card interactive={false} className="flex flex-col p-7 sm:p-8">
-            <p className="text-[15px] leading-relaxed text-text-secondary">
-              We shoot and edit your content, build your booking funnel, and
-              launch and optimize your campaigns before you pay us anything.
-              Our first invoice goes out when your{" "}
-              <span className="font-medium text-white">30th lead arrives</span>,
-              and not before.
+            <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
+              <p className="text-4xl font-extralight text-white">
+                $1,000
+                <span className="text-[15px] text-text-muted">/month</span>
+              </p>
+              <p className="text-[15px] font-medium text-text-secondary">
+                Meta ads, managed end to end
+              </p>
+            </div>
+
+            <p className="mt-5 text-[15px] leading-relaxed text-white">
+              If we don&apos;t deliver at least 25 qualified leads in your first
+              month, we work the second month at no charge.
             </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-text-secondary">
-              All we ask is that you run{" "}
-              <span className="font-medium text-white">$50 a day</span> in ad
-              spend, paid directly to Meta.
+            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary">
+              A qualified lead is someone in your area who gives us their
+              contact details asking about a treatment you offer.
+            </p>
+            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary">
+              Plus <span className="font-medium text-white">$50 a day</span> in
+              ad spend, paid directly to Meta. Month to month, cancel any time,
+              and you own every asset we create.
             </p>
 
             <dl className="mt-7 flex flex-col divide-y divide-border-subtle border-t border-border-subtle pt-2">
               <div className="flex items-baseline justify-between gap-6 py-4">
-                <div>
-                  <dt className="text-[15px] font-medium text-white">
-                    After lead 30 — one platform
-                  </dt>
-                  <p className="text-[13px] text-text-muted">
-                    Meta ads, managed end to end
-                  </p>
-                </div>
-                <dd className="whitespace-nowrap text-[17px] font-light text-white">
-                  $1,000<span className="text-[13px] text-text-muted">/mo</span>
-                </dd>
-              </div>
-
-              <div className="flex items-baseline justify-between gap-6 py-4">
-                <div>
-                  <dt className="text-[15px] font-medium text-white">
-                    Two platforms
-                  </dt>
-                  <p className="text-[13px] text-text-muted">
-                    Meta plus TikTok or Google
-                  </p>
-                </div>
+                <dt className="text-[15px] font-medium text-white">
+                  Two platforms
+                </dt>
                 <dd className="whitespace-nowrap text-[17px] font-light text-white">
                   $2,000<span className="text-[13px] text-text-muted">/mo</span>
                 </dd>
               </div>
-
               <div className="flex items-baseline justify-between gap-6 pt-4">
-                <div>
-                  <dt className="text-[15px] font-medium text-white">
-                    Three platforms
-                  </dt>
-                  <p className="text-[13px] text-text-muted">
-                    Meta, TikTok, and Google
-                  </p>
-                </div>
+                <dt className="text-[15px] font-medium text-white">
+                  Three platforms
+                </dt>
                 <dd className="whitespace-nowrap text-[17px] font-light text-white">
                   $3,000<span className="text-[13px] text-text-muted">/mo</span>
                 </dd>
@@ -353,8 +339,8 @@ export default async function ProposalPage({
             </dl>
 
             <p className="mt-6 border-t border-border-subtle pt-5 text-[13px] leading-relaxed text-text-tertiary">
-              Month to month throughout, cancel any time. Raise your ad budget
-              later and you get more results while our fee stays the same.
+              Raise your ad budget later and you get more results while our fee
+              stays the same.
             </p>
           </Card>
         </Reveal>
