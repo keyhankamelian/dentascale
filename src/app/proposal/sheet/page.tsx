@@ -96,9 +96,10 @@ export default async function ProposalSheetPage({
 
   const rowLabels = [
     "Leads",
+    "Consults booked",
     "Cost per lead",
     "Total ad spend",
-    "Est. case value booked",
+    "Booked case value",
   ];
 
   return (
@@ -245,10 +246,9 @@ export default async function ProposalSheetPage({
           </tbody>
         </table>
         <p className="mt-2 text-[10.5px] leading-snug text-neutral-400">
-          Case value is an estimate based on typical treatment values in each
-          practice&apos;s market, not collected revenue. Results vary by practice
-          based on offer, market, location, ad spend, and branding. Past results
-          are not a guarantee of future performance.
+          Booked case value reflects treatment booked, not collected revenue.
+          Results vary by practice based on offer, market, location, ad spend,
+          and branding. Past results are not a guarantee of future performance.
         </p>
       </section>
 

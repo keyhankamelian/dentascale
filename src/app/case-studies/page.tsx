@@ -11,7 +11,7 @@ import { caseStudies } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Case Studies",
   description:
-    "Real results from real dental practices. Orthodontic and general dentistry campaigns delivering leads at a fraction of the industry-average cost per lead.",
+    "Real results from a real orthodontic practice, delivering leads at a fraction of the industry-average cost per lead."
 };
 
 export default function CaseStudiesPage() {
@@ -97,11 +97,10 @@ export default function CaseStudiesPage() {
       <Section bg={caseStudies.length % 2 === 0 ? "secondary" : "primary"}>
         <Reveal className="mx-auto max-w-2xl text-center">
           <p className="text-[12px] leading-relaxed text-text-tertiary">
-            Case value is an estimate based on typical treatment values in each
-            practice&apos;s market, not collected revenue. Results vary for each
-            business based on factors including their offer, market, location,
-            ad spend, and branding. Past results are not a guarantee of future
-            performance.
+            Booked case value reflects treatment booked, not collected
+            revenue. Results vary for each business based on factors including
+            their offer, market, location, ad spend, and branding. Past results
+            are not a guarantee of future performance.
           </p>
         </Reveal>
       </Section>

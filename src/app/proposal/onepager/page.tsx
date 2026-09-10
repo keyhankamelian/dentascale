@@ -37,9 +37,10 @@ function stat(label: string) {
 
 const results = [
   { value: stat("Leads"), label: "Leads in 30 days" },
+  { value: stat("Consults booked"), label: "Consults booked" },
   { value: stat("Cost per lead"), label: "Cost per lead" },
   { value: stat("Total ad spend"), label: "Ad spend" },
-  { value: stat("Est. case value booked"), label: "Est. case value booked" },
+  { value: stat("Booked case value"), label: "Booked case value" },
 ];
 
 export default function OnePagerPage() {
@@ -131,7 +132,7 @@ export default function OnePagerPage() {
         <h2 className="border-b border-neutral-200 pb-1.5 text-[11.5px] font-semibold uppercase tracking-[1.5px] text-neutral-500">
           A recent campaign · orthodontic practice, Beverly Hills
         </h2>
-        <div className="mt-3 grid grid-cols-4 gap-x-5">
+        <div className="mt-3 grid grid-cols-5 gap-x-4">
           {results.map((r) => (
             <div key={r.label}>
               <p className="text-[21px] font-semibold leading-none tracking-tight text-neutral-900">
@@ -152,9 +153,9 @@ export default function OnePagerPage() {
           </p>
         ) : null}
         <p className="mt-2 text-[10px] leading-snug text-neutral-400">
-          Case value is an estimate based on typical treatment values in the
-          practice&apos;s market, not collected revenue. Results vary by
-          practice. Past results are not a guarantee of future performance.
+          Booked case value reflects treatment booked, not collected revenue.
+          Results vary by practice. Past results are not a guarantee of future
+          performance.
         </p>
       </section>
 

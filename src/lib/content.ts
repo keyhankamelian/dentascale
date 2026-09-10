@@ -44,9 +44,10 @@ export const caseStudies: CaseStudy[] = [
     featured: true,
     stats: [
       { value: 42, label: "Leads" },
+      { value: 10, label: "Consults booked" },
       { value: 9.31, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 391, label: "Total ad spend", prefix: "$" },
-      { value: 15000, label: "Est. case value booked", prefix: "$", suffix: "+" },
+      { value: 15000, label: "Booked case value", prefix: "$", suffix: "+" },
       { value: 74, label: "New IG followers", prefix: "+" },
     ],
     comparisons: [
@@ -68,35 +69,6 @@ export const caseStudies: CaseStudy[] = [
         "Working with DentaScale has changed our business's trajectory. We went from the stress of an empty calendar to getting so many patients that we can't keep up, and we're now thinking of opening a second location.",
       attribution: "DentaScale client, orthodontics practice",
     },
-  },
-  {
-    slug: "general-dentistry",
-    industry: "General dentistry",
-    channels: "Facebook & Instagram",
-    timeframe: "April 2026 · 30 days",
-    location: "Los Angeles, CA",
-    heading: "General dentistry practice, 30-day campaign",
-    stats: [
-      { value: 29, label: "Leads" },
-      { value: 20.69, label: "Cost per lead", decimals: 2, prefix: "$" },
-      { value: 600, label: "Total ad spend", prefix: "$" },
-      { value: 6000, label: "Est. case value booked", prefix: "$", suffix: "+" },
-      { value: 140, label: "New IG followers", prefix: "+" },
-    ],
-    comparisons: [
-      {
-        metric: "Cost per lead",
-        yours: "$20.69",
-        average: "$76",
-        badge: "73% below avg",
-      },
-      {
-        metric: "Leads per $1k spend",
-        yours: "48",
-        average: "29",
-        badge: "1.7x higher",
-      },
-    ],
   },
 ];
 
