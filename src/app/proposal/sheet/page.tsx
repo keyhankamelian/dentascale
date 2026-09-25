@@ -185,7 +185,8 @@ export default async function ProposalSheetPage({
         <p className="mt-1.5 max-w-[76ch] text-[12.5px] text-neutral-700">
           Plus $50 a day in ad spend, paid directly to Meta. We never touch
           your budget. Month to month, cancel any time, and you own every asset
-          we create.
+          we create. Your intro shoot is included at no extra cost for local
+          practices.
         </p>
         <p className="mt-1.5 max-w-[76ch] text-[12.5px] text-neutral-600">
           Raise your budget later and{" "}

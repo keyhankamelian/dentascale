@@ -170,7 +170,7 @@ export default function OnePagerPage() {
               <span className="font-semibold text-neutral-700">
                 $4,000/mo
               </span>{" "}
-              total.
+              total. Intro shoot included for local practices.
             </p>
           </div>
 

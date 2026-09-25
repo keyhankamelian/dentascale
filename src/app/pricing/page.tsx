@@ -22,6 +22,7 @@ const plans = [
       "Campaign setup & daily management",
       "Ad copy written for you",
       "Creative direction, shot lists & script",
+      "Intro content shoot included (local practices)",
       "Weekly plain-English reporting",
       "Lead-to-Chair System included",
     ],
@@ -36,6 +37,7 @@ const plans = [
       "Google Ads (Search & Display)",
       "Cross-channel strategy & testing",
       "Full-funnel coverage",
+      "Intro content shoot included (local practices)",
       "Lead-to-Chair System included",
     ],
     featured: false,
@@ -94,11 +96,11 @@ const addOns = [
     ],
   },
   {
-    name: "Content shoot",
+    name: "Additional content shoot",
     price: "$500",
     period: "one-time",
     description:
-      "Don't want to shoot your own content? We'll film it for you.",
+      "Your first shoot is included if you're local. Book another one for a refresh, or if you're outside our service area.",
     features: [
       "We come shoot your content",
       "Built from proven hooks & angles",
@@ -126,7 +128,7 @@ const faqs: FAQItem[] = [
   {
     question: "Will you create my content for me?",
     answer:
-      "We don't film or produce content for you, but we give you winning examples and tell you exactly what to shoot: shot lists, hooks, and angles proven to convert. What we do take care of is every word of your ad copy.",
+      "Yes. We shoot fresh content and combine it with anything you already have, before-and-afters, existing photos, whatever you've got, to create winning, scroll-stopping ads that bring in qualified leads in a predictable, scalable way. Your intro shoot is included at no extra cost for local practices; outside our service area, we can work from your existing content or add a shoot separately.",
   },
 ];
 

@@ -317,6 +317,10 @@ export default async function ProposalPage({
               ad spend, paid directly to Meta. Month to month, cancel any time,
               and you own every asset we create.
             </p>
+            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary">
+              Your intro content shoot is included at no extra cost if you&apos;re
+              a local practice.
+            </p>
 
             <dl className="mt-7 flex flex-col divide-y divide-border-subtle border-t border-border-subtle pt-2">
               <div className="flex items-baseline justify-between gap-6 py-4">
