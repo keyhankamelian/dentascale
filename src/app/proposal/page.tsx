@@ -58,7 +58,7 @@ const pillars: Pillar[] = [
   {
     icon: Target,
     title: "Paid campaigns",
-    body: "Built and managed on Meta, TikTok, and Google. Audience targeting, offer strategy, and daily optimization aimed at patients who actually want to book.",
+    body: "Built and managed on Meta and Google. Audience targeting, offer strategy, and daily optimization aimed at patients who actually want to book.",
   },
   {
     icon: MessageSquare,
@@ -296,7 +296,7 @@ export default async function ProposalPage({
           <Card interactive={false} className="flex flex-col p-7 sm:p-8">
             <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
               <p className="text-4xl font-extralight text-white">
-                $1,000
+                $2,000
                 <span className="text-[15px] text-text-muted">/month</span>
               </p>
               <p className="text-[15px] font-medium text-text-secondary">
@@ -321,18 +321,10 @@ export default async function ProposalPage({
             <dl className="mt-7 flex flex-col divide-y divide-border-subtle border-t border-border-subtle pt-2">
               <div className="flex items-baseline justify-between gap-6 py-4">
                 <dt className="text-[15px] font-medium text-white">
-                  Two platforms
+                  Meta + Google
                 </dt>
                 <dd className="whitespace-nowrap text-[17px] font-light text-white">
-                  $2,000<span className="text-[13px] text-text-muted">/mo</span>
-                </dd>
-              </div>
-              <div className="flex items-baseline justify-between gap-6 pt-4">
-                <dt className="text-[15px] font-medium text-white">
-                  Three platforms
-                </dt>
-                <dd className="whitespace-nowrap text-[17px] font-light text-white">
-                  $3,000<span className="text-[13px] text-text-muted">/mo</span>
+                  $4,000<span className="text-[13px] text-text-muted">/mo</span>
                 </dd>
               </div>
             </dl>

@@ -77,7 +77,7 @@ export default function OnePagerPage() {
   return (
     <div
       data-sheet
-      className="mx-auto max-w-[820px] bg-white px-10 py-9 font-sans text-[13px] leading-relaxed text-neutral-800 print:px-0 print:py-0"
+      className="mx-auto max-w-[820px] bg-white px-10 py-7 font-sans text-[13px] leading-relaxed text-neutral-800 print:px-0 print:py-0"
     >
       {/* Letterhead */}
       <header className="flex flex-wrap items-end justify-between gap-3 border-b-2 border-neutral-900 pb-3">
@@ -101,7 +101,7 @@ export default function OnePagerPage() {
       </header>
 
       {/* Headline */}
-      <section className="mt-4 rounded-lg border-l-4 border-violet-700 bg-violet-50 px-5 py-3.5">
+      <section className="mt-4 rounded-lg border-l-4 border-violet-700 bg-violet-50 px-5 py-3">
         <h1 className="text-[21px] font-bold leading-tight tracking-tight text-neutral-900">
           Turn cold LA scrolls into high-value patient bookings
         </h1>
@@ -114,7 +114,7 @@ export default function OnePagerPage() {
       </section>
 
       {/* Process */}
-      <section className="mt-4">
+      <section className="mt-3">
         <h2 className="text-[11.5px] font-semibold uppercase tracking-[1.5px] text-neutral-500">
           The end-to-end growth system
         </h2>
@@ -139,16 +139,16 @@ export default function OnePagerPage() {
       </section>
 
       {/* Pricing + guarantee */}
-      <section className="mt-4">
+      <section className="mt-3">
         <h2 className="text-[11.5px] font-semibold uppercase tracking-[1.5px] text-neutral-500">
           Transparent pricing &amp; risk-free guarantee
         </h2>
         <div className="mt-2.5 grid grid-cols-2 gap-4">
-          <div className="rounded-lg border-2 border-violet-700 px-4 py-3">
+          <div className="rounded-lg border-2 border-violet-700 px-4 py-2.5">
             <div className="flex items-baseline justify-between border-b border-dashed border-neutral-300 py-1.5">
               <p className="text-[12.5px] text-neutral-700">Service fee</p>
               <p className="text-[13px] font-semibold text-neutral-900">
-                $1,000<span className="font-normal text-neutral-500">/mo</span>
+                $2,000<span className="font-normal text-neutral-500">/mo</span>
               </p>
             </div>
             <div className="flex items-baseline justify-between border-b border-dashed border-neutral-300 py-1.5">
@@ -159,15 +159,22 @@ export default function OnePagerPage() {
                 $50<span className="font-normal text-neutral-500">/day</span>
               </p>
             </div>
-            <div className="flex items-baseline justify-between py-1.5">
+            <div className="flex items-baseline justify-between border-b border-dashed border-neutral-300 py-1.5">
               <p className="text-[12.5px] text-neutral-700">Terms</p>
               <p className="text-[12.5px] font-semibold text-violet-700">
                 Month-to-month · Cancel any time
               </p>
             </div>
+            <p className="pt-1 text-[11px] text-neutral-500">
+              Add Google Ads for{" "}
+              <span className="font-semibold text-neutral-700">
+                $4,000/mo
+              </span>{" "}
+              total.
+            </p>
           </div>
 
-          <div className="rounded-lg border-2 border-emerald-600 bg-emerald-50 px-4 py-3">
+          <div className="rounded-lg border-2 border-emerald-600 bg-emerald-50 px-4 py-2.5">
             <p className="text-[12.5px] font-bold text-emerald-800">
               ✓ The 25-lead guarantee
             </p>
@@ -186,11 +193,11 @@ export default function OnePagerPage() {
       </section>
 
       {/* Proof */}
-      <section className="mt-4">
+      <section className="mt-3">
         <h2 className="text-[11.5px] font-semibold uppercase tracking-[1.5px] text-neutral-500">
           Proven results in Los Angeles
         </h2>
-        <div className="mt-2.5 rounded-lg border border-neutral-200 p-3.5">
+        <div className="mt-2.5 rounded-lg border border-neutral-200 p-3">
           <div className="flex items-baseline justify-between">
             <p className="text-[13px] font-semibold text-neutral-900">
               Case study: {featuredCaseStudy.location ?? "Los Angeles"}{" "}
@@ -233,7 +240,7 @@ export default function OnePagerPage() {
       </section>
 
       {/* Close */}
-      <section className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-lg bg-neutral-900 px-5 py-3.5">
+      <section className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-lg bg-neutral-900 px-5 py-3">
         <div>
           <p className="text-[14px] font-bold text-white">
             Claim exclusivity in your LA sub-market

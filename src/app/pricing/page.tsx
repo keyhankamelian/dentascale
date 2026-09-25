@@ -9,16 +9,16 @@ import { LeadFormSection } from "@/components/sections/LeadFormSection";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple, transparent dental marketing pricing from $1,000/mo. Month-to-month, no lock-in. Ad spend paid directly to platforms. We never touch your budget.",
+    "Simple, transparent dental marketing pricing from $2,000/mo. Month-to-month, no lock-in. Ad spend paid directly to platforms. We never touch your budget.",
 };
 
 const plans = [
   {
-    name: "Starter",
-    price: "$1,000",
-    description: "One platform. All you need to get started and see results.",
+    name: "Meta Ads",
+    price: "$2,000",
+    description: "Everything you need to launch and see results on Meta.",
     features: [
-      "Meta Ads only",
+      "Meta Ads (Facebook & Instagram)",
       "Campaign setup & daily management",
       "Ad copy written for you",
       "Creative direction, shot lists & script",
@@ -28,25 +28,13 @@ const plans = [
     featured: false,
   },
   {
-    name: "Two-platform",
-    price: "$2,000",
-    description: "The sweet spot. Reach patients across two channels at once.",
+    name: "Meta + Google",
+    price: "$4,000",
+    description: "Reach patients on Meta and while they're searching on Google.",
     features: [
-      "Meta + TikTok or Google",
-      "Everything in Starter",
+      "Everything in Meta Ads",
+      "Google Ads (Search & Display)",
       "Cross-channel strategy & testing",
-      "Priority optimization",
-      "Lead-to-Chair System included",
-    ],
-    featured: false,
-  },
-  {
-    name: "Three-platform",
-    price: "$3,000",
-    description: "Maximum reach across every channel that matters.",
-    features: [
-      "Meta + TikTok + Google",
-      "Everything in Two-platform",
       "Full-funnel coverage",
       "Lead-to-Chair System included",
     ],
@@ -128,7 +116,7 @@ const faqs: FAQItem[] = [
   {
     question: "Who pays for the ad spend?",
     answer:
-      "You do. Ad spend goes directly to Meta, TikTok, and Google, and we never touch your budget. The monthly price above is purely for our management, strategy, and creative work. We recommend $500 to $1,000 per month in ad spend per platform.",
+      "You do. Ad spend goes directly to Meta and Google, and we never touch your budget. The monthly price above is purely for our management, strategy, and creative work. We recommend $500 to $1,000 per month in ad spend per platform.",
   },
   {
     question: "What's the Lead-to-Chair System, and does it cost extra?",
@@ -154,7 +142,7 @@ export default function PricingPage() {
       {/* Core plans */}
       <Section bg="secondary">
         <h2 className="sr-only">Plans</h2>
-        <ul className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <ul className="mx-auto grid max-w-3xl grid-cols-1 gap-5 md:grid-cols-2">
           {plans.map((plan, i) => (
             <Reveal as="li" key={plan.name} delay={i * 0.1}>
               <PricingCard

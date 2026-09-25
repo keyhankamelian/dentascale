@@ -169,7 +169,7 @@ export default async function ProposalSheetPage({
         </p>
         <div className="mt-2 flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <p className="text-[27px] font-semibold leading-none tracking-tight text-neutral-900">
-            $1,000
+            $2,000
             <span className="text-[15px] font-medium text-neutral-500">
               /month
             </span>
@@ -192,7 +192,7 @@ export default async function ProposalSheetPage({
           <strong className="font-semibold text-neutral-800">
             our fee stays the same
           </strong>
-          . Two platforms $2,000/mo, three $3,000/mo.
+          . Add Google Ads for $4,000/mo total.
         </p>
       </section>
 

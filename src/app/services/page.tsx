@@ -10,7 +10,7 @@ import { LeadFormSection } from "@/components/sections/LeadFormSection";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Brand and creative direction, paid social campaigns on Meta, TikTok & Google, social media growth, and weekly reporting. Done for you, start to finish.",
+    "Brand and creative direction, paid social campaigns on Meta & Google, social media growth, and weekly reporting. Done for you, start to finish.",
 };
 
 type Service = { icon: LucideIcon; title: string; body: string };
@@ -24,7 +24,7 @@ const services: Service[] = [
   {
     icon: Target,
     title: "Paid social campaigns",
-    body: "We design, launch, and manage paid campaigns on Meta, TikTok, and Google built specifically for dental practices. From audience targeting to offer strategy to daily optimization, we focus on one thing: patients who actually want to book. You approve the direction; we handle the buying, testing, and scaling.",
+    body: "We design, launch, and manage paid campaigns on Meta and Google built specifically for dental practices. From audience targeting to offer strategy to daily optimization, we focus on one thing: patients who actually want to book. You approve the direction; we handle the buying, testing, and scaling.",
   },
   {
     icon: TrendingUp,
