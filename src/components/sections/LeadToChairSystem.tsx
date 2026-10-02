@@ -1,9 +1,9 @@
 import {
   Phone,
   MessageSquare,
-  Calendar,
+  CalendarCheck,
   ShieldCheck,
-  CircleCheck,
+  BellRing,
   type LucideIcon,
 } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -15,33 +15,33 @@ type Item = { icon: LucideIcon; title: string; description: string };
 const items: Item[] = [
   {
     icon: Phone,
-    title: "The First Call Script",
+    title: "We call every lead ourselves",
     description:
-      "A word-for-word script your front desk uses to turn a curious caller into a confirmed appointment.",
-  },
-  {
-    icon: MessageSquare,
-    title: "Follow-up templates",
-    description:
-      "Ready-to-send texts and emails that re-engage leads who didn't book on the first touch.",
-  },
-  {
-    icon: Calendar,
-    title: "The follow-up cadence",
-    description:
-      "Exactly when to reach out (day 1, day 3, day 7) so no lead slips through the cracks.",
+      "New leads get a call within minutes, while they are still thinking about it, not a day later from a busy front desk.",
   },
   {
     icon: ShieldCheck,
-    title: "Objection handlers",
+    title: "We qualify before we book",
     description:
-      'Calm, proven responses to "I need to think about it," price questions, and insurance hesitation.',
+      "Right treatment, right area, serious about starting. You only see people worth a consult.",
   },
   {
-    icon: CircleCheck,
-    title: "No-show prevention checklist",
+    icon: CalendarCheck,
+    title: "We book it into your calendar",
     description:
-      "A simple reminder system that keeps booked patients showing up in the chair.",
+      "Qualified patients land straight in your consultation calendar. No lists to chase, no back-and-forth.",
+  },
+  {
+    icon: MessageSquare,
+    title: "We follow up on no-answers",
+    description:
+      "Texts and calls on day 1, 3, and 7, so a missed call never means a lost patient.",
+  },
+  {
+    icon: BellRing,
+    title: "We keep them showing up",
+    description:
+      "Confirmations and reminders before every consult to protect your chair time.",
   },
 ];
 
@@ -49,25 +49,21 @@ type Props = {
   bg?: "primary" | "secondary";
 };
 
-/** The proprietary Lead-to-Chair System section, reused on Home and Services. */
+/** The Lead-to-Chair System: we call, qualify, and book every lead. Reused on Home and Services. */
 export function LeadToChairSystem({ bg = "secondary" }: Props) {
   return (
     <Section bg={bg} id="lead-to-chair">
       <SectionHeading
-        label="Beyond Leads"
-        title="We don't just get you leads. We help you book them."
+        label="The Lead-to-Chair System"
+        title="We don't hand you a list. We book the consult."
       />
 
       <Reveal className="mx-auto mt-6 max-w-2xl text-center" delay={0.1}>
         <p className="text-[14px] leading-relaxed text-text-muted">
-          Most agencies hand you a pile of leads and disappear. We give every
-          client our proprietary{" "}
-          <span className="font-medium text-text-secondary">
-            Lead-to-Chair System
-          </span>
-          , the exact playbook for turning a fresh lead into a booked, show-up
-          patient. It&apos;s the difference between paying for clicks and
-          filling your schedule.
+          Most agencies hand you a pile of leads and disappear. We call every
+          lead ourselves, qualify them, and book them into your calendar. By
+          the time a patient reaches your office, they are already on the
+          schedule.
         </p>
       </Reveal>
 
@@ -102,7 +98,7 @@ export function LeadToChairSystem({ bg = "secondary" }: Props) {
 
       <Reveal className="mt-6 text-center" delay={0.15}>
         <p className="text-[13px] text-text-tertiary">
-          Included free with every plan.
+          Included with every plan.
         </p>
       </Reveal>
     </Section>

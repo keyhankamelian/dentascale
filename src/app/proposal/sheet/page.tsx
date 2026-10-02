@@ -27,8 +27,8 @@ function clean(value: string | undefined): string | undefined {
 
 const handled = [
   {
-    title: "Ad content & visuals",
-    body: "We come to you, shoot it, edit it, and write every word of copy. We can also use what you already have.",
+    title: "What to shoot, then the ads",
+    body: "A shot list and scripts. You film on your phone; we edit it into ads and write every word of copy. We also use what you already have.",
   },
   {
     title: "An offer worth booking",
@@ -36,15 +36,15 @@ const handled = [
   },
   {
     title: "Your booking funnel",
-    body: "We build the landing page and forms behind the ads, with your reviews front and center, so clicks turn into patients.",
+    body: "The landing page and forms behind the ads, with your reviews front and center, so clicks turn into leads.",
   },
   {
     title: "Paid campaigns",
     body: "Built, launched, and optimized daily around patients who are ready to book.",
   },
   {
-    title: "The Lead-to-Chair System",
-    body: "Call scripts, follow-up templates, and a no-show checklist for your front desk.",
+    title: "We call, qualify, and book",
+    body: "Our team calls every lead within minutes, qualifies them, and books them into your consultation calendar.",
   },
   {
     title: "Weekly reporting",
@@ -59,11 +59,11 @@ const steps = [
   },
   {
     title: "Week one, we build",
-    body: "Content shoot, editing, ad account, tracking, your booking funnel, and the campaigns themselves. Live within seven days.",
+    body: "You film from our shot list; we edit, set up the ad account and tracking, and build the campaigns. Live within seven days of your footage.",
   },
   {
-    title: "We launch and optimize",
-    body: "Campaigns go live and we tune them daily as real data comes in. You get a plain-English report every week.",
+    title: "We launch, call, and book",
+    body: "Campaigns go live and we tune them daily. We call every lead and book consults into your calendar. Plain-English report every week.",
   },
   {
     title: "25 leads, or month two is free",
@@ -114,7 +114,7 @@ export default async function ProposalSheetPage({
             Denta<span className="text-violet-700">Scale</span>
           </p>
           <p className="mt-0.5 text-[12px] text-neutral-500">
-            Branding &amp; paid social for dental practices
+            Invisalign leads, called and booked for you
           </p>
         </div>
         <div className="text-right text-[11.5px] leading-snug text-neutral-600">
@@ -134,12 +134,13 @@ export default async function ProposalSheetPage({
       {/* Opening */}
       <section className="mt-5">
         <h1 className="text-[26px] font-semibold leading-tight tracking-tight text-neutral-900">
-          Referrals built your practice. They won&apos;t scale it.
+          We fill your consult calendar. You just show up.
         </h1>
         <p className="mt-2 max-w-[72ch] text-[13.5px] text-neutral-700">
-          We help dental and orthodontic practices bring in new patients
-          predictably, with ad content and visuals that look like your practice
-          and social media ad campaigns you can measure.
+          For practices that can take on 10 to 20 more Invisalign and clear
+          aligner consults a month. We tell you what to shoot, edit the ads, run
+          the campaigns, and call every lead ourselves to book them into your
+          calendar.
         </p>
       </section>
 
@@ -185,8 +186,9 @@ export default async function ProposalSheetPage({
         <p className="mt-1.5 max-w-[76ch] text-[12.5px] text-neutral-700">
           Plus $50 a day in ad spend, paid directly to Meta. We never touch
           your budget. Month to month, cancel any time, and you own every asset
-          we create. Your intro shoot is included at no extra cost for local
-          practices.
+          we create. We call and book every lead for you, included. You film
+          from our shot list; an on-site shoot is $500 if you would rather we
+          come to you.
         </p>
         <p className="mt-1.5 max-w-[76ch] text-[12.5px] text-neutral-600">
           Raise your budget later and{" "}

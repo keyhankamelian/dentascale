@@ -23,16 +23,16 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "DentaScale: Branding & paid social for dental practices",
+    default: "DentaScale: Invisalign leads, called and booked for you",
     template: "%s | DentaScale",
   },
   description:
-    "We help dental and orthodontic practices grow beyond referrals by building an authentic online presence and running paid social campaigns that bring in new patients predictably, month after month.",
+    "For dental and orthodontic practices that can take on 10 to 20 more Invisalign and clear aligner consults a month. We make the ads, run the campaigns, and call every lead ourselves to book them into your calendar.",
   metadataBase: new URL("https://dentascale.net"),
   openGraph: {
-    title: "DentaScale: Branding & paid social for dental practices",
+    title: "DentaScale: Invisalign leads, called and booked for you",
     description:
-      "Referrals are unpredictable. Growth should be a system. Ad content, visuals, and social media ad campaigns that bring dental practices new patients predictably.",
+      "We fill your consult calendar. Ads, video editing, and lead calling and booking for Invisalign and clear aligner consults.",
     type: "website",
   },
   other: {

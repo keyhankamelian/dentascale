@@ -27,18 +27,18 @@ const testimonial = caseStudies.find((s) => s.testimonial)?.testimonial;
 const process = [
   {
     step: "01",
-    title: "On-site shoot",
-    body: "We send a team to your office to shoot custom video ads with your staff, chairside.",
+    title: "You film, we edit",
+    body: "We send a shot list and scripts. You film on your phone; we edit it into ads.",
   },
   {
     step: "02",
-    title: "Funnel & scripts",
-    body: "We build the booking funnel and give your front desk a speed-to-lead script to maximize consults.",
+    title: "Run the campaigns",
+    body: "We launch, test, and optimize targeted Meta campaigns to drive local patient inquiries.",
   },
   {
     step: "03",
-    title: "Meta management",
-    body: "We launch, test, and optimize targeted campaigns on Meta to drive local patient inquiries.",
+    title: "We call and book",
+    body: "We call every lead within minutes, qualify them, and book them into your consult calendar.",
   },
   {
     step: "04",
@@ -86,7 +86,7 @@ export default function OnePagerPage() {
             Denta<span className="text-violet-700">Scale</span>
           </p>
           <p className="mt-0.5 text-[11px] font-semibold uppercase tracking-[1.5px] text-violet-700">
-            Ortho &amp; Cosmetic Patient Acquisition
+            Invisalign Consults, Called &amp; Booked
           </p>
         </div>
         <div className="text-right text-[11.5px] leading-snug text-neutral-600">
@@ -103,13 +103,12 @@ export default function OnePagerPage() {
       {/* Headline */}
       <section className="mt-4 rounded-lg border-l-4 border-violet-700 bg-violet-50 px-5 py-3">
         <h1 className="text-[21px] font-bold leading-tight tracking-tight text-neutral-900">
-          Turn cold LA scrolls into high-value patient bookings
+          We fill your Invisalign consult calendar. You just show up.
         </h1>
         <p className="mt-2 max-w-[80ch] text-[12.5px] text-neutral-700">
-          Referrals are unpredictable — growth should be a system. We help Los
-          Angeles orthodontic and cosmetic practices bring in high-ticket
-          Invisalign, clear aligner, and cosmetic cases using authentic
-          on-site video ad campaigns, measured down to the dollar.
+          For Los Angeles practices that can take on 10 to 20 more Invisalign
+          and clear aligner consults a month. We run the ads, call every lead
+          ourselves, and book them straight into your calendar.
         </p>
       </section>
 
@@ -170,7 +169,7 @@ export default function OnePagerPage() {
               <span className="font-semibold text-neutral-700">
                 $4,000/mo
               </span>{" "}
-              total. Intro shoot included for local practices.
+              total. Lead calling and booking included.
             </p>
           </div>
 

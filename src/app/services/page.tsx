@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Target, TrendingUp, PenLine, BarChart3, type LucideIcon } from "lucide-react";
+import { Clapperboard, Film, Target, Phone, type LucideIcon } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
@@ -10,31 +10,31 @@ import { LeadFormSection } from "@/components/sections/LeadFormSection";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Brand and creative direction, paid social campaigns on Meta & Google, social media growth, and weekly reporting. Done for you, start to finish.",
+    "For practices that can take on 10 to 20 more Invisalign and clear aligner consults a month. We direct the content, edit the ads, run the campaigns, and call and book every lead into your calendar.",
 };
 
 type Service = { icon: LucideIcon; title: string; body: string };
 
 const services: Service[] = [
   {
-    icon: PenLine,
-    title: "Brand & creative direction",
-    body: "Your ads should look like your practice, not a stock photo library. We direct the creative from the ground up: what to film, how to frame it, which hooks and angles land. The result is content that represents you authentically and still stops the scroll. We write every word of the copy that runs with it.",
+    icon: Clapperboard,
+    title: "Creative direction: what to shoot",
+    body: "We tell you exactly what to film: a shot list, word-for-word scripts, and the hooks and angles that work for aligner cases. You shoot on your phone and send us the footage and any before-and-afters you already have. No film crew, no guesswork.",
+  },
+  {
+    icon: Film,
+    title: "Video editing and ads",
+    body: "We edit the footage ourselves and turn it into scroll-stopping ads, then write every word of the copy that runs with them. You approve the direction; we handle production.",
   },
   {
     icon: Target,
-    title: "Paid social campaigns",
-    body: "We design, launch, and manage paid campaigns on Meta and Google built specifically for dental practices. From audience targeting to offer strategy to daily optimization, we focus on one thing: patients who actually want to book. You approve the direction; we handle the buying, testing, and scaling.",
+    title: "Campaigns, run and reported",
+    body: "We launch and manage your campaigns on Meta, and on Google with the higher plan. Targeting, offer strategy, testing, and daily optimization, with a plain-English report every week on spend, leads, and cost per lead.",
   },
   {
-    icon: TrendingUp,
-    title: "Social media growth",
-    body: "Beyond direct-response ads, we run engagement campaigns that grow your following and keep your practice visible in the community. More reach means more trust, and more patients who already feel like they know you before they ever walk in the door.",
-  },
-  {
-    icon: BarChart3,
-    title: "Weekly reporting",
-    body: "Every week you get a clear, plain-English breakdown of what we spent, how many leads came in, what each one cost, and what's next. No vanity metrics, no jargon. Just the numbers that tell you whether your marketing is working.",
+    icon: Phone,
+    title: "We call, qualify, and book",
+    body: "Every lead gets a call from our team within minutes. We qualify them for fit and book them straight into your consultation calendar, so your front desk only meets patients who are already on the schedule.",
   },
 ];
 
@@ -43,8 +43,8 @@ export default function ServicesPage() {
     <>
       <PageHero
         label="Services"
-        title="Brand, creative, and campaigns: done for you"
-        subtitle="The system that turns attention into booked patients."
+        title="From the shot list to a booked consult"
+        subtitle="You film. We handle the ads, the calls, and the calendar."
       />
 
       <Section bg="secondary">

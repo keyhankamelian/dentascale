@@ -21,7 +21,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Growth Proposal",
   description:
-    "How DentaScale helps independent dental and orthodontic practices grow beyond referrals.",
+    "How DentaScale fills your Invisalign and clear aligner consult calendar: we run the ads, call every lead, and book them for you.",
   // Sent directly to prospects. Kept out of search results so it stays a
   // one-to-one document rather than a public landing page.
   robots: { index: false, follow: false },
@@ -52,18 +52,18 @@ type Pillar = { icon: LucideIcon; title: string; body: string };
 const pillars: Pillar[] = [
   {
     icon: PenLine,
-    title: "Ad content & visuals",
-    body: "We come to you and shoot it, edit it, and write every word of copy, so your ads look like your practice rather than a stock photo library.",
+    title: "What to shoot, then the ads",
+    body: "We send a shot list and scripts. You film on your phone and send the footage. We edit it into ads and write every word of copy, so they look like your practice.",
   },
   {
     icon: Target,
     title: "Paid campaigns",
-    body: "Built and managed on Meta and Google. Audience targeting, offer strategy, and daily optimization aimed at patients who actually want to book.",
+    body: "Built and managed on Meta, and on Google with the higher plan. Targeting, offer strategy, and daily optimization aimed at patients who want to book.",
   },
   {
     icon: MessageSquare,
-    title: "The Lead-to-Chair System",
-    body: "Scripts, follow-up templates, and a no-show checklist your front desk uses to turn a new lead into someone sitting in the chair. Included with every plan.",
+    title: "We call, qualify, and book",
+    body: "Our team calls every lead within minutes, qualifies them, and books them straight into your consultation calendar. Your front desk only meets patients already on the schedule.",
   },
   {
     icon: BarChart3,
@@ -79,11 +79,11 @@ const steps = [
   },
   {
     title: "Week one, we build",
-    body: "Content shoot, editing, ad account, tracking, your booking funnel, and the campaigns themselves. Live within seven days.",
+    body: "You film from our shot list, we edit, and we set up the ad account, tracking, and campaigns. Live within seven days of receiving your footage.",
   },
   {
-    title: "We launch and optimize",
-    body: "Campaigns go live and we tune them daily as real data comes in. You get a plain-English report every week.",
+    title: "We launch, call, and book",
+    body: "Campaigns go live and we tune them daily. We call every lead and book the consults into your calendar. You get a plain-English report every week.",
   },
   {
     title: "25 leads, or month two is free",
@@ -127,7 +127,7 @@ export default async function ProposalPage({
       <PageHero
         label={preparedFor ? `Prepared for ${preparedFor}` : "Growth Proposal"}
         title="A predictable way to fill your schedule"
-        subtitle="Ad content, visuals, and social media ad campaigns for independent dental and orthodontic practices. Month to month, with the numbers shown to you every week."
+        subtitle="For practices that can take on 10 to 20 more Invisalign and clear aligner consults a month. We run the ads, call every lead ourselves, and book them into your calendar."
       />
 
       {/* The problem */}
@@ -318,8 +318,9 @@ export default async function ProposalPage({
               and you own every asset we create.
             </p>
             <p className="mt-3 text-[14px] leading-relaxed text-text-secondary">
-              Your intro content shoot is included at no extra cost if you&apos;re
-              a local practice.
+              Includes calling, qualifying, and booking every lead. You film
+              from our shot list; we do the editing. Prefer us on-site? A
+              shoot is $500.
             </p>
 
             <dl className="mt-7 flex flex-col divide-y divide-border-subtle border-t border-border-subtle pt-2">

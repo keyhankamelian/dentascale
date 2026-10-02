@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Waves, Search, BarChart3, Gauge, ArrowRight, type LucideIcon } from "lucide-react";
+import { Clapperboard, Megaphone, Phone, CalendarCheck, Check, ArrowRight, type LucideIcon } from "lucide-react";
 import { Section, SectionHeading, SectionLabel } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
@@ -11,35 +11,41 @@ import { LeadFormSection } from "@/components/sections/LeadFormSection";
 import { featuredCaseStudy } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
-type Pain = { icon: LucideIcon; title: string; body: string };
+type Step = { icon: LucideIcon; title: string; body: string };
 
-const pains: Pain[] = [
+const steps: Step[] = [
   {
-    icon: Waves,
-    title: "Feast or famine",
-    body: "Some months the schedule is full, some months it isn't, and nothing you did explains the difference.",
+    icon: Clapperboard,
+    title: "We tell you what to shoot",
+    body: "A shot list and word-for-word scripts. You film on your phone and send us the footage. We do the rest.",
   },
   {
-    icon: Search,
-    title: "Invisible where it counts",
-    body: "Patients look you up before they book. What they find online doesn't reflect the quality of your work.",
+    icon: Megaphone,
+    title: "We build and run the ads",
+    body: "We edit the videos, turn them into ads, and run and optimize the campaigns every day.",
   },
   {
-    icon: BarChart3,
-    title: "Marketing you can't measure",
-    body: "Money goes out to billboards, mailers, and sponsorships, with no way to tell what actually brought anyone in.",
+    icon: Phone,
+    title: "We call and qualify every lead",
+    body: "Our team calls each new lead within minutes and checks they are a real fit for a consult.",
   },
   {
-    icon: Gauge,
-    title: "No way to scale",
-    body: "Even in a good month, there's no lever to pull when you want more patients in the chair next month.",
+    icon: CalendarCheck,
+    title: "We book them into your calendar",
+    body: "Qualified patients land directly in your consultation calendar, ready for you to see.",
   },
 ];
 
+const fitCriteria = [
+  "You offer Invisalign or clear aligners",
+  "You can take on 10 to 20 more consults a month",
+  "You want the leads called and booked for you",
+];
+
 const equations = [
+  { left: "We make the calls", right: "your front desk only meets patients who are already booked" },
   { left: "Month-to-month", right: "our results earn the next month" },
   { left: "Small roster", right: "your practice gets our full attention" },
-  { left: "Lean operation", right: "changes ship the same day, not after a meeting" },
   {
     left: "Real people",
     right: "always reachable, never a ticket system or an AI chatbot",
@@ -57,21 +63,21 @@ export default function HomePage() {
         />
         <div className="container-page relative flex flex-col items-center gap-7 py-24 text-center md:py-32">
           <Reveal>
-            <SectionLabel>For independent dental practices</SectionLabel>
+            <SectionLabel>For dental and orthodontic practices</SectionLabel>
           </Reveal>
 
           <Reveal delay={0.05}>
             <h1 className="max-w-3xl text-4xl font-extralight leading-[1.1] text-white sm:text-5xl md:text-[56px]">
-              Referrals are unpredictable.{" "}
-              <span className="text-accent-light">Growth should be a system.</span>
+              We fill your consult calendar.{" "}
+              <span className="text-accent-light">You just show up.</span>
             </h1>
           </Reveal>
 
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-[15px] leading-relaxed text-text-secondary md:text-base">
-              We help dental and orthodontic practices build an authentic
-              online presence and run paid social campaigns that bring in new
-              patients predictably, not by chance.
+              For offices that can take on 10 to 20 more Invisalign and clear
+              aligner consults a month. We run the ads, call every lead
+              ourselves, and book them straight into your calendar.
             </p>
           </Reveal>
 
@@ -83,34 +89,54 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Section 2 — Sound Familiar? */}
+      {/* Section 2 — How it works */}
       <Section bg="secondary">
         <SectionHeading
-          label="Sound Familiar?"
-          title="The ceiling most practices hit"
-          subtitle="Four reasons growth stalls, and what changes when you have a system."
+          label="How it works"
+          title="You film. We handle everything else."
+          subtitle="From the first shot list to a booked consult, one team does all of it."
         />
 
         <ul className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {pains.map((pain, i) => {
-            const Icon = pain.icon;
+          {steps.map((step, i) => {
+            const Icon = step.icon;
             return (
-              <Reveal as="li" key={pain.title} delay={i * 0.1}>
+              <Reveal as="li" key={step.title} delay={i * 0.1}>
                 <Card as="article" className="flex h-full flex-col gap-4 p-6">
                   <span className="flex size-11 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
                     <Icon size={20} aria-hidden="true" />
                   </span>
                   <h3 className="text-[17px] font-medium text-white">
-                    {pain.title}
+                    {step.title}
                   </h3>
                   <p className="text-[14px] leading-relaxed text-text-muted">
-                    {pain.body}
+                    {step.body}
                   </p>
                 </Card>
               </Reveal>
             );
           })}
         </ul>
+
+        <Reveal className="mx-auto mt-12 max-w-2xl" delay={0.1}>
+          <div className="rounded-[12px] border border-card-border bg-card p-6 sm:p-7">
+            <p className="text-[11px] font-medium uppercase tracking-[2px] text-accent-light">
+              This is for you if
+            </p>
+            <ul className="mt-4 flex flex-col gap-3">
+              {fitCriteria.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-[15px] text-text-secondary">
+                  <Check
+                    size={18}
+                    className="mt-0.5 shrink-0 text-accent-light"
+                    aria-hidden="true"
+                  />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Reveal>
       </Section>
 
       {/* Section 3 — Case Study Teaser */}

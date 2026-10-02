@@ -9,7 +9,7 @@ import { LeadFormSection } from "@/components/sections/LeadFormSection";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Simple, transparent dental marketing pricing from $2,000/mo. Month-to-month, no lock-in. Ad spend paid directly to platforms. We never touch your budget.",
+    "Ads, video editing, and lead calling and booking for Invisalign and clear aligner consults, from $2,000/mo. Month-to-month, no lock-in. Ad spend paid directly to platforms.",
 };
 
 const plans = [
@@ -19,12 +19,11 @@ const plans = [
     description: "Everything you need to launch and see results on Meta.",
     features: [
       "Meta Ads (Facebook & Instagram)",
+      "Shot lists & scripts: we tell you what to film",
+      "We edit your footage into ads and write the copy",
       "Campaign setup & daily management",
-      "Ad copy written for you",
-      "Creative direction, shot lists & script",
-      "Intro content shoot included (local practices)",
+      "We call, qualify & book every lead",
       "Weekly plain-English reporting",
-      "Lead-to-Chair System included",
     ],
     featured: false,
   },
@@ -37,8 +36,7 @@ const plans = [
       "Google Ads (Search & Display)",
       "Cross-channel strategy & testing",
       "Full-funnel coverage",
-      "Intro content shoot included (local practices)",
-      "Lead-to-Chair System included",
+      "Leads from both channels called & booked",
     ],
     featured: false,
   },
@@ -83,28 +81,15 @@ const addOns = [
     ],
   },
   {
-    name: "Lead reach-out",
-    price: "+$750",
-    period: "/mo",
-    description:
-      "We call and qualify your leads, then book appointments straight into your calendar.",
-    features: [
-      "We call every new lead",
-      "Qualify & screen for fit",
-      "Appointments booked for you",
-      "Hands-off for your front desk",
-    ],
-  },
-  {
-    name: "Additional content shoot",
+    name: "On-site content shoot",
     price: "$500",
     period: "one-time",
     description:
-      "Your first shoot is included if you're local. Book another one for a refresh, or if you're outside our service area.",
+      "Prefer us to film it? We come to your office and shoot it for you. Local practices only.",
     features: [
-      "We come shoot your content",
-      "Built from proven hooks & angles",
-      "Ready to run as ads or organic posts",
+      "We come to your office and shoot",
+      "Built from the same proven scripts",
+      "Edited and ready to run as ads",
     ],
   },
 ];
@@ -121,14 +106,19 @@ const faqs: FAQItem[] = [
       "You do. Ad spend goes directly to Meta and Google, and we never touch your budget. The monthly price above is purely for our management, strategy, and creative work. We recommend $500 to $1,000 per month in ad spend per platform.",
   },
   {
-    question: "What's the Lead-to-Chair System, and does it cost extra?",
+    question: "What does \"we call and book your leads\" mean?",
     answer:
-      "It's our proprietary playbook for turning leads into booked, show-up patients: scripts, templates, follow-up cadences, and a no-show checklist. It's included free with every plan, at no additional cost.",
+      "Every lead that comes in from your ads gets a call from our team within minutes. We confirm they are interested in Invisalign or clear aligners, are in your area, and are serious about starting, then book them directly into your consultation calendar. We follow up on no-answers and send reminders so they show up. It is included in every plan at no extra cost.",
   },
   {
-    question: "Will you create my content for me?",
+    question: "Who creates the content?",
     answer:
-      "Yes. We shoot fresh content and combine it with anything you already have, before-and-afters, existing photos, whatever you've got, to create winning, scroll-stopping ads that bring in qualified leads in a predictable, scalable way. Your intro shoot is included at no extra cost for local practices; outside our service area, we can work from your existing content or add a shoot separately.",
+      "We tell you exactly what to shoot: a shot list and word-for-word scripts. You film on your phone and send us the footage, plus any before-and-afters or photos you already have. We edit everything ourselves and turn it into ads. If you would rather not film, we can come to your office for an on-site shoot as an add-on.",
+  },
+  {
+    question: "How many consults should we be ready for?",
+    answer:
+      "Our program is built for practices that can take on 10 to 20 more Invisalign or clear aligner consults a month. That is a capacity guide, not a promise: results depend on your market, offer, and ad spend. If you cannot take on that volume yet, we will tell you honestly before you sign up.",
   },
 ];
 
