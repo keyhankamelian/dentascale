@@ -83,7 +83,7 @@ export default function HomePage() {
 
           <Reveal delay={0.15}>
             <Button href={siteConfig.bookingUrl} size="lg">
-              Book a strategy session
+              Apply to work with us
             </Button>
           </Reveal>
         </div>

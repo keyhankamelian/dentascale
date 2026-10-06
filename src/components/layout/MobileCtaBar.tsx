@@ -66,7 +66,7 @@ export function MobileCtaBar() {
         className="w-full"
         tabIndex={visible ? undefined : -1}
       >
-        Book a strategy session
+        Apply to work with us
       </Button>
     </div>
   );
