@@ -228,7 +228,7 @@ export function LeadForm() {
             Sending…
           </>
         ) : (
-          "Request my free strategy call"
+          "Apply to work with us"
         )}
       </button>
 
