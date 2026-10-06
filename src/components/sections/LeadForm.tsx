@@ -14,6 +14,12 @@ const BUSINESS_TYPES = [
   "Other",
 ] as const;
 
+const CONSULT_SOURCES = [
+  "Referrals / word of mouth",
+  "Google Ads",
+  "Meta Ads",
+] as const;
+
 const initial = {
   name: "",
   businessName: "",
@@ -33,6 +39,13 @@ const labelClass = "mb-1.5 block text-[13px] font-medium text-text-secondary";
 export function LeadForm() {
   const [form, setForm] = useState(initial);
   const [status, setStatus] = useState<Status>("idle");
+  const [sources, setSources] = useState<string[]>([]);
+
+  function toggleSource(source: string) {
+    setSources((prev) =>
+      prev.includes(source) ? prev.filter((x) => x !== source) : [...prev, source],
+    );
+  }
 
   function update<K extends keyof typeof initial>(key: K, value: string) {
     setForm((f) => ({ ...f, [key]: value }));
@@ -60,6 +73,7 @@ export function LeadForm() {
           phone: form.phone,
           email: form.email,
           location: form.location,
+          current_consult_sources: sources.join(", ") || "None selected",
           ...utm, // utm_source, utm_medium, utm_campaign, utm_term, utm_content, fbclid, gclid
           _subject: `New lead: ${form.name} at ${form.businessName}${source ? ` (via ${source})` : ""}`,
           _gotcha: form.botcheck, // Formspree honeypot — real users leave empty
@@ -207,6 +221,28 @@ export function LeadForm() {
             placeholder="Glendale, CA"
           />
         </div>
+
+        <fieldset className="sm:col-span-2">
+          <legend className={labelClass}>
+            How are you getting clear braces and Invisalign consults right now?
+          </legend>
+          <div className="mt-2 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6">
+            {CONSULT_SOURCES.map((source) => (
+              <label
+                key={source}
+                className="flex cursor-pointer items-center gap-2.5 text-sm text-text-secondary"
+              >
+                <input
+                  type="checkbox"
+                  checked={sources.includes(source)}
+                  onChange={() => toggleSource(source)}
+                  className="size-4 cursor-pointer rounded border-card-border bg-bg-primary accent-[var(--color-accent)]"
+                />
+                {source}
+              </label>
+            ))}
+          </div>
+        </fieldset>
       </div>
 
       {status === "error" && (
