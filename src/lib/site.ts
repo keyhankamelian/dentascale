@@ -10,10 +10,10 @@ export const siteConfig = {
   /** Formspree endpoint the lead form submits to (leads land in Formspree). */
   formEndpoint: "https://formspree.io/f/xrewojbg",
   /**
-   * Primary CTA destination — all "Book a call" buttons scroll to the lead
-   * form (#start), which sits at the bottom of every page.
+   * Primary CTA destination: every "Apply to work with us" button goes to the
+   * contact page, which holds the lead form.
    */
-  bookingUrl: "#start",
+  bookingUrl: "/contact",
   /**
    * Calendly scheduling link for the free Growth Plan session. Leave empty to
    * fall back to plain email/phone contact details; the proposal page renders

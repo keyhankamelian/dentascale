@@ -5,7 +5,7 @@ import { PageHero } from "@/components/sections/PageHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
-import { LeadFormSection } from "@/components/sections/LeadFormSection";
+import { ClosingCta } from "@/components/sections/ClosingCta";
 import { bothPathsFail } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -117,7 +117,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <LeadFormSection bg="secondary" />
+      <ClosingCta bg="secondary" />
     </>
   );
 }

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
 
@@ -13,6 +14,7 @@ import { siteConfig } from "@/lib/site";
  * is on screen — down there the bar would sit on top of the form's own fields.
  */
 export function MobileCtaBar() {
+  const pathname = usePathname();
   const [pastHero, setPastHero] = useState(false);
   const [formInView, setFormInView] = useState(false);
 
@@ -50,7 +52,7 @@ export function MobileCtaBar() {
     return () => observer.disconnect();
   }, []);
 
-  const visible = pastHero && !formInView;
+  const visible = pastHero && !formInView && pathname !== "/contact";
 
   return (
     <div

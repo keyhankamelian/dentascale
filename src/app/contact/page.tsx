@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with DentaScale by email or phone and we'll get back to you within 1 business day.",
+    "Apply to work with DentaScale. Tell us about your practice and we'll get back to you within 1 business day.",
 };
 
 const contactLinkClass =
@@ -20,13 +20,15 @@ const contactIconClass =
 export default function ContactPage() {
   return (
     <>
-      <PageHero label="Contact" title="Let's have a conversation" />
+      <PageHero label="Contact" title="Apply to work with us" />
 
-      <Section bg="secondary">
+      <LeadFormSection bg="secondary" />
+
+      <Section bg="primary">
         <Reveal className="mx-auto flex max-w-lg flex-col items-center gap-7 text-center">
           <p className="text-[15px] leading-relaxed text-text-secondary">
-            Tell us a bit about your practice and what you&apos;re looking for.
-            We&apos;ll get back to you within 1 business day.
+            Prefer to reach us directly? Email or call and we&apos;ll get back
+            to you within 1 business day.
           </p>
 
           <div className="flex flex-col items-center gap-3 sm:flex-row">
@@ -47,14 +49,8 @@ export default function ContactPage() {
               {siteConfig.phone}
             </a>
           </div>
-
-          <p className="text-[13px] text-text-tertiary">
-            Prefer to write it out? Use the form below.
-          </p>
         </Reveal>
       </Section>
-
-      <LeadFormSection bg="primary" />
     </>
   );
 }

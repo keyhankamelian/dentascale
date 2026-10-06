@@ -83,8 +83,7 @@ export function LeadForm() {
         <CheckCircle2 className="text-accent-light" size={40} aria-hidden="true" />
         <h3 className="text-lg font-medium text-white">Thanks, we&apos;ve got it.</h3>
         <p className="max-w-sm text-sm leading-relaxed text-text-muted">
-          We&apos;ll review your details and reach out shortly to set up your free
-          strategy call.
+          We&apos;ll review your application and reach out shortly.
         </p>
       </div>
     );
@@ -233,7 +232,7 @@ export function LeadForm() {
       </button>
 
       <p className="mt-3 text-center text-[12px] text-text-tertiary">
-        We&apos;ll review your details and reach out to schedule your call. By
+        We&apos;ll review your details and reach out. By
         submitting, you agree to our{" "}
         <Link
           href="/privacy"

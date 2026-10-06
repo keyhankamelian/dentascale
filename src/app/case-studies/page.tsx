@@ -5,7 +5,7 @@ import { Section } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { CaseStudyCard } from "@/components/sections/CaseStudyCard";
-import { LeadFormSection } from "@/components/sections/LeadFormSection";
+import { ClosingCta } from "@/components/sections/ClosingCta";
 import { caseStudies } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -105,9 +105,8 @@ export default function CaseStudiesPage() {
         </Reveal>
       </Section>
 
-      <LeadFormSection
-        bg={(caseStudies.length + 1) % 2 === 0 ? "secondary" : "primary"}
-      />
+      <ClosingCta
+        bg={(caseStudies.length + 1) % 2 === 0 ? "secondary" : "primary"} />
     </>
   );
 }

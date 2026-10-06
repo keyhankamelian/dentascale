@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/Button";
 import { EquationRow } from "@/components/ui/EquationRow";
 import { CaseStudyCard } from "@/components/sections/CaseStudyCard";
 import { LeadToChairSystem } from "@/components/sections/LeadToChairSystem";
-import { LeadFormSection } from "@/components/sections/LeadFormSection";
+import { ClosingCta } from "@/components/sections/ClosingCta";
 import { featuredCaseStudy } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
 
@@ -182,7 +182,7 @@ export default function HomePage() {
       </Section>
 
       {/* Section 6 — Final CTA */}
-      <LeadFormSection bg="secondary" />
+      <ClosingCta bg="secondary" />
     </>
   );
 }
