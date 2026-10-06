@@ -2,7 +2,7 @@
 
 export const siteConfig = {
   name: "DentaScale",
-  tagline: "The ortho & dental marketing agency for independent practices.",
+  tagline: "Marketing and patient acquisition systems for dental.",
   email: "hello@dentascale.net",
   /** Keyhan's direct address, used on outbound proposals so replies come to him. */
   founderEmail: "keyhan@dentascale.net",
