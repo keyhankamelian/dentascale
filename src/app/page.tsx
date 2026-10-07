@@ -44,6 +44,10 @@ const fitCriteria = [
 
 const equations = [
   { left: "We make the calls", right: "your front desk only meets patients who are already booked" },
+  {
+    left: "One office per market",
+    right: "we never compete against ourselves, so your ads and offer stay yours",
+  },
   { left: "Month-to-month", right: "our results earn the next month" },
   { left: "Small roster", right: "your practice gets our full attention" },
   {
