@@ -33,9 +33,9 @@ const items: Item[] = [
   },
   {
     icon: MessageSquare,
-    title: "We follow up on no-answers",
+    title: "We follow up until we get a yes or no",
     description:
-      "Texts and calls on day 1, 3, and 7, so a missed call never means a lost patient.",
+      "Calls and texts on day 1, 3, and 7. We keep following up until every lead gives a definitive answer, so a missed call never means a lost patient.",
   },
   {
     icon: BellRing,
@@ -49,21 +49,22 @@ type Props = {
   bg?: "primary" | "secondary";
 };
 
-/** The Lead-to-Chair System: we call, qualify, and book every lead. Reused on Home and Services. */
-export function LeadToChairSystem({ bg = "secondary" }: Props) {
+/** Our in-house sales team: calls, qualifies, and books every lead. Reused on Home and Services. */
+export function SalesTeamSection({ bg = "secondary" }: Props) {
   return (
-    <Section bg={bg} id="lead-to-chair">
+    <Section bg={bg} id="sales-team">
       <SectionHeading
-        label="The Lead-to-Chair System"
+        label="Our in-house sales team"
         title="We don't hand you a list. We book the consult."
       />
 
       <Reveal className="mx-auto mt-6 max-w-2xl text-center" delay={0.1}>
         <p className="text-[14px] leading-relaxed text-text-muted">
-          Most agencies hand you a pile of leads and disappear. We call every
-          lead ourselves, qualify them, and book them into your calendar. By
-          the time a patient reaches your office, they are already on the
-          schedule.
+          Most agencies hand you a pile of leads and disappear. Our in-house,
+          trained sales team calls every lead, qualifies them, and books them
+          into your schedule. They are trained on communication, kindness, and
+          humour, so prospective patients have a great experience before they
+          ever step foot in your office.
         </p>
       </Reveal>
 

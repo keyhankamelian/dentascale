@@ -6,7 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
 import { EquationRow } from "@/components/ui/EquationRow";
 import { CaseStudyCard } from "@/components/sections/CaseStudyCard";
-import { LeadToChairSystem } from "@/components/sections/LeadToChairSystem";
+import { SalesTeamSection } from "@/components/sections/SalesTeamSection";
 import { ClosingCta } from "@/components/sections/ClosingCta";
 import { featuredCaseStudy } from "@/lib/content";
 import { siteConfig } from "@/lib/site";
@@ -169,8 +169,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Section 4 — Lead-to-Chair System */}
-      <LeadToChairSystem bg="secondary" />
+      {/* Section 4 — Sales team */}
+      <SalesTeamSection bg="secondary" />
 
       {/* Section 5 — The Honest Pitch */}
       <Section bg="primary">
