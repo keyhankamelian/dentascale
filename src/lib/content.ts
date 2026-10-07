@@ -45,23 +45,23 @@ export const caseStudies: CaseStudy[] = [
     stats: [
       { value: 42, label: "Leads" },
       { value: 10, label: "Consults booked" },
-      { value: 9.31, label: "Cost per lead", decimals: 2, prefix: "$" },
-      { value: 391, label: "Total ad spend", prefix: "$" },
+      { value: 17.86, label: "Cost per lead", decimals: 2, prefix: "$" },
+      { value: 750, label: "Total ad spend", prefix: "$" },
       { value: 15000, label: "Booked case value", prefix: "$", suffix: "+" },
       { value: 74, label: "New IG followers", prefix: "+" },
     ],
     comparisons: [
       {
         metric: "Cost per lead",
-        yours: "$9.31",
+        yours: "$17.86",
         average: "$76",
-        badge: "88% below avg",
+        badge: "77% below avg",
       },
       {
         metric: "Leads per $1k spend",
-        yours: "107",
+        yours: "56",
         average: "29",
-        badge: "3.7x higher",
+        badge: "1.9x higher",
       },
     ],
     testimonial: {
