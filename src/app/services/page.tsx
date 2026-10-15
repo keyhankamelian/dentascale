@@ -39,7 +39,7 @@ const services: Service[] = [
   {
     icon: Phone,
     title: "We call, qualify, book, and follow up",
-    body: "Our in-house, trained sales team calls every lead within minutes, qualifies them for fit, and books them straight into your consultation calendar. We follow up tirelessly until each lead gives a definitive yes or no.",
+    body: "An automated system reaches every lead within 10 seconds, then our in-house, trained sales team calls them, qualifies them for fit, and books them straight into your consultation calendar. We follow up tirelessly until each lead gives a definitive yes or no.",
   },
 ];
 

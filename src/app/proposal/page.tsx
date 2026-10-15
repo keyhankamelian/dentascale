@@ -63,7 +63,7 @@ const pillars: Pillar[] = [
   {
     icon: MessageSquare,
     title: "We call, qualify, and book",
-    body: "Our team calls every lead within minutes, qualifies them, and books them straight into your consultation calendar. Your front desk only meets patients already on the schedule.",
+    body: "An automated system reaches every lead within 10 seconds, then our team calls, qualifies them, and books them straight into your consultation calendar. Your front desk only meets patients already on the schedule.",
   },
   {
     icon: BarChart3,
@@ -86,8 +86,8 @@ const steps = [
     body: "Campaigns go live and we tune them daily. We call every lead and book the consults into your calendar. You get a plain-English report every week.",
   },
   {
-    title: "25 leads, or month two is free",
-    body: "If we don't deliver at least 25 qualified leads in your first month, we work the second month at no charge. A qualified lead is someone in your area who gives us their contact details asking about a treatment you offer.",
+    title: "We follow up until a yes or no",
+    body: "Not every lead is ready on day one. We keep following up, kindly and persistently, until each one gives a clear yes or no.",
   },
 ];
 
@@ -127,7 +127,7 @@ export default async function ProposalPage({
       <PageHero
         label={preparedFor ? `Prepared for ${preparedFor}` : "Growth Proposal"}
         title="A predictable way to fill your schedule"
-        subtitle="For practices that can take on 10 to 20 more Invisalign and clear aligner consults a month. We run the ads, call every lead ourselves, and book them into your calendar."
+        subtitle="For practices that can take on 10 to 20 more Invisalign and clear aligner consults a month. We run the ads, reach every lead in 10 seconds, and our team calls and books them into your calendar."
       />
 
       {/* The problem */}
@@ -304,15 +304,7 @@ export default async function ProposalPage({
               </p>
             </div>
 
-            <p className="mt-5 text-[15px] leading-relaxed text-white">
-              If we don&apos;t deliver at least 25 qualified leads in your first
-              month, we work the second month at no charge.
-            </p>
-            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary">
-              A qualified lead is someone in your area who gives us their
-              contact details asking about a treatment you offer.
-            </p>
-            <p className="mt-3 text-[14px] leading-relaxed text-text-secondary">
+            <p className="mt-5 text-[14px] leading-relaxed text-text-secondary">
               Plus <span className="font-medium text-white">$50 a day</span> in
               ad spend, paid directly to Meta. Month to month, cancel any time,
               and you own every asset we create.

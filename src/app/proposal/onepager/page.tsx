@@ -15,7 +15,7 @@ export const metadata: Metadata = {
  * survive sitting in a pile and still get someone to act.
  *
  * Copy structure modeled on a reference executive-proposal layout: numbered
- * process steps, a split pricing/guarantee block, and a ROAS-led case study.
+ * process steps, a split pricing/what-we-do block, and a ROAS-led case study.
  * Pricing figures and the qualified-lead definition are kept identical to the
  * service agreement and every other proposal — only presentation changed.
  *
@@ -38,7 +38,7 @@ const process = [
   {
     step: "03",
     title: "We call and book",
-    body: "We call every lead within minutes, qualify them, and book them into your consult calendar.",
+    body: "Automated first contact in 10 seconds, then our team calls, qualifies, and books them into your calendar.",
   },
   {
     step: "04",
@@ -107,8 +107,8 @@ export default function OnePagerPage() {
         </h1>
         <p className="mt-2 max-w-[80ch] text-[12.5px] text-neutral-700">
           For Los Angeles practices that can take on 10 to 20 more Invisalign
-          and clear aligner consults a month. We run the ads, call every lead
-          ourselves, and book them straight into your calendar.
+          and clear aligner consults a month. We run the ads, reach every lead
+          in 10 seconds, and our team calls and books them into your calendar.
         </p>
       </section>
 
@@ -137,10 +137,10 @@ export default function OnePagerPage() {
         </div>
       </section>
 
-      {/* Pricing + guarantee */}
+      {/* Pricing + sales team */}
       <section className="mt-3">
         <h2 className="text-[11.5px] font-semibold uppercase tracking-[1.5px] text-neutral-500">
-          Transparent pricing &amp; risk-free guarantee
+          Transparent pricing &amp; how we handle your leads
         </h2>
         <div className="mt-2.5 grid grid-cols-2 gap-4">
           <div className="rounded-lg border-2 border-violet-700 px-4 py-2.5">
@@ -175,17 +175,16 @@ export default function OnePagerPage() {
 
           <div className="rounded-lg border-2 border-emerald-600 bg-emerald-50 px-4 py-2.5">
             <p className="text-[12.5px] font-bold text-emerald-800">
-              ✓ The 25-lead guarantee
+              ✓ Every lead, handled
             </p>
             <p className="mt-1.5 text-[12px] leading-snug text-emerald-900">
-              If we do not deliver at least{" "}
-              <strong className="font-semibold">25 qualified leads</strong> in
-              your first month, we manage your second month at{" "}
-              <strong className="font-semibold">$0 service charge</strong>.
+              An automated system reaches every new lead in{" "}
+              <strong className="font-semibold">10 seconds</strong>. Then real
+              people from our in-house team call, qualify, and book them.
             </p>
             <p className="mt-1.5 text-[11px] leading-snug text-emerald-800">
-              A qualified lead is someone in your area who gives us their
-              contact details asking about a treatment you offer.
+              We follow up until each lead gives a clear yes or no, and we
+              only work with one office per market.
             </p>
           </div>
         </div>

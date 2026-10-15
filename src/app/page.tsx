@@ -26,8 +26,8 @@ const steps: Step[] = [
   },
   {
     icon: Phone,
-    title: "We call and qualify every lead",
-    body: "Our team calls each new lead within minutes and checks they are a real fit for a consult.",
+    title: "We respond in 10 seconds, then call",
+    body: "An automated system reaches every new lead within 10 seconds. Then a real person from our team calls to qualify them.",
   },
   {
     icon: CalendarCheck,
@@ -80,8 +80,9 @@ export default function HomePage() {
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-[15px] leading-relaxed text-text-secondary md:text-base">
               For offices that can take on 10 to 20 more Invisalign and clear
-              aligner consults a month. We run the ads, call every lead
-              ourselves, and book them straight into your calendar.
+              aligner consults a month. We run the ads, reach every lead
+              in 10 seconds, and our team calls and books them straight into
+              your calendar.
             </p>
           </Reveal>
 

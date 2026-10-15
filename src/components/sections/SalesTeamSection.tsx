@@ -15,9 +15,9 @@ type Item = { icon: LucideIcon; title: string; description: string };
 const items: Item[] = [
   {
     icon: Phone,
-    title: "We call every lead ourselves",
+    title: "10 seconds to first contact",
     description:
-      "New leads get a call within minutes, while they are still thinking about it, not a day later from a busy front desk.",
+      "An automated system reaches every new lead within 10 seconds, while they are still thinking about it. Then real people call them as well.",
   },
   {
     icon: ShieldCheck,
@@ -61,7 +61,7 @@ export function SalesTeamSection({ bg = "secondary" }: Props) {
       <Reveal className="mx-auto mt-6 max-w-2xl text-center" delay={0.1}>
         <p className="text-[14px] leading-relaxed text-text-muted">
           Most agencies hand you a pile of leads and disappear. Our in-house,
-          trained sales team calls every lead, qualifies them, and books them
+          trained sales team calls every lead after our automated system makes first contact within 10 seconds, qualifies them, and books them
           into your schedule. They are trained on communication, kindness, and
           humour, so prospective patients have a great experience before they
           ever step foot in your office.

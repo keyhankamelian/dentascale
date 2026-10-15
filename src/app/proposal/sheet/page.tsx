@@ -44,7 +44,7 @@ const handled = [
   },
   {
     title: "We call, qualify, and book",
-    body: "Our team calls every lead within minutes, qualifies them, and books them into your consultation calendar.",
+    body: "An automated system reaches every lead in 10 seconds, then our team calls, qualifies them, and books them into your calendar.",
   },
   {
     title: "Weekly reporting",
@@ -66,8 +66,8 @@ const steps = [
     body: "Campaigns go live and we tune them daily. We call every lead and book consults into your calendar. Plain-English report every week.",
   },
   {
-    title: "25 leads, or month two is free",
-    body: "If we do not deliver at least 25 qualified leads in your first month, we work the second month at no charge. A qualified lead is someone in your area who gives us their contact details asking about a treatment you offer.",
+    title: "We follow up until a yes or no",
+    body: "Not every lead is ready on day one. We keep following up, kindly and persistently, until each one gives a clear yes or no.",
   },
 ];
 
@@ -139,7 +139,7 @@ export default async function ProposalSheetPage({
         <p className="mt-2 max-w-[72ch] text-[13.5px] text-neutral-700">
           For practices that can take on 10 to 20 more Invisalign and clear
           aligner consults a month. We tell you what to shoot, edit the ads, run
-          the campaigns, and call every lead ourselves to book them into your
+          the campaigns, and reach every lead in 10 seconds, then call them to book into your
           calendar.
         </p>
       </section>
@@ -179,11 +179,7 @@ export default async function ProposalSheetPage({
             Meta ads, managed end to end
           </p>
         </div>
-        <p className="mt-2 max-w-[76ch] text-[12.5px] font-medium text-violet-900">
-          If we do not deliver at least 25 qualified leads in your first month,
-          we work the second month at no charge.
-        </p>
-        <p className="mt-1.5 max-w-[76ch] text-[12.5px] text-neutral-700">
+        <p className="mt-2 max-w-[76ch] text-[12.5px] text-neutral-700">
           Plus $50 a day in ad spend, paid directly to Meta. We never touch
           your budget. Month to month, cancel any time, and you own every asset
           we create. We call and book every lead for you, included. You film
