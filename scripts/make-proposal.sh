@@ -2,7 +2,7 @@
 #
 # Generate a personalized proposal PDF.
 #
-#   ./scripts/make-proposal.sh "Dr. Tania Ohebsion" "Ohebsion Orthodontics"
+#   ./scripts/make-proposal.sh "Dr. Jane Smith" "Smith Orthodontics"
 #   ./scripts/make-proposal.sh "Dr. Smith"                # doctor only
 #   ./scripts/make-proposal.sh                            # generic version
 #

@@ -40,7 +40,7 @@ export const caseStudies: CaseStudy[] = [
     channels: "Facebook & Instagram",
     timeframe: "May 2026 · 30 days",
     location: "Beverly Hills, CA",
-    heading: "Dr. Tania Ohebsion's orthodontic practice, 30-day campaign",
+    heading: "Beverly Hills orthodontic office, 30-day campaign",
     featured: true,
     stats: [
       { value: 42, label: "Leads" },
