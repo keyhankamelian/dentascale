@@ -31,8 +31,8 @@ const steps: Step[] = [
   },
   {
     icon: CalendarCheck,
-    title: "We book them into your calendar",
-    body: "Qualified patients land directly in your consultation calendar, ready for you to see.",
+    title: "We qualify them, then book them into your calendar",
+    body: "We qualify every lead first, then book only the right fits straight into your consultation calendar, ready for you to see.",
   },
 ];
 
