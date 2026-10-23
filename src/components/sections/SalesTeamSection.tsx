@@ -55,7 +55,7 @@ export function SalesTeamSection({ bg = "secondary" }: Props) {
     <Section bg={bg} id="sales-team">
       <SectionHeading
         label="Our in-house sales team"
-        title="We don't hand you a list. We book the consult."
+        title="We don't hand you leads. We book the consult."
       />
 
       <Reveal className="mx-auto mt-6 max-w-2xl text-center" delay={0.1}>
