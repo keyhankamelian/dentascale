@@ -1,10 +1,23 @@
 import Link from "next/link";
-import { Clapperboard, Megaphone, Phone, CalendarCheck, Check, ArrowRight, type LucideIcon } from "lucide-react";
+import {
+  Clapperboard,
+  Megaphone,
+  Phone,
+  CalendarCheck,
+  Check,
+  ArrowRight,
+  Handshake,
+  TrendingUp,
+  PhoneCall,
+  MapPin,
+  RefreshCw,
+  Users,
+  type LucideIcon,
+} from "lucide-react";
 import { Section, SectionHeading, SectionLabel } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/Button";
-import { EquationRow } from "@/components/ui/EquationRow";
 import { CaseStudyCard } from "@/components/sections/CaseStudyCard";
 import { SalesTeamSection } from "@/components/sections/SalesTeamSection";
 import { ClosingCta } from "@/components/sections/ClosingCta";
@@ -42,25 +55,38 @@ const fitCriteria = [
   "You don't want your busy front desk handling the calls to leads",
 ];
 
-const equations = [
+type Reason = { icon: LucideIcon; title: string; body: string };
+
+const reasons: Reason[] = [
   {
-    left: "Delegate ads and leads to us",
-    right: "stop worrying about marketing and focus on what you do best",
+    icon: Handshake,
+    title: "Delegate it all",
+    body: "Ads, leads, and calls are ours. You focus on what you do best.",
   },
   {
-    left: "A consistent flow of Invisalign consults",
-    right: "instead of organic and referral business that is unpredictable",
+    icon: TrendingUp,
+    title: "Consistent consults",
+    body: "A steady flow of Invisalign consults, not the ups and downs of referrals.",
   },
-  { left: "We make the calls", right: "your front desk only meets patients who are already booked" },
   {
-    left: "One office per market",
-    right: "we never compete against ourselves, so your ads and offer stay yours",
+    icon: PhoneCall,
+    title: "We make the calls",
+    body: "Your front desk only meets patients who are already booked.",
   },
-  { left: "Month-to-month", right: "our results earn the next month" },
-  { left: "Small roster", right: "your practice gets our full attention" },
   {
-    left: "Real people",
-    right: "always reachable, never a ticket system or an AI chatbot",
+    icon: MapPin,
+    title: "One office per market",
+    body: "We never compete against ourselves, so your ads and offer stay yours.",
+  },
+  {
+    icon: RefreshCw,
+    title: "Month to month",
+    body: "No long contracts. Our results earn the next month.",
+  },
+  {
+    icon: Users,
+    title: "Real people",
+    body: "A small team that's always reachable. Never a ticket system or a chatbot.",
   },
 ];
 
@@ -185,13 +211,26 @@ export default function HomePage() {
       <Section bg="primary">
         <SectionHeading label="The Honest Pitch" title="Why DentaScale" />
 
-        <div className="mx-auto mt-10 max-w-3xl">
-          {equations.map((eq, i) => (
-            <Reveal key={eq.left} delay={i * 0.06}>
-              <EquationRow left={eq.left} right={eq.right} />
-            </Reveal>
-          ))}
-        </div>
+        <ul className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {reasons.map((reason, i) => {
+            const Icon = reason.icon;
+            return (
+              <Reveal as="li" key={reason.title} delay={(i % 3) * 0.08}>
+                <Card as="article" className="flex h-full flex-col gap-3 p-6">
+                  <span className="flex size-10 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
+                    <Icon size={18} aria-hidden="true" />
+                  </span>
+                  <h3 className="text-[17px] font-medium text-white">
+                    {reason.title}
+                  </h3>
+                  <p className="text-[14px] leading-relaxed text-text-muted">
+                    {reason.body}
+                  </p>
+                </Card>
+              </Reveal>
+            );
+          })}
+        </ul>
       </Section>
 
       {/* Section 6 — Final CTA */}
