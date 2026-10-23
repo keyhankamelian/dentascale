@@ -39,7 +39,7 @@ const steps: Step[] = [
 const fitCriteria = [
   "You offer Invisalign or clear aligners",
   "You can take on 10 to 20 more consults a month",
-  "You want the leads called and booked for you",
+  "You don't want your busy front desk handling the calls to leads",
 ];
 
 const equations = [
