@@ -43,6 +43,14 @@ const fitCriteria = [
 ];
 
 const equations = [
+  {
+    left: "Delegate ads and leads to us",
+    right: "stop worrying about marketing and focus on what you do best",
+  },
+  {
+    left: "A consistent flow of Invisalign consults",
+    right: "instead of organic and referral business that is unpredictable",
+  },
   { left: "We make the calls", right: "your front desk only meets patients who are already booked" },
   {
     left: "One office per market",
