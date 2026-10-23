@@ -1,12 +1,21 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { Building2, Bot, EyeOff } from "lucide-react";
+import { Waves, Globe, PenLine, Timer, Repeat, Filter, type LucideIcon } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Section, SectionHeading } from "@/components/ui/Section";
 import { Card } from "@/components/ui/Card";
 import { Reveal } from "@/components/ui/Reveal";
 import { ClosingCta } from "@/components/sections/ClosingCta";
-import { bothPathsFail } from "@/lib/content";
+import { stuckPoints } from "@/lib/content";
+
+const stuckIcons: Record<(typeof stuckPoints)[number]["icon"], LucideIcon> = {
+  waves: Waves,
+  globe: Globe,
+  pen: PenLine,
+  timer: Timer,
+  repeat: Repeat,
+  filter: Filter,
+};
 
 export const metadata: Metadata = {
   title: "About",
@@ -69,52 +78,29 @@ export default function AboutPage() {
         <SectionHeading
           label="The Problem"
           title="Why practices stay stuck"
-          subtitle="Dental practices are usually stuck in one of three places. We built DentaScale to be the way out."
+          subtitle="Most practices lose Invisalign consults in the same six places. We built DentaScale to close every one of them."
         />
 
-        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-3">
-          <Reveal as="div">
-            <Card as="article" className="flex h-full flex-col gap-4 p-7">
-              <span className="flex size-11 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
-                <Building2 size={20} aria-hidden="true" />
-              </span>
-              <h3 className="text-xl font-medium text-white">
-                {bothPathsFail.agencies.title}
-              </h3>
-              <p className="text-[14px] leading-relaxed text-text-muted">
-                {bothPathsFail.agencies.body}
-              </p>
-            </Card>
-          </Reveal>
-
-          <Reveal as="div" delay={0.1}>
-            <Card as="article" className="flex h-full flex-col gap-4 p-7">
-              <span className="flex size-11 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
-                <Bot size={20} aria-hidden="true" />
-              </span>
-              <h3 className="text-xl font-medium text-white">
-                {bothPathsFail.ai.title}
-              </h3>
-              <p className="text-[14px] leading-relaxed text-text-muted">
-                {bothPathsFail.ai.body}
-              </p>
-            </Card>
-          </Reveal>
-
-          <Reveal as="div" delay={0.2}>
-            <Card as="article" className="flex h-full flex-col gap-4 p-7">
-              <span className="flex size-11 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
-                <EyeOff size={20} aria-hidden="true" />
-              </span>
-              <h3 className="text-xl font-medium text-white">
-                {bothPathsFail.noMarketing.title}
-              </h3>
-              <p className="text-[14px] leading-relaxed text-text-muted">
-                {bothPathsFail.noMarketing.body}
-              </p>
-            </Card>
-          </Reveal>
-        </div>
+        <ul className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {stuckPoints.map((point, i) => {
+            const Icon = stuckIcons[point.icon];
+            return (
+              <Reveal as="li" key={point.title} delay={(i % 3) * 0.1}>
+                <Card as="article" className="flex h-full flex-col gap-4 p-7">
+                  <span className="flex size-11 items-center justify-center rounded-full border border-border-divider bg-accent-bg text-accent-light">
+                    <Icon size={20} aria-hidden="true" />
+                  </span>
+                  <h3 className="text-xl font-medium text-white">
+                    {point.title}
+                  </h3>
+                  <p className="text-[14px] leading-relaxed text-text-muted">
+                    {point.body}
+                  </p>
+                </Card>
+              </Reveal>
+            );
+          })}
+        </ul>
       </Section>
 
       <ClosingCta bg="secondary" />

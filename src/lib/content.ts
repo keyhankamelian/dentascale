@@ -74,18 +74,36 @@ export const caseStudies: CaseStudy[] = [
 /** The primary study used on the Home-page teaser. */
 export const featuredCaseStudy = caseStudies[0];
 
-/** "Why practices stay stuck" copy — agencies, AI tools, or no digital marketing at all. Used on the About page. */
-export const bothPathsFail = {
-  agencies: {
-    title: "Traditional agencies",
-    body: "Lock you into long contracts and spread their attention across dozens of accounts in every industry. Your campaigns come off the same template as everyone else's, your brand gets flattened into stock imagery, and the leads, when they come, rarely turn into booked patients.",
-  },
-  ai: {
-    title: "AI tools",
-    body: "Promise to replace a marketing team for a low monthly fee, then hand you generic content with no strategy behind it. There's no one who understands dental, no one shaping how your practice actually looks online, and no system to turn a lead into someone sitting in your chair.",
-  },
-  noMarketing: {
+/** "Why practices stay stuck": the six places consults get lost. Used on the About page. */
+export const stuckPoints = [
+  {
+    icon: "waves",
     title: "Referrals only",
-    body: "Growth depends entirely on word-of-mouth and walk-ins, which works until it doesn't. Patients searching online find nothing that reflects the quality of the work, and the practices already advertising capture that demand instead.",
+    body: "Word of mouth is great, but it goes up and down and you can't predict it. A strong month is followed by a slow one, and there's no way to turn it up when you need more consults.",
   },
-} as const;
+  {
+    icon: "globe",
+    title: "Missing the biggest audience",
+    body: "Billions of people are on Meta's apps every day. If your practice isn't showing up there, you're missing a huge market of attention, and the practices that are there get the patients who are ready to start.",
+  },
+  {
+    icon: "pen",
+    title: "Generic ads and offers",
+    body: "Most practices aren't ad pros, and they shouldn't have to be. The ad and the offer end up generic, the same as everyone else's, and nothing in them stops the scroll.",
+  },
+  {
+    icon: "timer",
+    title: "Slow to answer leads",
+    body: "Speed is everything. A lead who fills out a form is comparing practices right now, and a busy front desk can't call back in seconds. By the time someone does, they've moved on.",
+  },
+  {
+    icon: "repeat",
+    title: "Little or no follow-up",
+    body: "Most leads don't say yes on the first call. Without a system that keeps following up, kindly and persistently, they drift away and the ad spend is wasted.",
+  },
+  {
+    icon: "filter",
+    title: "No real qualifying",
+    body: "Without a proper qualifying process, the calendar fills with people who were never a good fit. We qualify every lead first, so the consults that reach you are worth your time.",
+  },
+] as const;
