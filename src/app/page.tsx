@@ -17,7 +17,7 @@ const steps: Step[] = [
   {
     icon: Clapperboard,
     title: "We tell you what to shoot",
-    body: "A shot list and word-for-word scripts. You film on your phone and send us the footage. We do the rest.",
+    body: "A shot list and word-for-word scripts. You film on your phone and send us the footage, plus before-and-afters and pictures of your office. We do the rest.",
   },
   {
     icon: Megaphone,
@@ -88,9 +88,9 @@ export default function HomePage() {
           <Reveal delay={0.1}>
             <p className="max-w-2xl text-[15px] leading-relaxed text-text-secondary md:text-base">
               For offices that can take on 10 to 20 more Invisalign and clear
-              aligner consults a month. We run the ads, reach every lead
-              in 10 seconds, and our team calls and books them straight into
-              your calendar.
+              aligner consults a month. We run the ads, reach every lead in 10
+              seconds, and our team calls, qualifies, and books them straight
+              into your calendar.
             </p>
           </Reveal>
 

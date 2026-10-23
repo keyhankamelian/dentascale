@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: "%s | DentaScale",
   },
   description:
-    "For dental and orthodontic practices that can take on 10 to 20 more Invisalign and clear aligner consults a month. We make the ads, run the campaigns, and reach every lead in 10 seconds, then our team calls and books them into your calendar.",
+    "For dental and orthodontic practices that can take on 10 to 20 more Invisalign and clear aligner consults a month. We make the ads, run the campaigns, and reach every lead in 10 seconds, then our team calls, qualifies, and books them into your calendar.",
   metadataBase: new URL("https://dentascale.net"),
   openGraph: {
     title: "DentaScale: Invisalign leads, called and booked for you",
