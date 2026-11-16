@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 
 export function Footer() {
@@ -30,12 +30,6 @@ export function Footer() {
           >
             {siteConfig.email}
           </a>
-          <a
-            href={`tel:+1${siteConfig.phone.replace(/\D/g, "")}`}
-            className="text-sm text-text-secondary transition-colors hover:text-white"
-          >
-            {siteConfig.phone}
-          </a>
 
           <div className="flex items-center gap-4">
             <a
@@ -44,13 +38,6 @@ export function Footer() {
               aria-label={`Email ${siteConfig.name}`}
             >
               <Mail size={20} aria-hidden="true" />
-            </a>
-            <a
-              href={`tel:+1${siteConfig.phone.replace(/\D/g, "")}`}
-              className="text-text-muted transition-colors hover:text-accent-light"
-              aria-label={`Call ${siteConfig.name}`}
-            >
-              <Phone size={20} aria-hidden="true" />
             </a>
           </div>
 

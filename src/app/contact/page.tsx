@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Section } from "@/components/ui/Section";
 import { Reveal } from "@/components/ui/Reveal";
@@ -27,8 +27,8 @@ export default function ContactPage() {
       <Section bg="primary">
         <Reveal className="mx-auto flex max-w-lg flex-col items-center gap-7 text-center">
           <p className="text-[15px] leading-relaxed text-text-secondary">
-            Prefer to reach us directly? Email or call and we&apos;ll get back
-            to you within 1 business day.
+            Prefer to reach us directly? Email us and we&apos;ll get back to
+            you within 1 business day.
           </p>
 
           <div className="flex flex-col items-center gap-3 sm:flex-row">
@@ -37,16 +37,6 @@ export default function ContactPage() {
                 <Mail size={18} aria-hidden="true" />
               </span>
               {siteConfig.email}
-            </a>
-
-            <a
-              href={`tel:+1${siteConfig.phone.replace(/\D/g, "")}`}
-              className={contactLinkClass}
-            >
-              <span className={contactIconClass}>
-                <Phone size={18} aria-hidden="true" />
-              </span>
-              {siteConfig.phone}
             </a>
           </div>
         </Reveal>

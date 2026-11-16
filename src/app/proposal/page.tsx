@@ -382,15 +382,6 @@ export default async function ProposalPage({
             >
               {siteConfig.founderEmail}
             </a>
-            <span aria-hidden="true" className="text-text-tertiary">
-              ·
-            </span>
-            <a
-              href={`tel:+1${siteConfig.phone.replace(/\D/g, "")}`}
-              className="text-text-secondary transition-colors hover:text-white"
-            >
-              {siteConfig.phone}
-            </a>
           </div>
 
           <p className="text-[13px] text-text-tertiary">
