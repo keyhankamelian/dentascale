@@ -47,7 +47,7 @@ export const caseStudies: CaseStudy[] = [
       { value: 10, label: "Consults booked" },
       { value: 35.71, label: "Cost per lead", decimals: 2, prefix: "$" },
       { value: 1500, label: "Total ad spend", prefix: "$" },
-      { value: 18000, label: "Booked case value", prefix: "$", suffix: "+" },
+      { value: 24000, label: "Booked case value", prefix: "$", suffix: "+" },
     ],
     comparisons: [
       {
