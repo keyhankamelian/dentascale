@@ -19,8 +19,8 @@ export function LeadFormSection({ bg = "primary" }: Props) {
         </h2>
 
         <p className="text-[14px] leading-relaxed text-text-muted">
-          We work with a limited number of practices. Send a few details and
-          we&apos;ll reach out to see if we&apos;re the right fit.
+          We take on 3 new practices a month, and only one per market. Tell
+          us about yours, then book your strategy session.
         </p>
       </Reveal>
 
