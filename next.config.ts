@@ -22,7 +22,12 @@ const csp = [
   "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
   "img-src 'self' data: https://www.facebook.com https://connect.facebook.net https://*.calendly.com",
   "font-src 'self' data:",
-  "connect-src 'self' https://formspree.io https://www.facebook.com https://connect.facebook.net https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.calendly.com",
+  // The two *.on.aws / *.cloud.run hosts are Meta's hosted Conversions API
+  // gateway ("Conversions API with Meta" in Events Manager), which the pixel
+  // sends a server-side copy of each event to. The hosts come from the pixel's
+  // config (connect.facebook.net/signals/config/<pixel id>); if Meta changes
+  // them, the browser console will show connect-src violations for the new ones.
+  "connect-src 'self' https://formspree.io https://www.facebook.com https://connect.facebook.net https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.calendly.com https://p0-b38350eb7d034b0fb67b0b36c767d56f.ecs.us-east-1.on.aws https://snofje0za8n8.cloud.run",
   // The Calendly scheduler renders in an iframe. Without an explicit
   // frame-src it falls back to default-src 'self' and is silently blocked.
   //
