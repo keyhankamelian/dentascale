@@ -14,6 +14,14 @@ const BUSINESS_TYPES = [
   "Other",
 ] as const;
 
+const MARKETING_SPEND = [
+  "Nothing right now",
+  "Under $1,000/month",
+  "$1,000 to $3,000/month",
+  "$3,000 to $5,000/month",
+  "$5,000+/month",
+] as const;
+
 const CONSULT_SOURCES = [
   "Referrals / word of mouth",
   "Google Ads",
@@ -27,6 +35,7 @@ const initial = {
   phone: "",
   email: "",
   location: "",
+  marketingSpend: "",
   botcheck: "", // honeypot — real users leave this empty
 };
 
@@ -73,6 +82,7 @@ export function LeadForm() {
           phone: form.phone,
           email: form.email,
           location: form.location,
+          current_marketing_spend: form.marketingSpend,
           current_consult_sources: sources.join(", ") || "None selected",
           ...utm, // utm_source, utm_medium, utm_campaign, utm_term, utm_content, fbclid, gclid
           _subject: `New lead: ${form.name} at ${form.businessName}${source ? ` (via ${source})` : ""}`,
@@ -220,6 +230,28 @@ export function LeadForm() {
             className={inputClass}
             placeholder="Glendale, CA"
           />
+        </div>
+
+        <div className="sm:col-span-2">
+          <label htmlFor="lf-spend" className={labelClass}>
+            How much are you currently spending on marketing?
+          </label>
+          <select
+            id="lf-spend"
+            required
+            value={form.marketingSpend}
+            onChange={(e) => update("marketingSpend", e.target.value)}
+            className={`${inputClass} ${form.marketingSpend ? "" : "text-text-tertiary"}`}
+          >
+            <option value="" disabled>
+              Select one…
+            </option>
+            {MARKETING_SPEND.map((t) => (
+              <option key={t} value={t} className="text-white">
+                {t}
+              </option>
+            ))}
+          </select>
         </div>
 
         <fieldset className="sm:col-span-2">
