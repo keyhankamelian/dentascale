@@ -25,10 +25,16 @@ const csp = [
   "connect-src 'self' https://formspree.io https://www.facebook.com https://connect.facebook.net https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com https://*.calendly.com",
   // The Calendly scheduler renders in an iframe. Without an explicit
   // frame-src it falls back to default-src 'self' and is silently blocked.
-  "frame-src https://calendly.com https://*.calendly.com",
+  //
+  // www.facebook.com is in frame-src and form-action for the Meta Pixel: when
+  // an event's URL is too long for a GET (over ~2,000 characters, which every
+  // ad click is once fbclid and UTM params are attached), the pixel posts it
+  // through a hidden form targeting a hidden iframe. Without both entries the
+  // Lead and Schedule events from ad traffic are silently dropped.
+  "frame-src https://calendly.com https://*.calendly.com https://www.facebook.com",
   "frame-ancestors 'self'",
   "base-uri 'self'",
-  "form-action 'self'",
+  "form-action 'self' https://www.facebook.com",
   "object-src 'none'",
 ].join("; ");
 
