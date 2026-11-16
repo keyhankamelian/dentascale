@@ -13,12 +13,18 @@ declare global {
   }
 }
 
-export function trackLead(): void {
+/**
+ * @param qualified Whether the applicant met the spend threshold for a call.
+ * Qualified applicants also fire a custom "QualifiedLead" event, so ads can be
+ * optimised for practices that can actually afford the service.
+ */
+export function trackLead(qualified = false): void {
   if (typeof window === "undefined") return;
 
   // Meta (Facebook) Pixel — standard "Lead" event.
   if (typeof window.fbq === "function") {
     window.fbq("track", "Lead");
+    if (qualified) window.fbq("trackCustom", "QualifiedLead");
   }
 
   // Google — GA4 event + optional Google Ads conversion.
@@ -30,5 +36,22 @@ export function trackLead(): void {
     if (adsId && label) {
       window.gtag("event", "conversion", { send_to: `${adsId}/${label}` });
     }
+  }
+}
+
+/**
+ * Fires when someone books a strategy session in the embedded Calendly
+ * scheduler. Meta's standard "Schedule" event lets ads optimise for booked
+ * calls rather than form fills.
+ */
+export function trackSchedule(): void {
+  if (typeof window === "undefined") return;
+
+  if (typeof window.fbq === "function") {
+    window.fbq("track", "Schedule");
+  }
+
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "book_strategy_session");
   }
 }

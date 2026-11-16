@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef } from "react";
 import Script from "next/script";
 import { siteConfig } from "@/lib/site";
+import { trackSchedule } from "@/lib/tracking";
 
 type CalendlyApi = {
   initInlineWidget: (options: {
@@ -58,6 +59,17 @@ export function CalendlyEmbed({ prefill }: Props) {
 
   // Covers the case where the script was already loaded before this mounted.
   useEffect(init, [init]);
+
+  // Calendly posts a message from its iframe when a booking is completed.
+  useEffect(() => {
+    function onMessage(e: MessageEvent) {
+      if (!e.origin.endsWith("calendly.com")) return;
+      const event = (e.data as { event?: string } | null)?.event;
+      if (event === "calendly.event_scheduled") trackSchedule();
+    }
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, []);
 
   if (!calendlyUrl) return null;
 

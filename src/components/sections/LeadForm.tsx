@@ -8,20 +8,22 @@ import { getStoredUtmParams } from "@/lib/utm";
 import { siteConfig } from "@/lib/site";
 import { CalendlyEmbed } from "./CalendlyEmbed";
 
-const BUSINESS_TYPES = [
-  "General dentistry",
-  "Orthodontics",
-  "Cosmetic",
-  "Other",
+/**
+ * Current monthly marketing spend. Only practices already spending $3,000+
+ * a month (roughly our fee plus recommended ad spend) are shown the
+ * strategy-session calendar; everyone else gets a "we'll be in touch".
+ */
+const MARKETING_SPEND = [
+  { label: "Nothing right now", qualifies: false },
+  { label: "Under $1,000/month", qualifies: false },
+  { label: "$1,000 to $3,000/month", qualifies: false },
+  { label: "$3,000 to $5,000/month", qualifies: true },
+  { label: "$5,000+/month", qualifies: true },
 ] as const;
 
-const MARKETING_SPEND = [
-  "Nothing right now",
-  "Under $1,000/month",
-  "$1,000 to $3,000/month",
-  "$3,000 to $5,000/month",
-  "$5,000+/month",
-] as const;
+function qualifiesForCall(spend: string): boolean {
+  return MARKETING_SPEND.some((o) => o.label === spend && o.qualifies);
+}
 
 const CONSULT_SOURCES = [
   "Referrals / word of mouth",
@@ -32,10 +34,8 @@ const CONSULT_SOURCES = [
 const initial = {
   name: "",
   businessName: "",
-  businessType: "",
   phone: "",
   email: "",
-  location: "",
   marketingSpend: "",
   botcheck: "", // honeypot — real users leave this empty
 };
@@ -69,6 +69,7 @@ export function LeadForm() {
     try {
       const utm = getStoredUtmParams();
       const source = utm.utm_source || (utm.fbclid ? "facebook" : undefined);
+      const qualified = qualifiesForCall(form.marketingSpend);
 
       const res = await fetch(siteConfig.formEndpoint, {
         method: "POST",
@@ -79,20 +80,19 @@ export function LeadForm() {
         body: JSON.stringify({
           name: form.name,
           business_name: form.businessName,
-          business_type: form.businessType,
           phone: form.phone,
           email: form.email,
-          location: form.location,
           current_marketing_spend: form.marketingSpend,
+          shown_calendar: qualified ? "Yes" : "No",
           current_consult_sources: sources.join(", ") || "None selected",
           ...utm, // utm_source, utm_medium, utm_campaign, utm_term, utm_content, fbclid, gclid
-          _subject: `New lead: ${form.name} at ${form.businessName}${source ? ` (via ${source})` : ""}`,
+          _subject: `${qualified ? "Qualified" : "New"} lead: ${form.name} at ${form.businessName}${source ? ` (via ${source})` : ""}`,
           _gotcha: form.botcheck, // Formspree honeypot — real users leave empty
         }),
       });
 
       if (res.ok) {
-        trackLead(); // fire FB Pixel + Google conversion on success only
+        trackLead(qualified); // fire FB Pixel + Google conversion on success only
         setStatus("success");
       } else {
         setStatus("error");
@@ -100,6 +100,20 @@ export function LeadForm() {
     } catch {
       setStatus("error");
     }
+  }
+
+  if (status === "success" && !qualifiesForCall(form.marketingSpend)) {
+    return (
+      <div className="flex flex-col items-center gap-3 rounded-[12px] border border-card-border bg-card px-6 py-12 text-center">
+        <CheckCircle2 className="text-accent-light" size={40} aria-hidden="true" />
+        <h3 className="text-lg font-medium text-white">
+          Thanks, we&apos;ve got your application.
+        </h3>
+        <p className="max-w-sm text-sm leading-relaxed text-text-muted">
+          We&apos;ll review it and reach out within 1 business day.
+        </p>
+      </div>
+    );
   }
 
   if (status === "success") {
@@ -168,27 +182,6 @@ export function LeadForm() {
           />
         </div>
 
-        <div className="sm:col-span-2">
-          <label htmlFor="lf-type" className={labelClass}>
-            Type of practice
-          </label>
-          <select
-            id="lf-type"
-            required
-            value={form.businessType}
-            onChange={(e) => update("businessType", e.target.value)}
-            className={`${inputClass} ${form.businessType ? "" : "text-text-tertiary"}`}
-          >
-            <option value="" disabled>
-              Select one…
-            </option>
-            {BUSINESS_TYPES.map((t) => (
-              <option key={t} value={t} className="text-white">
-                {t}
-              </option>
-            ))}
-          </select>
-        </div>
 
         <div>
           <label htmlFor="lf-phone" className={labelClass}>
@@ -222,21 +215,6 @@ export function LeadForm() {
           />
         </div>
 
-        <div className="sm:col-span-2">
-          <label htmlFor="lf-location" className={labelClass}>
-            Location (city)
-          </label>
-          <input
-            id="lf-location"
-            type="text"
-            required
-            autoComplete="address-level2"
-            value={form.location}
-            onChange={(e) => update("location", e.target.value)}
-            className={inputClass}
-            placeholder="Glendale, CA"
-          />
-        </div>
 
         <div className="sm:col-span-2">
           <label htmlFor="lf-spend" className={labelClass}>
@@ -252,9 +230,9 @@ export function LeadForm() {
             <option value="" disabled>
               Select one…
             </option>
-            {MARKETING_SPEND.map((t) => (
-              <option key={t} value={t} className="text-white">
-                {t}
+            {MARKETING_SPEND.map((o) => (
+              <option key={o.label} value={o.label} className="text-white">
+                {o.label}
               </option>
             ))}
           </select>
@@ -262,7 +240,8 @@ export function LeadForm() {
 
         <fieldset className="sm:col-span-2">
           <legend className={labelClass}>
-            How are you getting clear braces and Invisalign consults right now?
+            How are you getting clear braces and Invisalign consults right now?{" "}
+            <span className="font-normal text-text-tertiary">(optional)</span>
           </legend>
           <div className="mt-2 flex flex-col gap-2.5 sm:flex-row sm:flex-wrap sm:gap-x-6">
             {CONSULT_SOURCES.map((source) => (
