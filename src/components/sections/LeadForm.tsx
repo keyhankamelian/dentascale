@@ -6,6 +6,7 @@ import { CheckCircle2, Loader2 } from "lucide-react";
 import { trackLead } from "@/lib/tracking";
 import { getStoredUtmParams } from "@/lib/utm";
 import { siteConfig } from "@/lib/site";
+import { CalendlyEmbed } from "./CalendlyEmbed";
 
 const BUSINESS_TYPES = [
   "General dentistry",
@@ -103,12 +104,17 @@ export function LeadForm() {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center gap-3 rounded-[12px] border border-card-border bg-card px-6 py-12 text-center">
-        <CheckCircle2 className="text-accent-light" size={40} aria-hidden="true" />
-        <h3 className="text-lg font-medium text-white">Thanks, we&apos;ve got it.</h3>
-        <p className="max-w-sm text-sm leading-relaxed text-text-muted">
-          We&apos;ll review your application and reach out shortly.
-        </p>
+      <div className="flex flex-col items-center gap-6 text-center">
+        <div className="flex flex-col items-center gap-3">
+          <CheckCircle2 className="text-accent-light" size={40} aria-hidden="true" />
+          <h3 className="text-lg font-medium text-white">
+            Thanks, we&apos;ve got your application.
+          </h3>
+          <p className="max-w-sm text-sm leading-relaxed text-text-muted">
+            Last step: pick a time for your strategy session below.
+          </p>
+        </div>
+        <CalendlyEmbed prefill={{ name: form.name, email: form.email }} />
       </div>
     );
   }
