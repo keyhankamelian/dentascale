@@ -5,6 +5,7 @@ import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCtaBar } from "@/components/layout/MobileCtaBar";
+import { HideOnLanding } from "@/components/layout/HideOnLanding";
 import { UtmCapture } from "@/components/UtmCapture";
 
 // Analytics IDs — set these in .env.local (see .env.example). Tags only load
@@ -102,9 +103,13 @@ ${ADS_ID ? `gtag('config', '${ADS_ID}');` : ""}`}
         >
           Skip to content
         </a>
-        <Nav />
+        <HideOnLanding>
+          <Nav />
+        </HideOnLanding>
         <main id="main">{children}</main>
-        <Footer />
+        <HideOnLanding>
+          <Footer />
+        </HideOnLanding>
         <MobileCtaBar />
       </body>
     </html>

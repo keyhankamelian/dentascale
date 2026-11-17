@@ -43,7 +43,8 @@ const initial = {
 type Status = "idle" | "submitting" | "success" | "error";
 
 const inputClass =
-  "w-full rounded-lg border border-card-border bg-bg-primary px-3.5 py-2.5 text-sm text-white placeholder:text-text-tertiary transition-colors focus:border-accent focus:outline-none";
+  // 16px on phones: iOS Safari zooms the page into any input smaller than that.
+  "w-full rounded-lg border border-card-border bg-bg-primary px-3.5 py-2.5 text-base md:text-sm text-white placeholder:text-text-tertiary transition-colors focus:border-accent focus:outline-none";
 const labelClass = "mb-1.5 block text-[13px] font-medium text-text-secondary";
 
 export function LeadForm() {
@@ -285,8 +286,8 @@ export function LeadForm() {
       </button>
 
       <p className="mt-3 text-center text-[12px] text-text-tertiary">
-        We&apos;ll review your details and reach out. By
-        submitting, you agree to our{" "}
+        By applying, you agree that DentaScale may call, text, or email you
+        about your application, and to our{" "}
         <Link
           href="/privacy"
           className="underline underline-offset-2 hover:text-text-secondary"

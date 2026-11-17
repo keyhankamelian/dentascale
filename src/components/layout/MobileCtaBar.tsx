@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/Button";
 import { siteConfig } from "@/lib/site";
+import { isLandingPath } from "./HideOnLanding";
 
 /**
  * Sticky bottom CTA for small screens, so the primary action stays reachable
@@ -53,6 +54,9 @@ export function MobileCtaBar() {
   }, []);
 
   const visible = pastHero && !formInView && pathname !== "/contact";
+  // On an ad landing page the form is further down the same page, so the bar
+  // scrolls to it instead of sending people to /contact.
+  const landing = isLandingPath(pathname);
 
   return (
     <div
@@ -64,11 +68,11 @@ export function MobileCtaBar() {
       style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
     >
       <Button
-        href={siteConfig.bookingUrl}
+        href={landing ? "#start" : siteConfig.bookingUrl}
         className="w-full"
         tabIndex={visible ? undefined : -1}
       >
-        Apply to work with us
+        {landing ? "Apply now" : "Apply to work with us"}
       </Button>
     </div>
   );

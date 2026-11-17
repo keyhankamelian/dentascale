@@ -37,7 +37,8 @@ export default function PrivacyPage() {
             <p>
               When you submit our contact or strategy-call form, we collect the
               information you provide, which may include your name, business
-              name, practice type, phone number, email address, and location.
+              name, practice type, phone number, email address, location, and
+              current marketing spend.
             </p>
             <p>
               When you browse this site, the analytics and advertising tools
@@ -49,7 +50,10 @@ export default function PrivacyPage() {
 
           <PolicySection title="How we use your information">
             <ul className="list-disc space-y-2 pl-5">
-              <li>To respond to your inquiry and follow up about our services.</li>
+              <li>
+                To respond to your inquiry and follow up about our services by
+                phone call, text message, or email.
+              </li>
               <li>To evaluate whether our services are a good fit for your practice.</li>
               <li>To improve our website, marketing, and advertising performance.</li>
               <li>To measure the effectiveness of our ad campaigns.</li>
