@@ -55,6 +55,11 @@ const faqs: FAQItem[] = [
       "Our in-house sales team, trained on communication, kindness, and humour. An automated message reaches every new lead within 10 seconds, then a real person calls, qualifies them, and books the right fits into your calendar. We keep following up until we get a clear yes or no.",
   },
   {
+    question: "Will your team represent our practice the way we would?",
+    answer:
+      "Yes. During our onboarding call, we make sure we understand your brand values and tone. That way, when we reach out to patients on your behalf, we carry the same values and stay on brand with your practice.",
+  },
+  {
     question: "What do you need from us?",
     answer:
       "Some phone footage (we send you a shot list and scripts), your before-and-afters, and pictures of your office. Plus access to your consult calendar so we can book patients straight into it. Your front desk doesn't have to call anyone.",

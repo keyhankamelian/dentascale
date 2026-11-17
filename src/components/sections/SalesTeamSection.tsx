@@ -4,6 +4,7 @@ import {
   CalendarCheck,
   ShieldCheck,
   BellRing,
+  HeartHandshake,
   type LucideIcon,
 } from "lucide-react";
 import { Section, SectionHeading } from "@/components/ui/Section";
@@ -42,6 +43,12 @@ const items: Item[] = [
     title: "We keep them showing up",
     description:
       "Confirmations and reminders before every consult to protect your chair time.",
+  },
+  {
+    icon: HeartHandshake,
+    title: "We stay on brand with you",
+    description:
+      "During onboarding, we learn your practice's values and tone, so every call and message to your patients sounds like it came from your office.",
   },
 ];
 
