@@ -249,14 +249,17 @@ export default function ApplyPage() {
               You&apos;ll talk to Keyhan, the founder.
             </h2>
             <p className="text-[15px] leading-relaxed text-text-secondary">
-              I&apos;ve spent six years running paid ads for small and
-              medium-sized businesses, and now I work only with dental and
-              orthodontic practices.
+              I&apos;ve spent six years managing paid advertising for small and
+              medium-sized businesses, including the past four years working
+              with dental and orthodontic practices.
             </p>
             <p className="text-[15px] leading-relaxed text-text-secondary">
-              On the call, we&apos;ll look at your market and how you get
-              Invisalign consults today, and work out together whether
-              we&apos;re a fit. Thirty minutes, no pressure.
+              In our 30-minute strategy session, we&apos;ll review your market
+              and how your practice currently generates Invisalign
+              consultations. I&apos;ll then walk you through our process so you
+              can decide whether it makes sense for your practice. If it
+              isn&apos;t the right fit, there&apos;s no pressure to move
+              forward.
             </p>
           </Reveal>
         </div>
